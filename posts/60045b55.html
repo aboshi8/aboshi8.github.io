@@ -1,0 +1,1694 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Layui 基本使用, Kalbim">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Layui 基本使用 | Kalbim</title>
+    <link rel="icon" type="image/png" href="/blog/medias/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/blog/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/blog/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/blog/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/blog/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/blog/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/blog/css/my.css">
+
+    <script src="/blog/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+   <style>
+    body{
+       background-image: url(https://pic.yupoo.com/kalbim/dc120cc7/7d724e1d.png);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/blog/" class="waves-effect waves-light">
+                    
+                    <img src="/blog/medias/logo66.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Kalbim</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="https://aboshi8.gitee.io/blog/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/blog/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/blog/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>档案</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/blog/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/blog/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/blog/photo" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>相册</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/blog/box" class="waves-effect waves-light">
+      
+      <i class="fas fa-tools fa-fw" style="zoom: 0.6;"></i>
+      
+      <span>百宝箱</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>娱乐</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/blog/musics">
+          
+          <i class="fas fa-music" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Musics</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/blog/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Movies</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/blog/cat/cat.html">
+          
+          <i class="fas fa-cat" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>围小猫</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/blog/dragon/index.html">
+          
+          <i class="fas fa-dragon" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>小恐龙</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/blog/texiao/texiao.html">
+          
+          <i class="fas fa-magic" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>特效</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/blog/medias/logo66.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Kalbim</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="https://aboshi8.gitee.io/blog/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/blog/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/blog/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			档案
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/blog/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/blog/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/blog/photo" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			相册
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/blog/box" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tools fa-fw"></i>
+			
+			百宝箱
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			娱乐
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/blog/musics " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-music" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Musics</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/blog/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Movies</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/blog/cat/cat.html " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-cat" style="position: absolute;left:50px" ></i>
+			      
+		          <span>围小猫</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/blog/dragon/index.html " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-dragon" style="position: absolute;left:50px" ></i>
+			      
+		          <span>小恐龙</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/blog/texiao/texiao.html " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-magic" style="position: absolute;left:50px" ></i>
+			      
+		          <span>特效</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/blog/medias/featureimages/14.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Layui 基本使用</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/blog/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/blog/tags/Layui/">
+                                <span class="chip bg-color">Layui</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-09-04
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/blog/libs/prism/prism.css">
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>由国人开发，16年出厂的框架，其主要提供了很多好看、方便的样式，并且基本拿来即用，和Bootstrap有些相似，但个人认为该框架有个极大的好处就是定义了很多前后端交互的样式接口，如分页表格，只需在前端配置好接口，后端则按照定义好的接口规则返回数据，即可完成页面的展示，极大减少了后端人员的开发成本。</p>
+<p>说白了，该框架就是为了方便后端人员开发前端而使用的。<br>官方文档：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.layui.com/doc/">https://www.layui.com/doc/</a></p>
+<h3 id="Layui、Easyui和Bootstrap对比"><a href="#Layui、Easyui和Bootstrap对比" class="headerlink" title="Layui、Easyui和Bootstrap对比"></a>Layui、Easyui和Bootstrap对比</h3><p><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.cnblogs.com/helingjuan/p/9352191.html">https://www.cnblogs.com/helingjuan/p/9352191.html</a><br>个人总结（三个框架依次顺序）：美且轻、强但丑、简且稳</p>
+<h3 id="环境导入"><a href="#环境导入" class="headerlink" title="环境导入"></a>环境导入</h3><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 本地导入：
+&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;.&#x2F;layui&#x2F;css&#x2F;layui.css&quot; media&#x3D;&quot;all&quot;&gt;
+&#x2F;&#x2F; 导入CSS文件
+&lt;script src&#x3D;&quot;.&#x2F;layui&#x2F;layui.js&quot;&gt;&lt;&#x2F;script&gt;
+&#x2F;&#x2F; 导入JS文件
+
+&#x2F;&#x2F; CDN导入：
+&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;www.layuicdn.com&#x2F;layui-v2.5.4&#x2F;css&#x2F;layui.css&quot; media&#x3D;&quot;all&quot;&gt;
+&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;www.layuicdn.com&#x2F;layui-v2.5.4&#x2F;layui.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;!-- 该CDN引入字体会出现跨域情况，因此一些空间的样式显示会出现异常 --&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>注：</strong><br>若将Layui下载到本地进行导入时，记得在将<code>layui.css</code>和<code>layui.js</code>导入的同时，将其中的字体等也一同导入，以免显示的结果有异常<br>使用CDN导入时，提供的CDN链接由于配置文件，在导入字体文件等时会出现跨域请求的问题，所以字体等可能无法正常显示，因此不推荐，不过这里还是附上CDN链接：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.layuicdn.com/">CDN链接</a></p>
+<h3 id="好看的字体图标"><a href="#好看的字体图标" class="headerlink" title="好看的字体图标"></a>好看的字体图标</h3><p>参考文档：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.layui.com/doc/element/icon.html%23table">https://www.layui.com/doc/element/icon.html#table</a></p>
+<h2 id="好用的内置模块"><a href="#好用的内置模块" class="headerlink" title="好用的内置模块"></a>好用的内置模块</h2><h3 id="layer弹层"><a href="#layer弹层" class="headerlink" title="layer弹层"></a>layer弹层</h3><p>这个是该框架的代表作，常用于一些公告、提示框、轮播相册等场景，举例：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+    &lt;title&gt;弹层使用&lt;&#x2F;title&gt;
+    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;.&#x2F;layui&#x2F;css&#x2F;layui.css&quot; media&#x3D;&quot;all&quot;&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+&lt;div class&#x3D;&quot;layui-btn layui-btn-primary layer-demolist&quot; id&#x3D;&quot;test1&quot;&gt;我下面会出现一个弹层&lt;&#x2F;div&gt;
+&lt;&#x2F;body&gt;
+&lt;script src&#x3D;&quot;.&#x2F;layui&#x2F;layui.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script&gt;
+    layui.use(&#39;layer&#39;, function () &#123;
+        var layer &#x3D; layui.layer;
+
+        layer.tips(&#39;上&#39;, &#39;#test1&#39;, &#123;  &#x2F;&#x2F; 表示在id&#x3D;test1的地方显示弹层
+                tips: 3,    &#x2F;&#x2F; 1&#x2F;2&#x2F;3&#x2F;4分别表示从：上&#x2F;右&#x2F;下&#x2F;左显示弹层
+                time: 0,    &#x2F;&#x2F; 设置为0表示不消失
+        &#125;);
+    &#125;);
+
+&lt;&#x2F;script&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h6 id="结果图："><a href="#结果图：" class="headerlink" title="结果图："></a>结果图：</h6><p><img src="https://upload-images.jianshu.io/upload_images/13183513-7642064bc869f819.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/180/format/webp"></p>
+<p>弹层示例图</p>
+<h5 id="多个弹层示例"><a href="#多个弹层示例" class="headerlink" title="多个弹层示例"></a>多个弹层示例</h5><pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+    &lt;title&gt;弹层使用&lt;&#x2F;title&gt;
+    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;.&#x2F;layui&#x2F;css&#x2F;layui.css&quot; media&#x3D;&quot;all&quot;&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+&lt;button id&#x3D;&quot;show&quot; class&#x3D;&quot;layui-btn layui-btn-primary&quot;&gt;显示弹层&lt;&#x2F;button&gt;
+&lt;button class&#x3D;&quot;layui-btn del&quot;&gt;删除弹层1&lt;&#x2F;button&gt;
+&lt;button class&#x3D;&quot;layui-btn layui-btn-normal del&quot;&gt;删除弹层2&lt;&#x2F;button&gt;
+&lt;button class&#x3D;&quot;layui-btn layui-btn-warm del&quot;&gt;删除弹层3&lt;&#x2F;button&gt;
+&lt;button class&#x3D;&quot;layui-btn layui-btn-danger del&quot;&gt;删除弹层4&lt;&#x2F;button&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;center&gt;
+    &lt;div class&#x3D;&quot;layui-btn layui-btn-primary layer-demolist&quot; id&#x3D;&quot;test1&quot;&gt;我上面会出现一个弹层&lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;layui-btn layui-btn-primary layer-demolist&quot; id&#x3D;&quot;test2&quot;&gt;我右面会出现一个弹层&lt;&#x2F;div&gt;
+    &lt;br&gt;
+    &lt;div class&#x3D;&quot;layui-btn layui-btn-primary layer-demolist&quot; id&#x3D;&quot;test3&quot;&gt;我下面会出现一个弹层&lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;layui-btn layui-btn-primary layer-demolist&quot; id&#x3D;&quot;test4&quot;&gt;我左面会出现一个弹层&lt;&#x2F;div&gt;
+&lt;&#x2F;center&gt;
+&lt;&#x2F;body&gt;
+&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;jquery&#x2F;3.3.1&#x2F;jquery.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script src&#x3D;&quot;.&#x2F;layui&#x2F;layui.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script&gt;
+    layui.use(&#39;layer&#39;, function () &#123;
+        $(&#39;#show&#39;).click(function () &#123;
+            for (i &#x3D; 1; i &lt;&#x3D; 4; i++) &#123;
+                layui.layer.tips(i, &#39;#test&#39; + i, &#123;  &#x2F;&#x2F; 表示在id&#x3D;test1的地方显示弹层
+                    tips: i,    &#x2F;&#x2F; 1&#x2F;2&#x2F;3&#x2F;4分别表示从：上&#x2F;右&#x2F;下&#x2F;左显示弹层
+                    &#x2F;&#x2F; area: [&#39;200px&#39;, &#39;20px&#39;], &#x2F;&#x2F; 设置长高
+                    time: 0,    &#x2F;&#x2F; 设置为0表示不消失
+                    tipsMore: true, &#x2F;&#x2F;支持多个弹层
+                    success: function (layero, index) &#123;
+                        &#x2F;&#x2F; console.log(layero, index);
+                        layero.addClass(i + &quot;-error&quot;);    &#x2F;&#x2F; 添加一个class
+                        layero.children().eq(0).removeAttr(&quot;style&quot;);
+                        layero.children().eq(0).css(&quot;line-height&quot;, &quot;20px&quot;); &#x2F;&#x2F; 设置行高
+                        &#x2F;&#x2F; 给当前的标签设置id及样式
+                    &#125;
+                &#125;);
+            &#125;
+        &#125;);
+
+        $(&#39;.del&#39;).click(function () &#123;
+            current &#x3D; $(this).index();
+            $(&quot;.&quot; + current + &#39;-error&#39;).remove();
+            &#x2F;&#x2F; 删除按钮对应弹层，这里没有使用官方提供的close方法
+            &#x2F;&#x2F; 因为close方法是根据弹层的索引来进行删除
+            &#x2F;&#x2F; 但是每点击依次显示弹层，就会多4个弹层，那么其将无法把你希望的弹层都删除
+        &#125;)
+    &#125;);
+
+&lt;&#x2F;script&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h6 id="结果图：-1"><a href="#结果图：-1" class="headerlink" title="结果图："></a>结果图：</h6><p><img src="https://upload-images.jianshu.io/upload_images/13183513-645554b96e176163.png"><br>多个弹层示例</p>
+<p>样式参考文档：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.layui.com/demo/layer.html">https://www.layui.com/demo/layer.html</a><br>更多使用示例：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=http://layer.layui.com/">http://layer.layui.com/</a></p>
+<h3 id="日历控件示例"><a href="#日历控件示例" class="headerlink" title="日历控件示例"></a>日历控件示例</h3><pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+    &lt;title&gt;layDate快速使用&lt;&#x2F;title&gt;
+    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;.&#x2F;layui&#x2F;css&#x2F;layui.css&quot; media&#x3D;&quot;all&quot;&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+
+&lt;div class&#x3D;&quot;layui-inline&quot;&gt; &lt;!-- 注意：这一层元素并不是必须的 --&gt;
+    &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;layui-input&quot; id&#x3D;&quot;test1&quot;&gt;
+&lt;&#x2F;div&gt;
+
+&lt;script src&#x3D;&quot;.&#x2F;layui&#x2F;layui.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script&gt;
+    layui.use(&#39;laydate&#39;, function () &#123;
+        var laydate &#x3D; layui.laydate;
+
+        &#x2F;&#x2F;执行一个laydate实例
+        laydate.render(&#123;
+            elem: &#39;#test1&#39;, &#x2F;&#x2F;指定元素
+            type: &#39;datetime&#39;
+        &#125;);
+    &#125;);
+&lt;&#x2F;script&gt;
+&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h6 id="结果图：-2"><a href="#结果图：-2" class="headerlink" title="结果图："></a>结果图：</h6><p><img src="https://upload-images.jianshu.io/upload_images/13183513-13fd3482d5a59ce7.png"><br>日历示例</p>
+<h3 id="前后端结合完整示例-Flask-Layui实现分页表格"><a href="#前后端结合完整示例-Flask-Layui实现分页表格" class="headerlink" title="前后端结合完整示例-Flask+Layui实现分页表格"></a>前后端结合完整示例-Flask+Layui实现分页表格</h3><h5 id="后端代码"><a href="#后端代码" class="headerlink" title="后端代码"></a>后端代码</h5><pre class="line-numbers language-none"><code class="language-none"># -*- coding: utf-8 -*-
+from flask import Flask, make_response, request
+
+app &#x3D; Flask(__name__)
+
+@app.route(&quot;&#x2F;aaaaa&quot;)
+def xxx():
+    page &#x3D; int(request.args[&quot;page&quot;])
+    limit &#x3D; int(request.args[&quot;limit&quot;])
+    aaa &#x3D; &#123;&quot;code&quot;:0,&quot;msg&quot;:&quot;&quot;,&quot;data&quot;:[&#123;&quot;id&quot;:10000,&quot;username&quot;:&quot;user-0&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-0&quot;, &quot;sign&quot;:&quot;签名-0&quot;,&quot;experience&quot;:255,&quot;logins&quot;:24,&quot;wealth&quot;:82830700,&quot;classify&quot;:&quot;作家&quot;,&quot;score&quot;:57&#125;,&#123;&quot;id&quot;:10001,&quot;username&quot;:&quot;user-1&quot;,&quot;sex&quot;:&quot;男&quot;,&quot;city&quot;:&quot;城市-1&quot;,&quot;sign&quot;:&quot;签名-1&quot;,&quot;experience&quot;:884,&quot;logins&quot;:58,&quot;wealth&quot;:64928690,&quot;classify&quot;:&quot;词人&quot;,&quot;score&quot;:27&#125;,&#123;&quot;id&quot;:10002,&quot;username&quot;:&quot;user-2&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-2&quot;,&quot;sign&quot;:&quot;签名-2&quot;,&quot;experience&quot;:650,&quot;logins&quot;:77,&quot;wealth&quot;:6298078,&quot;classify&quot;:&quot;酱油&quot;,&quot;score&quot;:31&#125;,&#123;&quot;id&quot;:10003,&quot;username&quot;:&quot;user-3&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-3&quot;,&quot;sign&quot;:&quot;签名-3&quot;,&quot;experience&quot;:362,&quot;logins&quot;:157,&quot;wealth&quot;:37117017,&quot;classify&quot;:&quot;诗人&quot;,&quot;score&quot;:68&#125;,&#123;&quot;id&quot;:10004,&quot;username&quot;:&quot;user-4&quot;,&quot;sex&quot;:&quot;男&quot;,&quot;city&quot;:&quot;城市-4&quot;,&quot;sign&quot;:&quot;签名-4&quot;,&quot;experience&quot;:807,&quot;logins&quot;:51,&quot;wealth&quot;:76263262,&quot;classify&quot;:&quot;作家&quot;,&quot;score&quot;:6&#125;,&#123;&quot;id&quot;:10005,&quot;username&quot;:&quot;user-5&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-5&quot;,&quot;sign&quot;:&quot;签名-5&quot;,&quot;experience&quot;:173,&quot;logins&quot;:68,&quot;wealth&quot;:60344147,&quot;classify&quot;:&quot;作家&quot;,&quot;score&quot;:87&#125;,&#123;&quot;id&quot;:10006,&quot;username&quot;:&quot;user-6&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-6&quot;,&quot;sign&quot;:&quot;签名-6&quot;,&quot;experience&quot;:982,&quot;logins&quot;:37,&quot;wealth&quot;:57768166,&quot;classify&quot;:&quot;作家&quot;,&quot;score&quot;:34&#125;,&#123;&quot;id&quot;:10007,&quot;username&quot;:&quot;user-7&quot;,&quot;sex&quot;:&quot;男&quot;,&quot;city&quot;:&quot;城市-7&quot;,&quot;sign&quot;:&quot;签名-7&quot;,&quot;experience&quot;:727,&quot;logins&quot;:150,&quot;wealth&quot;:82030578,&quot;classify&quot;:&quot;作家&quot;,&quot;score&quot;:28&#125;,&#123;&quot;id&quot;:10008,&quot;username&quot;:&quot;user-8&quot;,&quot;sex&quot;:&quot;男&quot;,&quot;city&quot;:&quot;城市-8&quot;,&quot;sign&quot;:&quot;签名-8&quot;,&quot;experience&quot;:951,&quot;logins&quot;:133,&quot;wealth&quot;:16503371,&quot;classify&quot;:&quot;词人&quot;,&quot;score&quot;:14&#125;,&#123;&quot;id&quot;:10009,&quot;username&quot;:&quot;user-9&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-9&quot;,&quot;sign&quot;:&quot;签名-9&quot;,&quot;experience&quot;:484,&quot;logins&quot;:25,&quot;wealth&quot;:86801934,&quot;classify&quot;:&quot;词人&quot;,&quot;score&quot;:75&#125;,&#123;&quot;id&quot;:10010,&quot;username&quot;:&quot;user-10&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-10&quot;,&quot;sign&quot;:&quot;签名-10&quot;,&quot;experience&quot;:1016,&quot;logins&quot;:182,&quot;wealth&quot;:71294671,&quot;classify&quot;:&quot;诗人&quot;,&quot;score&quot;:34&#125;,&#123;&quot;id&quot;:10011,&quot;username&quot;:&quot;user-11&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-11&quot;,&quot;sign&quot;:&quot;签名-11&quot;,&quot;experience&quot;:492,&quot;logins&quot;:107,&quot;wealth&quot;:8062783,&quot;classify&quot;:&quot;诗人&quot;,&quot;score&quot;:6&#125;,&#123;&quot;id&quot;:10012,&quot;username&quot;:&quot;user-12&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-12&quot;,&quot;sign&quot;:&quot;签名-12&quot;,&quot;experience&quot;:106,&quot;logins&quot;:176,&quot;wealth&quot;:42622704,&quot;classify&quot;:&quot;词人&quot;,&quot;score&quot;:54&#125;,&#123;&quot;id&quot;:10013,&quot;username&quot;:&quot;user-13&quot;,&quot;sex&quot;:&quot;男&quot;,&quot;city&quot;:&quot;城市-13&quot;,&quot;sign&quot;:&quot;签名-13&quot;,&quot;experience&quot;:1047,&quot;logins&quot;:94,&quot;wealth&quot;:59508583,&quot;classify&quot;:&quot;诗人&quot;,&quot;score&quot;:63&#125;,&#123;&quot;id&quot;:10014,&quot;username&quot;:&quot;user-14&quot;,&quot;sex&quot;:&quot;男&quot;,&quot;city&quot;:&quot;城市-14&quot;,&quot;sign&quot;:&quot;签名-14&quot;,&quot;experience&quot;:873,&quot;logins&quot;:116,&quot;wealth&quot;:72549912,&quot;classify&quot;:&quot;词人&quot;,&quot;score&quot;:8&#125;,&#123;&quot;id&quot;:10015,&quot;username&quot;:&quot;user-15&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-15&quot;,&quot;sign&quot;:&quot;签名-15&quot;,&quot;experience&quot;:1068,&quot;logins&quot;:27,&quot;wealth&quot;:52737025,&quot;classify&quot;:&quot;作家&quot;,&quot;score&quot;:28&#125;,&#123;&quot;id&quot;:10016,&quot;username&quot;:&quot;user-16&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-16&quot;,&quot;sign&quot;:&quot;签名-16&quot;,&quot;experience&quot;:862,&quot;logins&quot;:168,&quot;wealth&quot;:37069775,&quot;classify&quot;:&quot;酱油&quot;,&quot;score&quot;:86&#125;,&#123;&quot;id&quot;:10017,&quot;username&quot;:&quot;user-17&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-17&quot;,&quot;sign&quot;:&quot;签名-17&quot;,&quot;experience&quot;:1060,&quot;logins&quot;:187,&quot;wealth&quot;:66099525,&quot;classify&quot;:&quot;作家&quot;,&quot;score&quot;:69&#125;,&#123;&quot;id&quot;:10018,&quot;username&quot;:&quot;user-18&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-18&quot;,&quot;sign&quot;:&quot;签名-18&quot;,&quot;experience&quot;:866,&quot;logins&quot;:88,&quot;wealth&quot;:81722326,&quot;classify&quot;:&quot;词人&quot;,&quot;score&quot;:74&#125;,&#123;&quot;id&quot;:10019,&quot;username&quot;:&quot;user-19&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-19&quot;,&quot;sign&quot;:&quot;签名-19&quot;,&quot;experience&quot;:682,&quot;logins&quot;:106,&quot;wealth&quot;:68647362,&quot;classify&quot;:&quot;词人&quot;,&quot;score&quot;:51&#125;,&#123;&quot;id&quot;:10020,&quot;username&quot;:&quot;user-20&quot;,&quot;sex&quot;:&quot;男&quot;,&quot;city&quot;:&quot;城市-20&quot;,&quot;sign&quot;:&quot;签名-20&quot;,&quot;experience&quot;:770,&quot;logins&quot;:24,&quot;wealth&quot;:92420248,&quot;classify&quot;:&quot;诗人&quot;,&quot;score&quot;:87&#125;,&#123;&quot;id&quot;:10021,&quot;username&quot;:&quot;user-21&quot;,&quot;sex&quot;:&quot;男&quot;,&quot;city&quot;:&quot;城市-21&quot;,&quot;sign&quot;:&quot;签名-21&quot;,&quot;experience&quot;:184,&quot;logins&quot;:131,&quot;wealth&quot;:71566045,&quot;classify&quot;:&quot;词人&quot;,&quot;score&quot;:99&#125;,&#123;&quot;id&quot;:10022,&quot;username&quot;:&quot;user-22&quot;,&quot;sex&quot;:&quot;男&quot;,&quot;city&quot;:&quot;城市-22&quot;,&quot;sign&quot;:&quot;签名-22&quot;,&quot;experience&quot;:739,&quot;logins&quot;:152,&quot;wealth&quot;:60907929,&quot;classify&quot;:&quot;作家&quot;,&quot;score&quot;:18&#125;,&#123;&quot;id&quot;:10023,&quot;username&quot;:&quot;user-23&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-23&quot;,&quot;sign&quot;:&quot;签名-23&quot;,&quot;experience&quot;:127,&quot;logins&quot;:82,&quot;wealth&quot;:14765943,&quot;classify&quot;:&quot;作家&quot;,&quot;score&quot;:30&#125;,&#123;&quot;id&quot;:10024,&quot;username&quot;:&quot;user-24&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-24&quot;,&quot;sign&quot;:&quot;签名-24&quot;,&quot;experience&quot;:212,&quot;logins&quot;:133,&quot;wealth&quot;:59011052,&quot;classify&quot;:&quot;词人&quot;,&quot;score&quot;:76&#125;,&#123;&quot;id&quot;:10025,&quot;username&quot;:&quot;user-25&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-25&quot;,&quot;sign&quot;:&quot;签名-25&quot;,&quot;experience&quot;:938,&quot;logins&quot;:182,&quot;wealth&quot;:91183097,&quot;classify&quot;:&quot;作家&quot;,&quot;score&quot;:69&#125;,&#123;&quot;id&quot;:10026,&quot;username&quot;:&quot;user-26&quot;,&quot;sex&quot;:&quot;男&quot;,&quot;city&quot;:&quot;城市-26&quot;,&quot;sign&quot;:&quot;签名-26&quot;,&quot;experience&quot;:978,&quot;logins&quot;:7,&quot;wealth&quot;:48008413,&quot;classify&quot;:&quot;作家&quot;,&quot;score&quot;:65&#125;,&#123;&quot;id&quot;:10027,&quot;username&quot;:&quot;user-27&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-27&quot;,&quot;sign&quot;:&quot;签名-27&quot;,&quot;experience&quot;:371,&quot;logins&quot;:44,&quot;wealth&quot;:64419691,&quot;classify&quot;:&quot;诗人&quot;,&quot;score&quot;:60&#125;,&#123;&quot;id&quot;:10028,&quot;username&quot;:&quot;user-28&quot;,&quot;sex&quot;:&quot;女&quot;,&quot;city&quot;:&quot;城市-28&quot;,&quot;sign&quot;:&quot;签名-28&quot;,&quot;experience&quot;:977,&quot;logins&quot;:21,&quot;wealth&quot;:75935022,&quot;classify&quot;:&quot;作家&quot;,&quot;score&quot;:37&#125;,&#123;&quot;id&quot;:10029,&quot;username&quot;:&quot;user-29&quot;,&quot;sex&quot;:&quot;男&quot;,&quot;city&quot;:&quot;城市-29&quot;,&quot;sign&quot;:&quot;签名-29&quot;,&quot;experience&quot;:647,&quot;logins&quot;:107,&quot;wealth&quot;:97450636,&quot;classify&quot;:&quot;酱油&quot;,&quot;score&quot;:27&#125;]&#125;
+
+    aaa[&quot;count&quot;] &#x3D; len(aaa[&quot;data&quot;])
+    aaa[&quot;data&quot;] &#x3D; aaa[&quot;data&quot;][(page-1)*10: (page-1)*10 + limit]
+    import json
+    rst &#x3D; make_response(json.dumps(aaa))
+    rst.headers[&#39;Access-Control-Allow-Origin&#39;] &#x3D; &#39;*&#39;
+    return rst
+
+if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
+    app.run()
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="前端代码"><a href="#前端代码" class="headerlink" title="前端代码"></a>前端代码</h5><pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+    &lt;title&gt;layPage快速使用&lt;&#x2F;title&gt;
+    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;.&#x2F;layui&#x2F;css&#x2F;layui.css&quot; media&#x3D;&quot;all&quot;&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+&lt;table id&#x3D;&quot;demo&quot; lay-filter&#x3D;&quot;test&quot;&gt;&lt;&#x2F;table&gt;
+&lt;div id&#x3D;&quot;test1&quot;&gt;&lt;&#x2F;div&gt;
+
+&lt;script src&#x3D;&quot;.&#x2F;layui&#x2F;layui.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script&gt;
+    layui.use(&#39;table&#39;, function () &#123;
+        var table &#x3D; layui.table;
+
+        &#x2F;&#x2F;第一个实例
+        table.render(&#123;
+            elem: &#39;#demo&#39;
+            , height: 500
+            , url: &#39;http:&#x2F;&#x2F;127.0.0.1:5000&#x2F;aaaaa&#39; &#x2F;&#x2F;数据接口
+            , page: true &#x2F;&#x2F;开启分页
+            , limit: 10 &#x2F;&#x2F;数据总数，从服务端得到
+            , loading: false
+            , LAY_CHECKED: true
+            , cols: [[ &#x2F;&#x2F;表头
+                &#123;field: &#39;id&#39;, title: &#39;ID&#39;, width: 80, sort: true, fixed: &#39;left&#39;&#125;
+                , &#123;field: &#39;username&#39;, title: &#39;用户名&#39;, width: 80&#125;
+                , &#123;field: &#39;sex&#39;, title: &#39;性别&#39;, width: 80, sort: true&#125;
+                , &#123;field: &#39;city&#39;, title: &#39;城市&#39;, width: 80&#125;
+                , &#123;field: &#39;sign&#39;, title: &#39;签名&#39;, width: 177&#125;
+                , &#123;field: &#39;experience&#39;, title: &#39;积分&#39;, width: 80, sort: true&#125;
+                , &#123;field: &#39;score&#39;, title: &#39;评分&#39;, width: 80, sort: true&#125;
+                , &#123;field: &#39;classify&#39;, title: &#39;职业&#39;, width: 80&#125;
+                , &#123;field: &#39;wealth&#39;, title: &#39;财富&#39;, width: 135, sort: true&#125;
+            ]]
+        &#125;);
+
+    &#125;);
+&lt;&#x2F;script&gt;
+&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h6 id="结果图：-3"><a href="#结果图：-3" class="headerlink" title="结果图："></a>结果图：</h6><p><img src="https://upload-images.jianshu.io/upload_images/13183513-b95e4c6cabef7bd9.png"><br>分页表格示例</p>
+<h3 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h3><p>支持异步上传，无需与其他表单共存<br>参考：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.layui.com/doc/modules/upload.html">https://www.layui.com/doc/modules/upload.html</a></p>
+<h3 id="树形图"><a href="#树形图" class="headerlink" title="树形图"></a>树形图</h3><h5 id="图片示例："><a href="#图片示例：" class="headerlink" title="图片示例："></a>图片示例：</h5><p><img src="https://upload-images.jianshu.io/upload_images/13183513-6fdb0e3640c228a4.png"><br>树形图示例</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.layui.com/doc/modules/tree.html">https://www.layui.com/doc/modules/tree.html</a></p>
+<h3 id="颜色选择器"><a href="#颜色选择器" class="headerlink" title="颜色选择器"></a>颜色选择器</h3><h5 id="图片示例：-1"><a href="#图片示例：-1" class="headerlink" title="图片示例："></a>图片示例：</h5><p><img src="https://upload-images.jianshu.io/upload_images/13183513-8b97841c2ad477a9.png"><br>颜色选择器示例</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.layui.com/doc/modules/colorpicker.html">https://www.layui.com/doc/modules/colorpicker.html</a></p>
+<h3 id="分页导航栏"><a href="#分页导航栏" class="headerlink" title="分页导航栏"></a>分页导航栏</h3><h5 id="图片示例：-2"><a href="#图片示例：-2" class="headerlink" title="图片示例："></a>图片示例：</h5><p><img src="https://upload-images.jianshu.io/upload_images/13183513-2cfd7d882ed304d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/297/format/webp"><br>分页导航栏示例</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.layui.com/doc/modules/element.html">https://www.layui.com/doc/modules/element.html</a></p>
+<h3 id="评分组件"><a href="#评分组件" class="headerlink" title="评分组件"></a>评分组件</h3><p>举例：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+    &lt;title&gt;评分使用&lt;&#x2F;title&gt;
+    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;.&#x2F;layui&#x2F;css&#x2F;layui.css&quot; media&#x3D;&quot;all&quot;&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+&lt;div id&#x3D;&quot;test1&quot;&gt;&lt;&#x2F;div&gt;
+&lt;&#x2F;body&gt;
+&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;jquery&#x2F;3.3.1&#x2F;jquery.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script src&#x3D;&quot;.&#x2F;layui&#x2F;layui.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script&gt;
+    layui.use(&#39;rate&#39;, function () &#123;
+        var rate &#x3D; layui.rate;
+        var ins1 &#x3D; rate.render(&#123;
+            elem: &#39;#test1&#39;,  &#x2F;&#x2F;绑定元素
+            value: 3,   &#x2F;&#x2F; 默认三颗星
+            choose: function (value) &#123;
+                console.log(value); &#x2F;&#x2F; 点击输出评分
+            &#125;
+        &#125;);
+    &#125;);
+&lt;&#x2F;script&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h6 id="结果图：-4"><a href="#结果图：-4" class="headerlink" title="结果图："></a>结果图：</h6><p><img src="https://upload-images.jianshu.io/upload_images/13183513-bf5180ced23466b3.png"><br>评分组件示例</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.layui.com/doc/modules/rate.html">https://www.layui.com/doc/modules/rate.html</a></p>
+<h3 id="工具集"><a href="#工具集" class="headerlink" title="工具集"></a>工具集</h3><h5 id="固定块"><a href="#固定块" class="headerlink" title="固定块"></a>固定块</h5><p>可以固定一个图框在网页的某个位置（有点像IPhone里固定在屏幕的灰色圈圈），点击后实现某个功能，举例：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+    &lt;title&gt;固定块使用&lt;&#x2F;title&gt;
+    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;.&#x2F;layui&#x2F;css&#x2F;layui.css&quot; media&#x3D;&quot;all&quot;&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+&lt;&#x2F;body&gt;
+&lt;script src&#x3D;&quot;.&#x2F;layui&#x2F;layui.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script&gt;
+    layui.use(&#39;util&#39;, function () &#123;
+        var util &#x3D; layui.util;
+        util.fixbar(&#123;
+            bar1: true
+            , css: &#123;left: 0, top: 300&#125;
+            , click: function (type) &#123;
+                console.log(type);
+                if (type &#x3D;&#x3D;&#x3D; &#39;bar1&#39;) &#123;
+                    alert(&#39;点击了bar1&#39;)
+                &#125;
+            &#125;
+        &#125;);
+    &#125;);
+&lt;&#x2F;script&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h6 id="结果图：-5"><a href="#结果图：-5" class="headerlink" title="结果图："></a>结果图：</h6><p><img src="https://upload-images.jianshu.io/upload_images/13183513-541e00312439135c.png"><br>固定块示例</p>
+<h5 id="更多参考文档：https-www-layui-com-doc-modules-util-html"><a href="#更多参考文档：https-www-layui-com-doc-modules-util-html" class="headerlink" title="更多参考文档：https://www.layui.com/doc/modules/util.html"></a>更多参考文档：<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.layui.com/doc/modules/util.html">https://www.layui.com/doc/modules/util.html</a></h5><h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>即让代码显示出来，举例：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+    &lt;title&gt;代码块使用&lt;&#x2F;title&gt;
+    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;.&#x2F;layui&#x2F;css&#x2F;layui.css&quot; media&#x3D;&quot;all&quot;&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+&lt;div id&#x3D;&quot;test1&quot; class&#x3D;&quot;layui-code&quot;&gt;print(&quot;hello world!&quot;)&lt;br&gt;
+    exit()
+&lt;&#x2F;div&gt;
+&lt;&#x2F;body&gt;
+&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;jquery&#x2F;3.3.1&#x2F;jquery.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script src&#x3D;&quot;.&#x2F;layui&#x2F;layui.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script&gt;
+    layui.use(&#39;code&#39;, function () &#123; &#x2F;&#x2F;加载code模块
+        layui.code(); &#x2F;&#x2F;引用code方法
+    &#125;);
+&lt;&#x2F;script&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="结果图：-6"><a href="#结果图：-6" class="headerlink" title="结果图："></a>结果图：</h5><p><img src="https://upload-images.jianshu.io/upload_images/13183513-87fad6f14689c8ee.png"><br>代码块示例</p>
+<h3 id="轮播图"><a href="#轮播图" class="headerlink" title="轮播图"></a>轮播图</h3><p>举例：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+    &lt;title&gt;轮播图使用&lt;&#x2F;title&gt;
+    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;.&#x2F;layui&#x2F;css&#x2F;layui.css&quot; media&#x3D;&quot;all&quot;&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+&lt;div class&#x3D;&quot;layui-carousel&quot; id&#x3D;&quot;test1&quot;&gt;
+    &lt;div carousel-item&gt;
+        &lt;div style&#x3D;&quot;background: red;&quot;&gt;条目1&lt;&#x2F;div&gt;
+        &lt;div style&#x3D;&quot;background: green;&quot;&gt;条目2&lt;&#x2F;div&gt;
+        &lt;div style&#x3D;&quot;background: blue;&quot;&gt;条目3&lt;&#x2F;div&gt;
+        &lt;div style&#x3D;&quot;background: yellow;&quot;&gt;条目4&lt;&#x2F;div&gt;
+        &lt;div style&#x3D;&quot;background: purple;&quot;&gt;条目5&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;body&gt;
+&lt;script src&#x3D;&quot;.&#x2F;layui&#x2F;layui.js&quot;&gt;&lt;&#x2F;script&gt;
+
+&lt;script&gt;
+    layui.use(&#39;carousel&#39;, function () &#123;
+        var carousel &#x3D; layui.carousel;
+        &#x2F;&#x2F;建造实例
+        carousel.render(&#123;
+            elem: &#39;#test1&#39;
+            , width: &#39;100%&#39; &#x2F;&#x2F;设置容器宽度
+            , arrow: &#39;always&#39; &#x2F;&#x2F;始终显示箭头
+        &#125;);
+    &#125;);
+&lt;&#x2F;script&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="结果图：-7"><a href="#结果图：-7" class="headerlink" title="结果图："></a>结果图：</h5><p><img src="https://upload-images.jianshu.io/upload_images/13183513-13d380d7755fce40.png"><br>轮播图示例</p>
+<h3 id="Layui踩坑记录"><a href="#Layui踩坑记录" class="headerlink" title="Layui踩坑记录"></a>Layui踩坑记录</h3><h5 id="使用弹层时第一次的效果不对，之后又没问题"><a href="#使用弹层时第一次的效果不对，之后又没问题" class="headerlink" title="使用弹层时第一次的效果不对，之后又没问题"></a>使用弹层时第一次的效果不对，之后又没问题</h5><p>原因：第一次执行时资源没有加载完毕<br>解决办法：把弹层功能放在<code>layer.ready</code>中执行，举例：</p>
+<pre class="line-numbers language-none"><code class="language-none">layui.use(&#39;layer&#39;, function () &#123;
+    let layer &#x3D; layui.layer;
+    layer.ready(function () &#123;
+        &#x2F;&#x2F; 将内容放在ready方法里
+        layer.msg(&quot;测试&quot;, &#123;
+            time: 0,
+            area: [&#39;300px&#39;, &#39;150px&#39;],
+            shade: [0.6, &#39;#000&#39;, true],
+            icon: 7,
+            shadeClose: true,
+            btn: [&#39;关闭&#39;]
+        &#125;);
+    &#125;)
+&#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>原链接：<br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4444e701c587">https://www.jianshu.com/p/4444e701c587</a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/blog/about" rel="external nofollow noreferrer">kalbim</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://aboshi8.gitee.io/blog/blog/posts/60045b55.html">https://aboshi8.gitee.io/blog/blog/posts/60045b55.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/blog/about" target="_blank">kalbim</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/blog/tags/Layui/">
+                                    <span class="chip bg-color">Layui</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/blog/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/blog/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/blog/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/blog/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/blog/posts/bd3ea19a.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/blog/medias/featureimages/16.jpg" class="responsive-img" alt="创建数据库，创建数据库表MySQL语句">
+                        
+                        <span class="card-title">创建数据库，创建数据库表MySQL语句</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-05
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            kalbim
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/blog/tags/MySQL/">
+                        <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
+                    <a href="/blog/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/blog/posts/e4ac4193.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/blog/medias/featureimages/19.jpg" class="responsive-img" alt="使用:before伪类实现自定义li标签前面的图标">
+                        
+                        <span class="card-title">使用:before伪类实现自定义li标签前面的图标</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            kalbim
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/blog/tags/html/">
+                        <span class="chip bg-color">html</span>
+                    </a>
+                    
+                    <a href="/blog/tags/%E4%BC%AA%E7%B1%BB/">
+                        <span class="chip bg-color">伪类</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/blog/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/blog/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/blog/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/blog/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/blog/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/blog/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="6826437463"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.4'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/blog/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/blog/about" target="_blank">kalbim</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">32.7k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2021";
+                    var startMonth = "6";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已成功存活了 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已成功存活了 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1367863704" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1367863704" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/blog/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/blog/libs/materialize/materialize.min.js"></script>
+    <script src="/blog/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/blog/libs/aos/aos.js"></script>
+    <script src="/blog/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/blog/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/blog/js/matery.js"></script>
+    
+    
+    <!--浏览器搞笑标题  恶搞 -->
+    <script type="text/javascript" src="/js/FunnyTitle.js"></script>
+       
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/blog/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/blog/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/blog/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/blog/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/blog/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    
+    <script type="text/javascript">
+        //只在桌面版网页启用特效,添加樱花飘落效果768
+        var windowWidth = $(window).width();
+        if (windowWidth > 500) {
+            document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+        }
+    </script>
+    <!--222-->
+    <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/sakura.js"></script>
+
+
+    <!--动态线条背景--> <!--
+    <script type="text/javascript"
+    color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>   -->
+    
+    <!--添加鼠标彩虹星星掉落跟随效果-->
+    <script src="/js/cursor.js"></script>
+
+</body>
+
+</html>
