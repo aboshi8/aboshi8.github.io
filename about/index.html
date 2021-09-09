@@ -29,7 +29,7 @@
 
     <script src="/blog/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
 
 
 
@@ -437,7 +437,7 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/blog/">23</a></span>
+    <span class="count"><a href="/blog/">25</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -446,7 +446,7 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/blog/tags">11</a></span>
+    <span class="count"><a href="/blog/tags">12</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -462,7 +462,7 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/blog/">23</a></span>
+    <span class="count"><a href="/blog/">25</a></span>
     <span class="name">文章</span>
 </div>
 
@@ -471,7 +471,7 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/blog/tags">11</a></span>
+    <span class="count"><a href="/blog/tags">12</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -591,7 +591,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,15,8],
+                data: [0,0,0,0,0,0,0,0,0,0,0,15,10],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -657,7 +657,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Hexo","博客","博客优化","MySQL","数据库","hexo","Github","html","伪类","hexo-theme-matery"]
+                data: ["Hexo","博客","博客优化","MySQL","数据库","Github","插件","nodejs","html","伪类"]
             }
         ],
         yAxis: [
@@ -670,7 +670,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [9,9,7,4,4,1,1,1,1,1],
+                data: [14,9,7,4,4,2,2,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -800,14 +800,20 @@
             
             
             
+            <a href="/blog/tags/Github/">
+                <span class="chip center-align waves-effect waves-light chip-default">Github</span>
+            </a>
+            
+            
+            
             <a href="/blog/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/">
                 <span class="chip center-align waves-effect waves-light chip-default">博客优化</span>
             </a>
             
             
             
-            <a href="/blog/tags/hexo/">
-                <span class="chip center-align waves-effect waves-light chip-default">hexo</span>
+            <a href="/blog/tags/nodejs/">
+                <span class="chip center-align waves-effect waves-light chip-default">nodejs</span>
             </a>
             
             
@@ -824,12 +830,6 @@
             
             
             
-            <a href="/blog/tags/Github/">
-                <span class="chip center-align waves-effect waves-light chip-default">Github</span>
-            </a>
-            
-            
-            
             <a href="/blog/tags/html/">
                 <span class="chip center-align waves-effect waves-light chip-default">html</span>
             </a>
@@ -838,6 +838,12 @@
             
             <a href="/blog/tags/%E4%BC%AA%E7%B1%BB/">
                 <span class="chip center-align waves-effect waves-light chip-default">伪类</span>
+            </a>
+            
+            
+            
+            <a href="/blog/tags/%E6%8F%92%E4%BB%B6/">
+                <span class="chip center-align waves-effect waves-light chip-default">插件</span>
             </a>
             
             
@@ -929,7 +935,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">32.7k</span>&nbsp;字
+                class="white-color">33.5k</span>&nbsp;字
             
             
             
@@ -1206,6 +1212,24 @@ $(function () {
     <!--添加鼠标彩虹星星掉落跟随效果-->
     <script src="/js/cursor.js"></script>
 
-</body>
+<!-- hexo injector body_end start --><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('col l3 hide-on-med-and-down expanded')[0];
+                var item_html = '<div class="card-widget card-history"> <div class="card-content" style="    position: relative; overflow: hidden; margin-top: 1rem; padding: 1rem 1.2rem; border-radius: 8px; background: var(--card-bg); -webkit-box-shadow: var(--card-box-shadow); box-shadow: var(--card-box-shadow); -webkit-transition: box-shadow .3s; -moz-transition: box-shadow .3s; -o-transition: box-shadow .3s; -ms-transition: box-shadow .3s; transition: box-shadow .3s;background-color: white;"><div class="item-headline"> <i class="fas fa-clock fa-spin"></i> <span>那年今日</span></div> <div id="history-baidu" style="height: 100px;overflow: hidden"> <div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"> <div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div> </div> </div> </div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('col l3 hide-on-med-and-down expanded')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('col l3 hide-on-med-and-down expanded')[0];
+                var item_html = '<div class="card-widget card-clock"> <div class="card-glass"> <div class="card-background"><div class="card-content"> <div id="hexo_electric_clock"> <img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('col l3 hide-on-med-and-down expanded')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><!-- hexo injector body_end end --></body>
 
 </html>
