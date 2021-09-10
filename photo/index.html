@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <title>相册</title>
@@ -14,6 +14,18 @@
     </script>
 </head>
 <body>
+    <div id="video-container" style="width:100%;">
+        <video autoplay="" muted="" loop="" style="width: 100%;">
+              <source src="https://cdn.jsdelivr.net/gh/betsyx/beyond/home/yourstar.mp4" type="video/mp4">
+                   您的浏览器不支持视频播放，请更换其他浏览器。
+        </video>
+        <div id="overlay">
+        <h3 class="hjh3" style="color: #fff; text-align: center;left:50%;top:2rem;margin-left:-50%; width: 100%; margin-top: -0.03rem; position: absolute;">
+            <span class="en" style="color: #fff; width:50%; display: block; margin: 0 auto;font-size:0.1rem;">坑爹需求</span>
+            <span class="cn" style="color: #fff;font-size:0.1rem;">放什么视频啊放</span></h3>
+         </div>
+   </div>
+   
     <div class="wrapper">
 
             <!-- <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
@@ -264,9 +276,74 @@
 
         <div style="text-align:center;margin:0px 0; font:normal 14px/24px 'MicroSoft YaHei';">
         <p>
-        <p>本站提供的资源，都来自网络，版权争议与本站无关，所有内容及软件的文章仅限用于学习和研究目的。不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负，我们不保证内容的长久可用性，通过使用本站内容随之而来的风险与本站无关，您必须在下载后的24个小时之内，从您的电脑/手机中彻底删除上述内容。侵删请致信E-mail：1367863704@qq.com</p></p>
-        <p>博主：<a href="https://aboshi8.gitee.io/blog/" target="_blank">返回首页</a></p>
+        <p style="color: #fff;">本站提供的资源，都来自网络，版权争议与本站无关，所有内容及软件的文章仅限用于学习和研究目的。不得将上述内容用于商业或者非法用途，否则，一切后果请用户自负，我们不保证内容的长久可用性，通过使用本站内容随之而来的风险与本站无关，您必须在下载后的24个小时之内，从您的电脑/手机中彻底删除上述内容。侵删请致信E-mail：1367863704@qq.com</p></p>
+        <p style="color: #fff;">博主：<a href="https://aboshi8.gitee.io/blog/" style="color: #fff;" target="_blank">返回首页</a></p>
         </div>
     </div>    
+
 </body>
 </html>
+
+<script type="text/javascript" src="https://www.monitaedu.com/statics/js/x5/jaliswall.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.wall').jaliswall({ item: '.article' });
+    });
+        
+        
+        
+        // shipinJS
+var video = document.querySelector('video')
+  , container = document.querySelector('#video-container');
+ 
+var setVideoDimensions = function () {
+  // Video's intrinsic dimensions
+  var w = video.videoWidth
+    , h = video.videoHeight;
+   
+  // Intrinsic Ratio
+  // Will be more than 1 if W > H and less if W < H
+  var videoRatio = (w / h).toFixed(2);
+   
+  // Get the container's computed styles
+  //
+  // Also calculate the min dimensions required (this will be
+  // the container dimentions)
+  var containerStyles = window.getComputedStyle(container)
+    , minW = parseInt( containerStyles.getPropertyValue('width') )
+    , minH = parseInt( containerStyles.getPropertyValue('height') );
+   
+  // What's the min:intrinsic dimensions
+  //
+  // The idea is to get which of the container dimension
+  // has a higher value when compared with the equivalents
+  // of the video. Imagine a 1200x700 container and
+  // 1000x500 video. Then in order to find the right balance
+  // and do minimum scaling, we have to find the dimension
+  // with higher ratio.
+  //
+  // Ex: 1200/1000 = 1.2 and 700/500 = 1.4 - So it is best to
+  // scale 500 to 700 and then calculate what should be the
+  // right width. If we scale 1000 to 1200 then the height
+  // will become 600 proportionately.
+  var widthRatio = minW / w
+    , heightRatio = minH / h;
+   
+  // Whichever ratio is more, the scaling
+  // has to be done over that dimension
+  if (widthRatio > heightRatio) {
+    var newWidth = minW;
+    var newHeight = Math.ceil( newWidth / videoRatio );
+  }
+  else {
+    var newHeight = minH;
+    var newWidth = Math.ceil( newHeight * videoRatio );
+  }
+   
+  video.style.width = newWidth + 'px';
+  video.style.height = newHeight + 'px';
+};
+ 
+video.addEventListener('loadedmetadata', setVideoDimensions, false);
+window.addEventListener('resize', setVideoDimensions, false);
+</script>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Node.js 安装配置, Kalbim">
+    <meta name="keywords" content="Markdown写作语法, Kalbim">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Node.js 安装配置 | Kalbim</title>
+    <title>Markdown写作语法 | Kalbim</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -402,12 +402,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/29.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Node.js 安装配置</h1>
+                    <h1 class="description center-align post-title">Markdown写作语法</h1>
                 </div>
             </div>
         </div>
@@ -523,8 +523,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/nodejs/">
-                                <span class="chip bg-color">nodejs</span>
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">Markdown</span>
                             </a>
                         
                     </div>
@@ -539,7 +539,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-17
+                    2021-09-09
                 </div>
                 
 
@@ -548,7 +548,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    667
                 </div>
                 
 
@@ -578,91 +578,95 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Node-js-安装配置"><a href="#Node-js-安装配置" class="headerlink" title="Node.js 安装配置"></a>Node.js 安装配置</h1><p>本章节我们将向大家介绍在 Windows 和 Linux 上安装 Node.js 的方法。</p>
-<p>本安装教程以 Node.js v4.4.3 LTS(长期支持版本)版本为例。</p>
-<p>Node.js 安装包及源码下载地址为：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>。</p>
-<p><img src="//www.runoob.com/wp-content/uploads/2014/03/download-page.jpg" alt="nodejs_download"></p>
-<p>你可以根据不同平台系统选择你需要的 Node.js 安装包。</p>
-<p>Node.js 历史版本下载地址：<a target="_blank" rel="noopener" href="https://nodejs.org/dist/">https://nodejs.org/dist/</a></p>
-<p><strong>注意：</strong>Linux 上安装 Node.js 需要安装 Python 2.6 或 2.7 ，不建议安装 Python 3.0 以上版本。</p>
+                <h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a><a href="#%E4%B8%80%E3%80%81%E6%A0%87%E9%A2%98" title="一、标题"></a>一、标题</h1><p>一段句子前面加个#号为一级标题，两个为二级标题，以此类推（注意每个#号后面打空格）。</p>
+<pre class="line-numbers language-none"><code class="language-none"># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <hr>
-<h2 id="Windows-上安装-Node-js"><a href="#Windows-上安装-Node-js" class="headerlink" title="Windows 上安装 Node.js"></a>Windows 上安装 Node.js</h2><p>你可以采用以下两种方式来安装。</p>
-<h3 id="1、Windows-安装包-msi"><a href="#1、Windows-安装包-msi" class="headerlink" title="1、Windows 安装包(.msi)"></a>1、Windows 安装包(.msi)</h3><p><img src="https://www.runoob.com/wp-content/uploads/2014/03/4530AA77-2208-47FA-A900-91C93AEC95AF.jpg"></p>
-<p>本文实例以 v0.10.26 版本为例，其他版本类似， 安装步骤：</p>
-<p>步骤 1 : 双击下载后的安装包 <strong>v0.10.26</strong>，如下所示：</p>
-<p><img src="//www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step1.png" alt="install-node-msi-version-on-windows-step1"></p>
-<p>步骤 2 : 点击以上的Run(运行)，将出现如下界面：</p>
-<p><img src="//www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step2.png" alt="install-node-msi-version-on-windows-step2"></p>
-<p>步骤 3 : 勾选接受协议选项，点击 next（下一步） 按钮 :</p>
-<p><img src="//www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step3.png" alt="install-node-msi-version-on-windows-step3"></p>
-<p>步骤 4 : Node.js默认安装目录为 “C:\Program Files\nodejs\“ , 你可以修改目录，并点击 next（下一步）：</p>
-<p><img src="//www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step4.png" alt="install-node-msi-version-on-windows-step4"></p>
-<p>步骤 5 : 点击树形图标来选择你需要的安装模式 , 然后点击下一步 next（下一步）</p>
-<p><img src="//www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step5.png" alt="install-node-msi-version-on-windows-step5"></p>
-<p>步骤 6 :点击 Install（安装） 开始安装Node.js。你也可以点击 Back（返回）来修改先前的配置。 然后并点击 next（下一步）：</p>
-<p><img src="//www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step6.png" alt="install-node-msi-version-on-windows-step6"></p>
-<p>安装过程：</p>
-<p><img src="//www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step7.png" alt="install-node-msi-version-on-windows-step7"></p>
-<p>点击 Finish（完成）按钮退出安装向导。</p>
-<p><img src="//www.runoob.com/wp-content/uploads/2014/03/install-node-msi-version-on-windows-step8.png" alt="install-node-msi-version-on-windows-step8"></p>
-<p>检测PATH环境变量是否配置了Node.js，点击开始=》运行=》输入”cmd” =&gt; 输入命令”path”，输出如下结果：</p>
-<p>PATH=C:\oraclexe\app\oracle\product\10.2.0\server\bin;C:\Windows\system32;<br>C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;<br>c:\python32\python;C:\MinGW\bin;C:\Program Files\GTK2-Runtime\lib;<br>C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\nodejs\;<br>C:\Users\rg\AppData\Roaming\npm</p>
-<p>我们可以看到环境变量中已经包含了C:\Program Files\nodejs\</p>
-<p>检查Node.js版本</p>
-<p><img src="//www.runoob.com/wp-content/uploads/2014/03/node-version-test.png" alt="node-version-test"></p>
-<h3 id="2、Windows-二进制文件-exe-安装"><a href="#2、Windows-二进制文件-exe-安装" class="headerlink" title="2、Windows 二进制文件 (.exe)安装"></a>2、Windows 二进制文件 (.exe)安装</h3><p>32 位安装包下载地址 : <a target="_blank" rel="noopener" href="http://nodejs.org/dist/v0.10.26/node.exe">http://nodejs.org/dist/v0.10.26/node.exe</a></p>
-<p>64 位安装包下载地址 : <a target="_blank" rel="noopener" href="http://nodejs.org/dist/v0.10.26/x64/node.exe">http://nodejs.org/dist/v0.10.26/x64/node.exe</a></p>
-<p><strong>安装步骤</strong></p>
-<p>步骤 1 : 双击下载的安装包 Node.exe ，将出现如下界面 :</p>
-<p><img src="//www.runoob.com/wp-content/uploads/2014/03/install-node-exe-on-windows-step1.png" alt="install-node-exe-on-windows-step1"></p>
-<p>点击 Run（运行）按钮将出现命令行窗口：</p>
-<p><img src="//www.runoob.com/wp-content/uploads/2014/03/install-node-exe-on-windows-step21.png" alt="install-node-exe-on-windows-step21"></p>
-<h3 id="版本测试"><a href="#版本测试" class="headerlink" title="版本测试"></a>版本测试</h3><p>进入 node.exe 所在的目录，如下所示：</p>
-<p><img src="//www.runoob.com/wp-content/uploads/2014/03/node-version.png" alt="node-version"></p>
-<p>如果你获得以上输出结果，说明你已经成功安装了Node.js。</p>
-<hr>
-<h2 id="Linux-上安装-Node-js"><a href="#Linux-上安装-Node-js" class="headerlink" title="Linux 上安装 Node.js"></a>Linux 上安装 Node.js</h2><h3 id="直接使用已编译好的包"><a href="#直接使用已编译好的包" class="headerlink" title="直接使用已编译好的包"></a>直接使用已编译好的包</h3><p>Node 官网已经把 linux 下载版本更改为已编译好的版本了，我们可以直接下载解压后使用：</p>
-<p># wget <a target="_blank" rel="noopener" href="https://nodejs.org/dist/v10.9.0/node-v10.9.0-linux-x64.tar.xz">https://nodejs.org/dist/v10.9.0/node-v10.9.0-linux-x64.tar.xz</a>    // 下载<br> tar xf  node-v10.9.0-linux-x64.tar.xz       // 解压<br> cd node-v10.9.0-linux-x64/                  // 进入解压目录<br> ./bin/node -v                               // 执行node命令 查看版本<br>v10.9.0</p>
-<p>解压文件的 bin 目录底下包含了 node、npm 等命令，我们可以使用 ln 命令来设置软连接：</p>
-<p>ln -s /usr/software/nodejs/bin/npm   /usr/local/bin/<br>ln -s /usr/software/nodejs/bin/node   /usr/local/bin/</p>
-<h3 id="Ubuntu-源码安装-Node-js"><a href="#Ubuntu-源码安装-Node-js" class="headerlink" title="Ubuntu 源码安装 Node.js"></a>Ubuntu 源码安装 Node.js</h3><p>以下部分我们将介绍在 Ubuntu Linux 下使用源码安装 Node.js 。 其他的 Linux 系统，如 Centos 等类似如下安装步骤。</p>
-<p>在 Github 上获取 Node.js 源码：</p>
-<p>$ sudo git clone <a target="_blank" rel="noopener" href="https://github.com/nodejs/node.git">https://github.com/nodejs/node.git</a><br>Cloning into ‘node’…</p>
-<p>修改目录权限：</p>
-<p>$ sudo chmod -R 755 node</p>
-<p>使用 <strong>./configure</strong> 创建编译文件，并按照：</p>
-<p>$ cd node<br>$ sudo ./configure<br>$ sudo make<br>$ sudo make install</p>
-<p>查看 node 版本：</p>
-<p>$ node –version<br>v0.10.25</p>
-<h3 id="Ubuntu-apt-get命令安装"><a href="#Ubuntu-apt-get命令安装" class="headerlink" title="Ubuntu apt-get命令安装"></a>Ubuntu apt-get命令安装</h3><p>命令格式如下：</p>
-<p>sudo apt-get install nodejs<br>sudo apt-get install npm</p>
-<h3 id="CentOS-下源码安装-Node-js"><a href="#CentOS-下源码安装-Node-js" class="headerlink" title="CentOS 下源码安装 Node.js"></a>CentOS 下源码安装 Node.js</h3><p>1、下载源码，你需要在<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>下载最新的Nodejs版本，本文以v0.10.24为例:</p>
-<p>cd /usr/local/src/<br>wget <a target="_blank" rel="noopener" href="http://nodejs.org/dist/v0.10.24/node-v0.10.24.tar.gz">http://nodejs.org/dist/v0.10.24/node-v0.10.24.tar.gz</a></p>
-<p>2、解压源码</p>
-<p>tar zxvf node-v0.10.24.tar.gz</p>
-<p>3、 编译安装</p>
-<p>cd node-v0.10.24<br>./configure –prefix=/usr/local/node/0.10.24<br>make<br>make install</p>
-<p>4、 配置NODE_HOME，进入profile编辑环境变量</p>
-<p>vim /etc/profile</p>
-<p>设置 nodejs 环境变量，在 <em><strong>export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL</strong></em> 一行的上面添加如下内容:</p>
-<p>#set for nodejs<br>export NODE_HOME=/usr/local/node/0.10.24<br>export PATH=$NODE_HOME/bin:$PATH</p>
-<p>:wq保存并退出，编译/etc/profile 使配置生效</p>
-<p>source /etc/profile</p>
-<p>验证是否安装配置成功</p>
-<p>node -v</p>
-<p>输出 v0.10.24 表示配置成功</p>
-<p>npm模块安装路径</p>
-<p>/usr/local/node/0.10.24/lib/node_modules/</p>
-<p><strong>注：</strong>Nodejs 官网提供了编译好的 Linux 二进制包，你也可以下载下来直接应用。</p>
-<hr>
-<h2 id="Mac-OS-上安装"><a href="#Mac-OS-上安装" class="headerlink" title="Mac OS 上安装"></a>Mac OS 上安装</h2><p>你可以通过以下两种方式在 Mac OS 上来安装 node：</p>
-<ul>
-<li><p>1、在<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">官方下载网站</a>下载 pkg 安装包，直接点击安装即可。</p>
-</li>
-<li><p>2、使用 brew 命令来安装：</p>
-<p>brew install node</p>
-</li>
+<h1 id="二、段落"><a href="#二、段落" class="headerlink" title="二、段落"></a><a href="#%E4%BA%8C%E3%80%81%E6%AE%B5%E8%90%BD" title="二、段落"></a>二、段落</h1><ul>
+<li>斜体 ：在加粗的文字两边分别加一个*号</li>
+<li>粗体： 在加斜的文字两边分别加两个*号</li>
+<li>斜粗体：文字两边分别加三个*号</li>
+<li>分割线： 三个或者三个以上的 - 或者 * 都可以。</li>
+<li>删除线：文字两边分别加两个~~</li>
+<li>下划线： 文字两边分别加两个 <code>&lt;u&gt;</code></li>
+<li>脚注： 语法<code>[^要注明的文本]: 内容</code></li>
 </ul>
+<hr>
+<h1 id="三、列表"><a href="#三、列表" class="headerlink" title="三、列表"></a><a href="#%E4%B8%89%E3%80%81%E5%88%97%E8%A1%A8" title="三、列表"></a>三、列表</h1><p>无序列表使用*<strong>**、</strong>+<strong>或</strong>-**作为列表标记，这些标记后面要添加一个空格，然后再填写内容：</p>
+<pre class="line-numbers language-none"><code class="language-none">* 第一项
+* 第二项
+* 第三项
+
++ 第一项
++ 第二项
++ 第三项
+
+- 第一项
+- 第二项
+- 第三项<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>有序列表使用数字并加上 <strong>.</strong> 号来表示，如：</p>
+<pre class="line-numbers language-none"><code class="language-none">1. 第一项
+2. 第二项
+3. 第三项<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a><a href="#%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97" title="列表嵌套"></a>列表嵌套</h2><p>列表嵌套只需在子列表中的选项前面添加四个空格即可：</p>
+<pre class="line-numbers language-none"><code class="language-none">1. 第一项：
+    - 第一项嵌套的第一个元素
+    - 第一项嵌套的第二个元素
+2. 第二项：
+    - 第二项嵌套的第一个元素
+    - 第二项嵌套的第二个元素<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h1 id="四、区块"><a href="#四、区块" class="headerlink" title="四、区块"></a><a href="#%E5%9B%9B%E3%80%81%E5%8C%BA%E5%9D%97" title="四、区块"></a>四、区块</h1><p>Markdown 区块引用是在段落开头使用 <strong>&gt;</strong> 符号 ，然后后面紧跟一个<strong>空格</strong>符号：。</p>
+<p>另外区块是可以嵌套的，一个 <strong>&gt;</strong> 符号是最外层，两个 <strong>&gt;</strong> 符号是第一层嵌套，以此类推：</p>
+<h2 id="1-区块中使用列表"><a href="#1-区块中使用列表" class="headerlink" title="1. 区块中使用列表"></a><a href="#1-%E5%8C%BA%E5%9D%97%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8" title="1. 区块中使用列表"></a>1. 区块中使用列表</h2><pre class="line-numbers language-none"><code class="language-none">&gt; 区块中使用列表
+&gt; 1. 第一项
+&gt; 2. 第二项
+&gt; + 第一项
+&gt; + 第二项
+&gt; + 第三项<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="2-列表中使用区块"><a href="#2-列表中使用区块" class="headerlink" title="2. 列表中使用区块"></a><a href="#2-%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%9D%97" title="2. 列表中使用区块"></a>2. 列表中使用区块</h2><pre class="line-numbers language-none"><code class="language-none">* 第一项
+    &gt; 菜鸟教程
+    &gt; 学的不仅是技术更是梦想
+* 第二项<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h1 id="五、代码"><a href="#五、代码" class="headerlink" title="五、代码"></a><a href="#%E4%BA%94%E3%80%81%E4%BB%A3%E7%A0%81" title="五、代码"></a>五、代码</h1><ol>
+<li><p>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（**`**），例如：</p>
+<p> <code>printf()</code>函数</p>
+</li>
+<li><p> 代码区块：段落前加三个```。</p>
+</li>
+</ol>
+<hr>
+<h1 id="六、链接"><a href="#六、链接" class="headerlink" title="六、链接"></a><a href="#%E5%85%AD%E3%80%81%E9%93%BE%E6%8E%A5" title="六、链接"></a>六、链接</h1><p>语法：<code>[链接名称](链接地址)</code>或<code>&lt;链接地址&gt;</code></p>
+<hr>
+<h1 id="七、图片"><a href="#七、图片" class="headerlink" title="七、图片"></a><a href="#%E4%B8%83%E3%80%81%E5%9B%BE%E7%89%87" title="七、图片"></a>七、图片</h1><p>语法：<code>![图片alt](图片地址 &quot;title&quot;)</code></p>
+<p>图片alt就是显示在图片下面的文字，相当于对图片内容的解释。<br>图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</p>
+<hr>
+<h1 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a><a href="#%E5%85%AB%E3%80%81%E8%A1%A8%E6%A0%BC" title="八、表格"></a>八、表格</h1><p>语法：<code>用|来分隔单元格，用---来分隔表头和其他行</code>，如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">|  表头   | 表头  |
+|  ---  | ---  |
+| 单元格  | 单元格 |
+| 单元格  | 单元格 |<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>对齐方式：</p>
+<ul>
+<li><code>--:</code>:右对齐</li>
+<li><code>:--</code>:左对齐</li>
+<li><code>:-:</code>:中对齐</li>
+</ul>
+<hr>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-advance.html">markdown更多高级技巧</a></p>
+<hr>
 
                 
             </div>
@@ -689,7 +693,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://aboshi8.github.io/posts/daebf257.html">https://aboshi8.github.io/posts/daebf257.html</a>
+                    <a href="https://aboshi8.github.io/posts/9fae5294.html">https://aboshi8.github.io/posts/9fae5294.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -727,8 +731,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/nodejs/">
-                                    <span class="chip bg-color">nodejs</span>
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">Markdown</span>
                                 </a>
                             
                         </div>
@@ -1161,17 +1165,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/6d28dd00.html">
+                <a href="/posts/9fae5294.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/30.jpg" class="responsive-img" alt="github文件下载慢的完美解决方案">
+                        <img src="/medias/featureimages/29.jpg" class="responsive-img" alt="Markdown写作语法">
                         
-                        <span class="card-title">github文件下载慢的完美解决方案</span>
+                        <span class="card-title">Markdown写作语法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1181,9 +1186,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1191,6 +1196,15 @@
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1202,13 +1216,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/6f43ac77.html">
+                <a href="/posts/d2f5cb8d.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Hexo+github如何搭建博客">
+                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="hexo-electric-clock电子时钟插件">
                         
-                        <span class="card-title">Hexo+github如何搭建博客</span>
+                        <span class="card-title">hexo-electric-clock电子时钟插件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1219,7 +1233,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-09
                             </span>
                         <span class="publish-author">
                             
@@ -1236,8 +1250,8 @@
                         <span class="chip bg-color">Hexo</span>
                     </a>
                     
-                    <a href="/tags/Github/">
-                        <span class="chip bg-color">Github</span>
+                    <a href="/tags/%E6%8F%92%E4%BB%B6/">
+                        <span class="chip bg-color">插件</span>
                     </a>
                     
                 </div>

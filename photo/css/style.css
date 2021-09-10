@@ -32,7 +32,7 @@
 body{
     /* background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fcdn.duitang.com%2Fuploads%2Fitem%2F201211%2F24%2F20121124225729_uh5i5.jpeg&refer=http%3A%2F%2Fcdn.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633621040&t=68fd26b27657bf2272f6d063cbe4efbc); */
     overflow: auto;
-    background:#322;
+    background:rgb(54, 107, 156);
 }
 
 
