@@ -138,15 +138,6 @@
         </a>
       </li>
       
-      <li>
-        <a href="/blog/girlfriend">
-          
-          <i class="fas fa-camera-retro" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>幸福时刻</span>
-        </a>
-      </li>
-      
     </ul>
     
   </li>
@@ -313,16 +304,6 @@
 				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
 			      
 		          <span>壁纸</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a href="/blog/girlfriend " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-camera-retro" style="position: absolute;left:50px" ></i>
-			      
-		          <span>幸福时刻</span>
                   </a>
                 </li>
               
@@ -674,20 +655,20 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 
 <p>点击回车，然后会出现一个询问内容，输入<code>yes</code>，回车，会出现一段内容，<code>Hi ! You&#39;ve successfully authenticated, but GitHub doesnot provide shell access.</code>。 说明连接成功。此处这个``应该是你Github的用户名。</p>
 <p>进入博客站点目录，用文本编辑器打开<code>_config.yml</code>，这个<code>_config.yml</code>是博客的配置文件，在以后的博客修改，如个性化修改，博客SEO优化等都会使用到，修改如下图的几个地方：</p>
-<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">title: 你的博客名
-subtitle: 博客的副标题，有些主题支持
-description: 博客描述
-keywords: 博客关键词
-author: 作者，在文章中显示
-language: 博客语言语种   
-timezone: 时区<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"><span class="token key atrule">title</span><span class="token punctuation">:</span> 你的博客名
+<span class="token key atrule">subtitle</span><span class="token punctuation">:</span> 博客的副标题，有些主题支持
+<span class="token key atrule">description</span><span class="token punctuation">:</span> 博客描述
+<span class="token key atrule">keywords</span><span class="token punctuation">:</span> 博客关键词
+<span class="token key atrule">author</span><span class="token punctuation">:</span> 作者，在文章中显示
+<span class="token key atrule">language</span><span class="token punctuation">:</span> 博客语言语种   
+<span class="token key atrule">timezone</span><span class="token punctuation">:</span> 时区<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2JhaWZlbmc2Ni9waWNnb3Bob3RzL2ltYWdlcy8yMDE5MTExNzIyNDEzOC5wbmc?x-oss-process=image/format,png"></p>
 <p>滑到文件最底部，有一个deploy，在deploy下面添加一个repo项 ，一个branch项。填入如下代码，并如下图所示：</p>
-<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">type: git
-repo: git@github.com:Github用户名&#x2F;github用户名.github.io.git  
-&#x2F;&#x2F;也可使用https地址，如：https:&#x2F;&#x2F;github.com&#x2F;Github用户名&#x2F;Github用户名.github.io.git            
-branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"><span class="token key atrule">type</span><span class="token punctuation">:</span> git
+<span class="token key atrule">repo</span><span class="token punctuation">:</span> git@github.com<span class="token punctuation">:</span>Github用户名/github用户名.github.io.git  
+//也可使用https地址，如：https<span class="token punctuation">:</span>//github.com/Github用户名/Github用户名.github.io.git            
+<span class="token key atrule">branch</span><span class="token punctuation">:</span> master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2JhaWZlbmc2Ni9waWNnb3Bob3RzL2ltYWdlcy8yMDE5MTExNzIyNDE1MS5wbmc?x-oss-process=image/format,png"></p>
 <p>最后就是生成页面，并发布至Github Pages，执行如下命令：</p>
