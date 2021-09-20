@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="《MySQL必知必会》第6-7章 过滤数据与数据过滤, kalbim">
+    <meta name="keywords" content="计算机网络,计网">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>《MySQL必知必会》第6-7章 过滤数据与数据过滤 | Kalbim</title>
+    <title>从输入URL到页面展示，这中间发生了什么 | Kalbim</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -393,12 +393,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/37.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/48.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">《MySQL必知必会》第6-7章 过滤数据与数据过滤</h1>
+                    <h1 class="description center-align post-title">从输入URL到页面展示，这中间发生了什么</h1>
                 </div>
             </div>
         </div>
@@ -514,12 +514,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/MySQL/">
-                                <span class="chip bg-color">MySQL</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                <span class="chip bg-color">数据库</span>
+                            <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                                <span class="chip bg-color">计网</span>
                             </a>
                         
                     </div>
@@ -534,7 +530,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-06
+                    2021-09-20
                 </div>
                 
 
@@ -543,7 +539,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    4.1k
                 </div>
                 
 
@@ -573,196 +569,175 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="《MySQL必知必会》第4-5章-SELECT检索与排序"><a href="#《MySQL必知必会》第4-5章-SELECT检索与排序" class="headerlink" title="《MySQL必知必会》第4-5章 SELECT检索与排序"></a>《MySQL必知必会》第4-5章 SELECT检索与排序</h1><h1 id="1-SELECT-语句"><a href="#1-SELECT-语句" class="headerlink" title="1. SELECT 语句"></a><a href="#1-SELECT-%E8%AF%AD%E5%8F%A5" title="1. SELECT 语句"></a>1. SELECT 语句</h1><h2 id="1-1-检索单个列"><a href="#1-1-检索单个列" class="headerlink" title="1.1 检索单个列"></a><a href="#1-1-%E6%A3%80%E7%B4%A2%E5%8D%95%E4%B8%AA%E5%88%97" title="1.1 检索单个列"></a>1.1 检索单个列</h2><p>关键字SELECT后写需要查询的列名</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql<span class="token operator">></span> <span class="token keyword">select</span> prod\_name <span class="token keyword">from</span> products<span class="token punctuation">;</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">---------------+  </span>
-<span class="token operator">|</span> prod\_name      \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">---------------+  </span>
-<span class="token operator">|</span> Fuses          \<span class="token operator">|</span>  
-<span class="token operator">|</span> JetPack <span class="token number">1000</span>   \<span class="token operator">|</span>  
-<span class="token operator">|</span> TNT \<span class="token punctuation">(</span><span class="token number">5</span> sticks\<span class="token punctuation">)</span> \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">---------------+  </span>
-<span class="token number">14</span> <span class="token keyword">rows</span> <span class="token operator">in</span> <span class="token keyword">set</span> \<span class="token punctuation">(</span><span class="token number">0.00</span> sec\<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <p>“从浏览器地址栏输入 url 到请求返回发生了什么？”，呃，这道面试题我都不知道被问了多少遍，作为必考题，我们有必要总结一下。</p>
+<p>总的来说，分为以下几个过程：</p>
+<ul>
+<li>1、DNS 解析</li>
+<li>2、TCP 连接</li>
+<li>3、发送 HTTP 请求</li>
+<li>4、服务器处理请求并返回 HTTP 报文</li>
+<li>5、浏览器解析渲染页面</li>
+</ul>
+<p>下面让我们了解下这 5 个过程。</p>
+<h2 id="一、DNS-解析"><a href="#一、DNS-解析" class="headerlink" title="一、DNS 解析"></a>一、DNS 解析</h2><p>DNS( Domain Name System)是”域名系统”的英文缩写。DNS 解析的过程就是寻找哪台机器上有你需要资源的过程。</p>
+<p>当你在浏览器中输入一个地址时，例如<code>www.shanzhonglei.com</code>，其实不是网站真正意义上的地址。互联网上每一台计算机的唯一标识是它的 IP 地址，但是 IP 地址并不方便记忆，所以就用网址代替 IP 地址。</p>
+<h3 id="1-1-DNS-域名解析过程"><a href="#1-1-DNS-域名解析过程" class="headerlink" title="1.1 DNS 域名解析过程"></a>1.1 DNS 域名解析过程</h3><ul>
+<li>1、浏览器缓存。首先会检查浏览器缓存中有没有域名对应的 ip 地址，这个缓存是有过期时长的，一般是几分钟到几小时不等。</li>
+<li>2、本地 hosts 文件。检查自己本地的 hosts 文件是否有这个网址映射关系。windows 就是 C:\Windows\System32\drivers\etc\hosts 文件，linux 在/etc/hosts 文件中配置。</li>
+<li>3、路由器缓存。可能还存在路由器缓存这一层。</li>
+<li>3、本地 DNS 服务器。如果要查询的域名，包含在本地配置区域资源中，则返回解析结果给客户机。此解析具有权威性。</li>
+<li>4、根 DNS 服务器。如果未用转发模式，本地 DNS 就把请求发至 13 台根 DNS 进行解析。如果是转发模式，DNS 服务器就会把请求转发至上一级 DNS 服务器，由上一级服务器进行解析，上一级服务器如果不能解析，或找根 DNS 或把转请求转至上上级，以此循环。</li>
+<li>5、此外还会去查询顶级域名服务器和主域名服务器</li>
+</ul>
+<p>所以解析过程大概为：<code>浏览器缓存-&gt;本地hosts文件-&gt;路由器缓存-&gt;本地DNS服务器-&gt;根DNS服务器-&gt;顶级域名服务器-&gt;主域名服务器</code></p>
+<h3 id="1-2-前端-DNS-优化"><a href="#1-2-前端-DNS-优化" class="headerlink" title="1.2 前端 DNS 优化"></a>1.2 前端 DNS 优化</h3><p>可以在 html 页面头部写入 dns 缓存地址。</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>x-dns-prefetch-control<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>on<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dns-prefetch<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.shanzhonglei.com/<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<blockquote>
+<h3 id="1-3-DNS-负载均衡"><a href="#1-3-DNS-负载均衡" class="headerlink" title="1.3 DNS 负载均衡"></a>1.3 DNS 负载均衡</h3><p>如果 DNS 返回的 IP 地址每次都一样，那么这台机器需要多高的性能和储存才能满足亿万请求呢？</p>
+<p>其实 DNS 可以返回一个合适的机器的 IP 给用户，例如可以根据每台机器的负载量，该机器离用户地理位置的距离等等，这种过程就是 DNS 负载均衡，又叫做 DNS 重定向。</p>
+<p>大家耳熟能详的 CDN(Content Delivery Network)就是利用 DNS 的重定向技术，DNS 服务器会返回一个跟用户最接近的点的 IP 地址给用户，CDN 节点的服务器负责响应用户的请求，提供所需的内容。</p>
+<h2 id="二、TCP-连接"><a href="#二、TCP-连接" class="headerlink" title="二、TCP 连接"></a>二、TCP 连接</h2><p>用户数据包协议（User Datagram Protocol），简称 UDP，是基于 IP 之上开发能和应用打交道的协议。</p>
+<p>UDP 中一个最重要的信息是端口号，端口号其实就是一个数字，每个想访问网络的程序都需要绑定一个端口号。</p>
+<p>通过端口号 UDP 就能把指定的数据包发送给指定的程序了，所以通过 IP 地址信息把数据包发送给指定的电脑，而 UDP 通过端口号把数据包分发给正确的程序。</p>
+<p>TCP（Transmission Control Protocol，传输控制协议）是一种面向连接的、可靠的、基于字节流的传输层通信协议。TCP 相对于 UDP 有两个特点：</p>
+<ul>
+<li>对于数据包的丢失，建立重传机制</li>
+<li>TCP 引入数据包排序机制，用来保证把乱序的数据包组合成一个完整的文件</li>
+</ul>
+<p>三次握手，就是指在建立一个 TCP 连接时，客户端和服务器总共要发送 3 个数据包来确认连接的建立。三次握手主要作用：</p>
+<ul>
+<li>1、确认双方的接收能力和发送能力</li>
+<li>2、指定自己的初始化序列号，为后面的可靠性做准备</li>
+</ul>
+<h3 id="2-1-三次握手过程"><a href="#2-1-三次握手过程" class="headerlink" title="2.1 三次握手过程"></a>2.1 三次握手过程</h3><p>刚开始客户端处于 Closed 的状态，服务器处于 Listen 状态。</p>
 <ol>
-<li> 多条SQL语句必须使用分号(;)分隔,推荐做法.</li>
-<li> SQL语句不区分大小写</li>
+<li><strong>客户端发送到服务器</strong>。客户端发送 <code>SYN</code> 报文给服务器，并且指明客户端初始化序列号为 <code>ISN(c)</code>，即以 <code>SYN=1, seq=x</code> 的形式发送过去。此时客户端处于 <code>SYN_SEND</code> 状态。</li>
+<li><strong>服务器发送给客户端</strong>。服务器收到客户端的 <code>SYN</code> 和 <code>ISN(c)</code>，也发送一个 <code>SYN</code> 回去，同时设置 <code>ACK = ISN(c) + 1</code> 以及指明服务器初始化序列号为 <code>ISN(s)</code>，即以 <code>SYN=1, ACK=x+1， seq=y</code> 的形式发送给客户端。</li>
+<li><strong>客户端发送到服务器</strong>。客户端收到服务器发送的消息后，设置 <code>ACK = ISN(s) + 1</code>，将自身的 <code>ISN(c) + 1</code>，即以 <code>ACK=y+1, seq=x+1</code> 的形式发送给服务器。此时客户端处于 <code>ESTABLISHED</code> 阶段，服务器收到报文，也处于 <code>ESTABLISHED</code> 阶段，双方建立了连接。<br><img src="https://segmentfault.com/img/bVcUYtV"></li>
 </ol>
-</blockquote>
-<h2 id="1-2-检索多个列"><a href="#1-2-检索多个列" class="headerlink" title="1.2 检索多个列"></a><a href="#1-2-%E6%A3%80%E7%B4%A2%E5%A4%9A%E4%B8%AA%E5%88%97" title="1.2 检索多个列"></a>1.2 检索多个列</h2><p>和检索单列类似,关键字SELECT后写需要查询的列名,逗号分隔</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql<span class="token operator">></span> <span class="token keyword">select</span> prod\_id<span class="token punctuation">,</span>prod\_name<span class="token punctuation">,</span>prod\_price <span class="token keyword">from</span> products<span class="token punctuation">;</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+----------------+------------+  </span>
-<span class="token operator">|</span> prod\_id <span class="token operator">|</span> prod\_name      <span class="token operator">|</span> prod\_price \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+----------------+------------+  </span>
-<span class="token operator">|</span> ANV01   <span class="token operator">|</span> <span class="token number">.5</span> ton anvil   <span class="token operator">|</span>       <span class="token number">5.99</span> \<span class="token operator">|</span>  
-<span class="token operator">|</span> ANV02   <span class="token operator">|</span> <span class="token number">1</span> ton anvil    <span class="token operator">|</span>       <span class="token number">9.99</span> \<span class="token operator">|</span>  
-<span class="token operator">|</span> ANV03   <span class="token operator">|</span> <span class="token number">2</span> ton anvil    <span class="token operator">|</span>      <span class="token number">14.99</span> \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+----------------+------------+  </span>
-<span class="token number">14</span> <span class="token keyword">rows</span> <span class="token operator">in</span> <span class="token keyword">set</span> \<span class="token punctuation">(</span><span class="token number">0.00</span> sec\<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="1-3-检索所有列"><a href="#1-3-检索所有列" class="headerlink" title="1.3 检索所有列"></a><a href="#1-3-%E6%A3%80%E7%B4%A2%E6%89%80%E6%9C%89%E5%88%97" title="1.3 检索所有列"></a>1.3 检索所有列</h2><p>使用通配符(*)即可</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> \<span class="token operator">*</span> <span class="token keyword">from</span> products<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-<p>最好别使用*通配符,虽然此种写法方便,但是索引不需要的列通常会降低检索和应用程序的性能</p>
-</blockquote>
-<h2 id="1-4-检索不同行并去重"><a href="#1-4-检索不同行并去重" class="headerlink" title="1.4 检索不同行并去重"></a><a href="#1-4-%E6%A3%80%E7%B4%A2%E4%B8%8D%E5%90%8C%E8%A1%8C%E5%B9%B6%E5%8E%BB%E9%87%8D" title="1.4 检索不同行并去重"></a>1.4 检索不同行并去重</h2><p>使用关键字DISTINCT,指示MySQL只返回不同值,从而达到去重目的.</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql<span class="token operator">></span> <span class="token keyword">select</span> vend\_id <span class="token keyword">from</span> products<span class="token punctuation">;</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+  </span>
-<span class="token operator">|</span> vend\_id \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+  </span>
-<span class="token operator">|</span>    <span class="token number">1001</span> \<span class="token operator">|</span>  
-<span class="token operator">|</span>    <span class="token number">1002</span> \<span class="token operator">|</span>  
-<span class="token operator">|</span>    <span class="token number">1003</span> \<span class="token operator">|</span>  
-<span class="token operator">|</span>    <span class="token number">1003</span> \<span class="token operator">|</span>  
-<span class="token operator">|</span>    <span class="token number">1005</span> \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+  </span>
-<span class="token number">14</span> <span class="token keyword">rows</span> <span class="token operator">in</span> <span class="token keyword">set</span> \<span class="token punctuation">(</span><span class="token number">0.00</span> sec\<span class="token punctuation">)</span>  
-  
-mysql<span class="token operator">></span> <span class="token keyword">select</span> <span class="token keyword">distinct</span> vend\_id <span class="token keyword">from</span> products<span class="token punctuation">;</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+  </span>
-<span class="token operator">|</span> vend\_id \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+  </span>
-<span class="token operator">|</span>    <span class="token number">1001</span> \<span class="token operator">|</span>  
-<span class="token operator">|</span>    <span class="token number">1002</span> \<span class="token operator">|</span>  
-<span class="token operator">|</span>    <span class="token number">1003</span> \<span class="token operator">|</span>  
-<span class="token operator">|</span>    <span class="token number">1005</span> \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+  </span>
-<span class="token number">4</span> <span class="token keyword">rows</span> <span class="token operator">in</span> <span class="token keyword">set</span> \<span class="token punctuation">(</span><span class="token number">0.01</span> sec\<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<blockquote>
+<h3 id="2-2、两次握手不行吗？"><a href="#2-2、两次握手不行吗？" class="headerlink" title="2.2、两次握手不行吗？"></a>2.2、两次握手不行吗？</h3><p>三次握手的目的：</p>
 <ol>
-<li> DISTINCT关键字必须直接放在列名的前面</li>
-<li> 不能不分使用DISTINCT,即DISTINCT关键字应用于所有列而不仅是前置它的列</li>
+<li>客户端发送数据给服务器，服务器确认自己可以接受客户端的请求。</li>
+<li>服务器发送数据给客户端，客户端确认自己可以发送数据给服务器，也可以接受到服务器的请求。</li>
+<li>客户端发送数据给服务器，服务器确认自己可以发送数据给客户端。</li>
 </ol>
-</blockquote>
-<h2 id="1-5-限制结果-Limit使用"><a href="#1-5-限制结果-Limit使用" class="headerlink" title="1.5 限制结果 Limit使用"></a><a href="#1-5-%E9%99%90%E5%88%B6%E7%BB%93%E6%9E%9C-Limit%E4%BD%BF%E7%94%A8" title="1.5 限制结果 Limit使用"></a>1.5 限制结果 Limit使用</h2><p>只返回指定个数的结果,在语句后使用关键字 limit,关键字后加行数即可</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql<span class="token operator">></span> <span class="token keyword">select</span> prod\_name <span class="token keyword">from</span> products <span class="token keyword">limit</span> <span class="token number">2</span><span class="token punctuation">;</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">-------------+  </span>
-<span class="token operator">|</span> prod\_name    \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">-------------+  </span>
-<span class="token operator">|</span> <span class="token number">.5</span> ton anvil \<span class="token operator">|</span>  
-<span class="token operator">|</span> <span class="token number">1</span> ton anvil  \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">-------------+  </span>
-<span class="token number">2</span> <span class="token keyword">rows</span> <span class="token operator">in</span> <span class="token keyword">set</span> \<span class="token punctuation">(</span><span class="token number">0.00</span> sec\<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>指定检索的开始行和行数 <code>limit m,n</code></p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql<span class="token operator">></span> <span class="token keyword">select</span> prod\_name <span class="token keyword">from</span> products <span class="token keyword">limit</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">;</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">-------------+  </span>
-<span class="token operator">|</span> prod\_name    \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">-------------+  </span>
-<span class="token operator">|</span> <span class="token number">.5</span> ton anvil \<span class="token operator">|</span>  
-<span class="token operator">|</span> <span class="token number">1</span> ton anvil  \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">-------------+  </span>
-<span class="token number">2</span> <span class="token keyword">rows</span> <span class="token operator">in</span> <span class="token keyword">set</span> \<span class="token punctuation">(</span><span class="token number">0.00</span> sec\<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">第一个数为开始位置,第二个数为要检索出来的行数.
-上面语句的意思 : 从第0行开始,检索出2行的数据.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<blockquote>
-<p>在LIMIT中指定要检索的行数为检索的最大行数,如果没有足够的行,MySQL将只返回它能返回的那么多行.</p>
-</blockquote>
-<h2 id="1-6-使用完全限定的表名"><a href="#1-6-使用完全限定的表名" class="headerlink" title="1.6 使用完全限定的表名"></a><a href="#1-6-%E4%BD%BF%E7%94%A8%E5%AE%8C%E5%85%A8%E9%99%90%E5%AE%9A%E7%9A%84%E8%A1%A8%E5%90%8D" title="1.6 使用完全限定的表名"></a>1.6 使用完全限定的表名</h2><p>完全限定的表名可以默认不添加,但是在某些场景下(后续介绍)完全限定的表名还是非常有必须要的.</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql<span class="token operator">></span> <span class="token keyword">select</span> products<span class="token punctuation">.</span>prod\_name <span class="token keyword">from</span> products<span class="token punctuation">;</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">---------------+  </span>
-<span class="token operator">|</span> prod\_name      \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">---------------+  </span>
-<span class="token operator">|</span> <span class="token number">.5</span> ton anvil   \<span class="token operator">|</span>  
-<span class="token operator">|</span> <span class="token number">1</span> ton anvil    \<span class="token operator">|</span>  
-<span class="token operator">|</span> <span class="token number">2</span> ton anvil    \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">---------------+  </span>
-<span class="token number">14</span> <span class="token keyword">rows</span> <span class="token operator">in</span> <span class="token keyword">set</span> \<span class="token punctuation">(</span><span class="token number">0.00</span> sec\<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="2-排序检索数据"><a href="#2-排序检索数据" class="headerlink" title="2. 排序检索数据"></a><a href="#2-%E6%8E%92%E5%BA%8F%E6%A3%80%E7%B4%A2%E6%95%B0%E6%8D%AE" title="2. 排序检索数据"></a>2. 排序检索数据</h1><h2 id="2-1-按单个列排序"><a href="#2-1-按单个列排序" class="headerlink" title="2.1 按单个列排序"></a><a href="#2-1-%E6%8C%89%E5%8D%95%E4%B8%AA%E5%88%97%E6%8E%92%E5%BA%8F" title="2.1 按单个列排序"></a>2.1 按单个列排序</h2><p>数据默认检索出来的顺序是按照数据最初在表中被添加的顺序,我们可以使用<code>ORDER BY</code>子句来显示的指定排序字段.</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql<span class="token operator">></span> <span class="token keyword">select</span> prod\_name <span class="token keyword">from</span> products <span class="token keyword">order</span> <span class="token keyword">by</span> prod\_name<span class="token punctuation">;</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">---------------+  </span>
-<span class="token operator">|</span> prod\_name      \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">---------------+  </span>
-<span class="token operator">|</span> <span class="token number">.5</span> ton anvil   \<span class="token operator">|</span>  
-<span class="token operator">|</span> <span class="token number">1</span> ton anvil    \<span class="token operator">|</span>  
-<span class="token operator">|</span> <span class="token number">2</span> ton anvil    \<span class="token operator">|</span>  
-<span class="token operator">|</span> Bird seed      \<span class="token operator">|</span>  
-<span class="token operator">|</span> Carrots        \<span class="token operator">|</span>  
-<span class="token operator">|</span> Detonator      \<span class="token operator">|</span>  
-<span class="token operator">|</span> Fuses          \<span class="token operator">|</span>  
-<span class="token operator">|</span> JetPack <span class="token number">1000</span>   \<span class="token operator">|</span>  
-<span class="token operator">|</span> JetPack <span class="token number">2000</span>   \<span class="token operator">|</span>  
-<span class="token operator">|</span> Oil can        \<span class="token operator">|</span>  
-<span class="token operator">|</span> Safe           \<span class="token operator">|</span>  
-<span class="token operator">|</span> Sling          \<span class="token operator">|</span>  
-<span class="token operator">|</span> TNT \<span class="token punctuation">(</span><span class="token number">1</span> stick\<span class="token punctuation">)</span>  \<span class="token operator">|</span>  
-<span class="token operator">|</span> TNT \<span class="token punctuation">(</span><span class="token number">5</span> sticks\<span class="token punctuation">)</span> \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">---------------+  </span>
-<span class="token number">14</span> <span class="token keyword">rows</span> <span class="token operator">in</span> <span class="token keyword">set</span> \<span class="token punctuation">(</span><span class="token number">0.00</span> sec\<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<blockquote>
-<p>此处是按照字典书序排序</p>
-</blockquote>
-<h2 id="2-2-按多个列排序"><a href="#2-2-按多个列排序" class="headerlink" title="2.2 按多个列排序"></a><a href="#2-2-%E6%8C%89%E5%A4%9A%E4%B8%AA%E5%88%97%E6%8E%92%E5%BA%8F" title="2.2 按多个列排序"></a>2.2 按多个列排序</h2><p>多个列排序,只要指定列名,列名之间用逗号分隔即可.<br>检索三个列,首先按价格排序,然后再按名称排序:</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql<span class="token operator">></span> <span class="token keyword">select</span> prod\_id<span class="token punctuation">,</span>prod\_price<span class="token punctuation">,</span>prod\_name <span class="token keyword">from</span> products <span class="token keyword">order</span> <span class="token keyword">by</span> prod\_price<span class="token punctuation">,</span>prod\_name<span class="token punctuation">;</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+------------+----------------+  </span>
-<span class="token operator">|</span> prod\_id <span class="token operator">|</span> prod\_price <span class="token operator">|</span> prod\_name      \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+------------+----------------+  </span>
-<span class="token operator">|</span> FC      <span class="token operator">|</span>       <span class="token number">2.50</span> <span class="token operator">|</span> Carrots        \<span class="token operator">|</span>  
-<span class="token operator">|</span> TNT1    <span class="token operator">|</span>       <span class="token number">2.50</span> <span class="token operator">|</span> TNT \<span class="token punctuation">(</span><span class="token number">1</span> stick\<span class="token punctuation">)</span>  \<span class="token operator">|</span>  
-<span class="token operator">|</span> FU1     <span class="token operator">|</span>       <span class="token number">3.42</span> <span class="token operator">|</span> Fuses          \<span class="token operator">|</span>  
-<span class="token operator">|</span> SLING   <span class="token operator">|</span>       <span class="token number">4.49</span> <span class="token operator">|</span> Sling          \<span class="token operator">|</span>  
-<span class="token operator">|</span> ANV01   <span class="token operator">|</span>       <span class="token number">5.99</span> <span class="token operator">|</span> <span class="token number">.5</span> ton anvil   \<span class="token operator">|</span>  
-<span class="token operator">|</span> OL1     <span class="token operator">|</span>       <span class="token number">8.99</span> <span class="token operator">|</span> Oil can        \<span class="token operator">|</span>  
-<span class="token operator">|</span> ANV02   <span class="token operator">|</span>       <span class="token number">9.99</span> <span class="token operator">|</span> <span class="token number">1</span> ton anvil    \<span class="token operator">|</span>  
-<span class="token operator">|</span> FB      <span class="token operator">|</span>      <span class="token number">10.00</span> <span class="token operator">|</span> Bird seed      \<span class="token operator">|</span>  
-<span class="token operator">|</span> TNT2    <span class="token operator">|</span>      <span class="token number">10.00</span> <span class="token operator">|</span> TNT \<span class="token punctuation">(</span><span class="token number">5</span> sticks\<span class="token punctuation">)</span> \<span class="token operator">|</span>  
-<span class="token operator">|</span> DTNTR   <span class="token operator">|</span>      <span class="token number">13.00</span> <span class="token operator">|</span> Detonator      \<span class="token operator">|</span>  
-<span class="token operator">|</span> ANV03   <span class="token operator">|</span>      <span class="token number">14.99</span> <span class="token operator">|</span> <span class="token number">2</span> ton anvil    \<span class="token operator">|</span>  
-<span class="token operator">|</span> JP1000  <span class="token operator">|</span>      <span class="token number">35.00</span> <span class="token operator">|</span> JetPack <span class="token number">1000</span>   \<span class="token operator">|</span>  
-<span class="token operator">|</span> SAFE    <span class="token operator">|</span>      <span class="token number">50.00</span> <span class="token operator">|</span> Safe           \<span class="token operator">|</span>  
-<span class="token operator">|</span> JP2000  <span class="token operator">|</span>      <span class="token number">55.00</span> <span class="token operator">|</span> JetPack <span class="token number">2000</span>   \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+------------+----------------+  </span>
-<span class="token number">14</span> <span class="token keyword">rows</span> <span class="token operator">in</span> <span class="token keyword">set</span> \<span class="token punctuation">(</span><span class="token number">0.00</span> sec\<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<blockquote>
-<p>此例中,仅在多个行具有相同的prod_price值时才对产品按prod_name进行排序.<br>如果prod_price列中所有的值都是唯一的,则不会按prod_name排序.</p>
-</blockquote>
-<h2 id="2-3-指定排序方向"><a href="#2-3-指定排序方向" class="headerlink" title="2.3 指定排序方向"></a><a href="#2-3-%E6%8C%87%E5%AE%9A%E6%8E%92%E5%BA%8F%E6%96%B9%E5%90%91" title="2.3 指定排序方向"></a>2.3 指定排序方向</h2><p>数据排序分为两种 : 升序(ASC)和降序(DESC). 默认的排序方式是升序.</p>
-<p>DESC关键字只应用到直接位于其前面的列名,如果想在多个列上进行降序排序,就必须对每个列指定DESC关键字</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql<span class="token operator">></span> <span class="token keyword">select</span> prod\_id<span class="token punctuation">,</span>prod\_price<span class="token punctuation">,</span>prod\_name <span class="token keyword">from</span> products <span class="token keyword">order</span> <span class="token keyword">by</span> prod\_price <span class="token keyword">desc</span><span class="token punctuation">,</span>prod\_name <span class="token keyword">desc</span><span class="token punctuation">;</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+------------+----------------+  </span>
-<span class="token operator">|</span> prod\_id <span class="token operator">|</span> prod\_price <span class="token operator">|</span> prod\_name      \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+------------+----------------+  </span>
-<span class="token operator">|</span> JP2000  <span class="token operator">|</span>      <span class="token number">55.00</span> <span class="token operator">|</span> JetPack <span class="token number">2000</span>   \<span class="token operator">|</span>  
-<span class="token operator">|</span> SAFE    <span class="token operator">|</span>      <span class="token number">50.00</span> <span class="token operator">|</span> Safe           \<span class="token operator">|</span>  
-<span class="token operator">|</span> JP1000  <span class="token operator">|</span>      <span class="token number">35.00</span> <span class="token operator">|</span> JetPack <span class="token number">1000</span>   \<span class="token operator">|</span>  
-<span class="token operator">|</span> ANV03   <span class="token operator">|</span>      <span class="token number">14.99</span> <span class="token operator">|</span> <span class="token number">2</span> ton anvil    \<span class="token operator">|</span>  
-<span class="token operator">|</span> DTNTR   <span class="token operator">|</span>      <span class="token number">13.00</span> <span class="token operator">|</span> Detonator      \<span class="token operator">|</span>  
-<span class="token operator">|</span> TNT2    <span class="token operator">|</span>      <span class="token number">10.00</span> <span class="token operator">|</span> TNT \<span class="token punctuation">(</span><span class="token number">5</span> sticks\<span class="token punctuation">)</span> \<span class="token operator">|</span>  
-<span class="token operator">|</span> FB      <span class="token operator">|</span>      <span class="token number">10.00</span> <span class="token operator">|</span> Bird seed      \<span class="token operator">|</span>  
-<span class="token operator">|</span> ANV02   <span class="token operator">|</span>       <span class="token number">9.99</span> <span class="token operator">|</span> <span class="token number">1</span> ton anvil    \<span class="token operator">|</span>  
-<span class="token operator">|</span> OL1     <span class="token operator">|</span>       <span class="token number">8.99</span> <span class="token operator">|</span> Oil can        \<span class="token operator">|</span>  
-<span class="token operator">|</span> ANV01   <span class="token operator">|</span>       <span class="token number">5.99</span> <span class="token operator">|</span> <span class="token number">.5</span> ton anvil   \<span class="token operator">|</span>  
-<span class="token operator">|</span> SLING   <span class="token operator">|</span>       <span class="token number">4.49</span> <span class="token operator">|</span> Sling          \<span class="token operator">|</span>  
-<span class="token operator">|</span> FU1     <span class="token operator">|</span>       <span class="token number">3.42</span> <span class="token operator">|</span> Fuses          \<span class="token operator">|</span>  
-<span class="token operator">|</span> TNT1    <span class="token operator">|</span>       <span class="token number">2.50</span> <span class="token operator">|</span> TNT \<span class="token punctuation">(</span><span class="token number">1</span> stick\<span class="token punctuation">)</span>  \<span class="token operator">|</span>  
-<span class="token operator">|</span> FC      <span class="token operator">|</span>       <span class="token number">2.50</span> <span class="token operator">|</span> Carrots        \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">--------+------------+----------------+  </span>
-<span class="token number">14</span> <span class="token keyword">rows</span> <span class="token operator">in</span> <span class="token keyword">set</span> \<span class="token punctuation">(</span><span class="token number">0.00</span> sec\<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<blockquote>
-<p>在字典排序中,A被视为与a相同,这是MySQL等大多数数据库管理系统默认行为,<br>如果想要更改需要DBA的帮助</p>
-</blockquote>
-<h2 id="2-4-ORDER-BY与LIMIT组合"><a href="#2-4-ORDER-BY与LIMIT组合" class="headerlink" title="2.4 ORDER BY与LIMIT组合"></a><a href="#2-4-ORDER-BY%E4%B8%8ELIMIT%E7%BB%84%E5%90%88" title="2.4 ORDER BY与LIMIT组合"></a>2.4 ORDER BY与LIMIT组合</h2><p>ORDER BY与LIMIT组合,可以找出一列中最高或最低的值</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql<span class="token operator">></span> <span class="token keyword">select</span> prod\_price <span class="token keyword">from</span> products <span class="token keyword">order</span> <span class="token keyword">by</span> prod\_price <span class="token keyword">desc</span> <span class="token keyword">limit</span> <span class="token number">1</span><span class="token punctuation">;</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">-----------+  </span>
-<span class="token operator">|</span> prod\_price \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">-----------+  </span>
-<span class="token operator">|</span>      <span class="token number">55.00</span> \<span class="token operator">|</span>  
-<span class="token operator">+</span>\<span class="token operator">-</span><span class="token comment">-----------+  </span>
-<span class="token number">1</span> <span class="token keyword">row</span> <span class="token operator">in</span> <span class="token keyword">set</span> \<span class="token punctuation">(</span><span class="token number">0.00</span> sec\<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<blockquote>
-<p>ORDER BY子句必须在FROM子句之后,LIMIT子句必须在ORDER BY子句之后<br>但是这两个关键字联合使用会有问题,后面会单独讲解.</p>
-</blockquote>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a><a href="#Tips" title="Tips"></a>Tips</h2><p>欢迎收藏和转发，感谢你的支持！(๑•̀ㅂ•́)و✧</p>
+<p>如果采用两次握手，客户端发送数据给服务器，服务器确认后就当连接开始：</p>
+<ol>
+<li>客户端发送一次请求给服务器，指定时间后没响应再发了一个</li>
+<li>服务器先接收到后一个建立连接的请求，然后前一个建立连接的请求，因为网络延迟等问题，在第二个之后达到了</li>
+<li>服务器认为第二个请求是最新发的，于是向客户端发送确认报文段，同意建立连接，于是连接建立了（两次握手）</li>
+<li>这时候客户端还在等待最新的请求连接（第二次请求），自动忽略服务器发送的关于第一个请求连接的响应，也不发送数据</li>
+<li>服务器一直等待客户端发送数据，服务器资源被占用</li>
+</ol>
+<h3 id="2-3-三次握手过程中可以携带数据吗？"><a href="#2-3-三次握手过程中可以携带数据吗？" class="headerlink" title="2.3 三次握手过程中可以携带数据吗？"></a>2.3 三次握手过程中可以携带数据吗？</h3><p>第三次握手的时候可以携带，第一第二次不可以携带。</p>
+<p>第三次握手的时候，客户端处于 ESTABLISHED 状态了，它可以建立连接并且知道服务器的接收、发送能力是正常的，所以可以携带数据了。</p>
+<h3 id="2-4、四次挥手过程"><a href="#2-4、四次挥手过程" class="headerlink" title="2.4、四次挥手过程"></a>2.4、四次挥手过程</h3><ul>
+<li>客户端发送给服务器。客户端以 FIN=1, seq=u 的形式发送给服务器，表示需要关闭客户端和服务器的数据传输。此时客户端处于 FIN_WAIT 状态。</li>
+<li>服务器发送给客户端。服务器收到信息，先返回 ACK 给客户端，即以 ACK=1, seq=v, ack=u+1 的形式返回给客户端，表示收到客户端报文了。此时服务器处于 CLOST_WAIT 状态。</li>
+<li>服务器发送给客户端。服务器等待一会，看客户端还有没有数据没发过来，等处理完这些数据之后，也想断开连接了，于是发送 FIN 给客户端，即以 FIN=1, ACK=1, seq=w, ack=u+1 的形式发送给客户端。此时服务器处于 LAST_ACK 状态。</li>
+<li>客户端发送给服务器。客户端收到 FIN 之后，返回 ACK 报文作为应答，即以 ACK=1, seq=w+1 的形式发送给服务器。此时客户端处于 TIME_WAIT 状态。<br><img src="https://segmentfault.com/img/bVcUYtU"></li>
+</ul>
+<h3 id="2-5、为什么需要四次挥手"><a href="#2-5、为什么需要四次挥手" class="headerlink" title="2.5、为什么需要四次挥手"></a>2.5、为什么需要四次挥手</h3><p>因为服务器接收到客户端的关闭请求之后。</p>
+<p>如果有一些数据因为网络延迟等问题没有发送到，那么它直接关闭会导致这些数据没有接收到；亦或者服务器也有一些数据要发送给客户端，要确保这些数据发送完。</p>
+<p>我们知道 <code>TCP</code> 是个可靠的棒小伙，所以它才会第一次回复客户端收到关闭连接的请求了，第二次回复客户端你发送的数据应该没延迟了，我也发送完我要发送的数据了，可以关闭了。</p>
+<p>最后客户端接收到了，回复告诉服务器它也可以关闭了，然后过一阵子确保服务器接收到它发的 <code>ACK</code> 报文之后，也处于 <code>CLOSED</code> 状态了。这样就确保了连接的正常关闭。</p>
+<h2 id="三、发送-HTTP-请求"><a href="#三、发送-HTTP-请求" class="headerlink" title="三、发送 HTTP 请求"></a>三、发送 HTTP 请求</h2><p>发送 HTTP 请求的过程就是构建 HTTP 请求报文，并通过 TCP 协议发送到服务器指定端口（HTTP 协议默认端口 80/8080，HTTPS 协议默认端口 443）。</p>
+<p>HTTP 请求报文由 3 部分组成：请求行、请求报文 和 请求正文。</p>
+<ul>
+<li>请求行：常用方法有：GET、POST、PUT、DELETE、OPTIONS、HEAD。</li>
+<li>请求报头：允许客户端向服务器传递请求的附加信息和客户端自身的信息。</li>
+<li>请求正文：通过 POST、PUT 等方法时，通常需要客户端向服务器传递数据，这些数据就储存在请求正文中。</li>
+</ul>
+<p>注意，如果本地缓存是否缓存了该资源，就会直接渲染页面。</p>
+<h3 id="GET-和-POST-方法到底有什么区别？"><a href="#GET-和-POST-方法到底有什么区别？" class="headerlink" title="GET 和 POST 方法到底有什么区别？"></a>GET 和 POST 方法到底有什么区别？</h3><p>如果没有前提，也就是不用任何规范限制的话，我们只考虑语法来说，GET 请求和 POST 请求都能拉取数据。这两个方式是没有任何区别的，只有名字不一样。</p>
+<p>RFC 是一种网络规范，如果基于 RFC 规范，那就不一样：</p>
+<ul>
+<li>1、GET 的数据在 URL 中对所有人都是可见的。POST 的数据不会显示在 URL 中。</li>
+<li>2、GET 对数据长度有限制，当发送数据时，GET 方法向 URL 添加数据；URL 的长度是受限制的（URL 的最大长度是 2048 个字符）。POST 无限制。</li>
+<li>3、GET 可收藏为书签，POST 不可收藏为书签。</li>
+<li>4、GET 后退按钮/刷新无影响，POST 数据会被重新提交。</li>
+<li>5、GET 编码类型 application/x-www-form-url，POST 编码类型 encodedapplication/x-www-form-urlencoded 或 multipart/form-data。为二进制数据使用多重编码。</li>
+<li>6、GET 历史参数会保留在浏览器历史中。POST 参数不会保存在浏览器历史中。</li>
+<li>7、GET 只允许 ASCII 字符。POST 没有限制。也允许二进制数据。</li>
+<li>8、与 POST 相比，GET 的安全性较差，因为所发送的数据是 URL 的一部分。在发送密码或其他敏感信息时绝不要使用 GET ！POST 比 GET 更安全，因为参数不会被保存在浏览器历史或 web 服务器日志中。</li>
+<li>9、比如 GET 请求只会有一次 TCP 连接，而 POST 请求会有两次 TCP 连接。对于 GET 方式的请求，浏览器会把 http header 和 data 一并发送出去，服务器响应 200（返回数据）;而对于 POST，浏览器先发送 header，服务器响应 100 continue，浏览器再发送 data，服务器响应 200 ok（返回数据）。</li>
+</ul>
+<p>四种常见的 POST 提交数据方式：</p>
+<ul>
+<li>1.application/x-www-form-urlencoded（表单默认方式）</li>
+<li>2.multipart/form-data（表单上传文件）</li>
+<li>3.application/json</li>
+<li>4.text/xml</li>
+</ul>
+<h2 id="四、服务器处理请求并返回-HTTP-报文"><a href="#四、服务器处理请求并返回-HTTP-报文" class="headerlink" title="四、服务器处理请求并返回 HTTP 报文"></a>四、服务器处理请求并返回 HTTP 报文</h2><p>这一步，会检查状态码，如果是 301/302，则需要重定向，从 Location 自动中读取地址，重新发起请求。如果是 200 状态码，检查响应类型 Content-Type，如果是字节流类型，则将该请求提交给下载管理器，该导航流程结束，不再进行后续的渲染。</p>
+<p>如果是 html 则通知浏览器进程准备渲染进程准备进行渲染。</p>
+<p>HTTP 响应报文也是由 3 部分组成：状态码、响应报头 和 响应报文。</p>
+<ul>
+<li>状态码：<br>1xx：指示信息–表示请求已接收，继续处理。<br>2xx：成功–表示请求已被成功接收、理解、接受。<br>3xx：重定向–要完成请求必须进行更进一步的操作。<br>4xx：客户端错误–请求有语法错误或请求无法实现。<br>5xx：服务器端错误–服务器未能实现合法的请求。</li>
+</ul>
+<p>平时遇到比较常见的状态码有:200, 204, 301, 302, 304, 400, 401, 403, 404, 422, 500(分别表示什么请自行查找)。</p>
+<ul>
+<li>响应报头：常见的响应报头字段 Server、Connection 等。</li>
+<li>响应报文：服务器返回给浏览器的文本信息，通常 HTML、CSS、JS、图片等文件就放在这一部分。</li>
+</ul>
+<h3 id="状态码-301-和-302-的区别？"><a href="#状态码-301-和-302-的区别？" class="headerlink" title="状态码 301 和 302 的区别？"></a>状态码 301 和 302 的区别？</h3><p>301 重定向是一种永久重定向，而 302 跳转是暂时的跳转。</p>
+<h2 id="五、浏览器解析渲染页面"><a href="#五、浏览器解析渲染页面" class="headerlink" title="五、浏览器解析渲染页面"></a>五、浏览器解析渲染页面</h2><p><img src="https://segmentfault.com/img/bVcUYtT"></p>
+<p>浏览器的渲染过程为：</p>
+<ol>
+<li>解析 HTML，生成 <code>DOM</code> 树</li>
+<li>解析 CSS，生成 <code>CSS 规则树（CSS Rule Tree）</code></li>
+<li>将 <code>DOM Tree</code> 和 <code>CSS Rule Tree</code> 相结合，生成 <strong>渲染树</strong>（<code>Render Tree</code>）</li>
+<li>从根节点开始，计算每一个元素的大小、位置，给出每个节点所应该出现的屏幕精确坐标，从而得到基于渲染树的 <strong>布局渲染树</strong>（<code>Layout of the render tree</code>）。</li>
+<li>遍历渲染树，将每个节点用 <code>UI</code> 渲染引擎来绘制，从而将整棵树绘制到页面上，这个步骤叫 <strong>绘制渲染树</strong>（<code>Painting the render tree</code>）</li>
+</ol>
+<p>浏览器在解析过程中，如果遇到请求外部资源时，如图像，JS 等，还会重新执行网络请求。这个请求过程是异步的，并不会影响 HTML 文档进行加载，但是当文档加载过程中遇到 JS 文件，HTML 文档会挂起渲染过程，不仅要等到文档中 JS 文件加载完毕还要等待解析执行完毕，才会继续 HTML 的渲染过程。原因是因为 JS 有可能修改 DOM 结构，这就是 JS 阻塞后续资源下载的根本原因。</p>
+<p>CSS 文件的加载不影响 JS 文件的加载，但是却影响 JS 文件的执行。JS 代码执行前浏览器必须保证 CSS 文件已经下载并加载完毕。</p>
+<p>建议将 script 标签放到 body 标签底部，或者给 script 标签添加 defer/async 属性。</p>
+<h3 id="页面渲染层优化"><a href="#页面渲染层优化" class="headerlink" title="页面渲染层优化"></a>页面渲染层优化</h3><ul>
+<li>1、HTML 文档结构层次尽量少，最好不深于六层</li>
+<li>2、脚本尽量后放</li>
+<li>3、少量首屏样式内联放在标签内</li>
+<li>4、样式结构层次尽量简单</li>
+<li>5、在脚本中尽量减少 DOM 操作，尽量缓存访问 DOM 的样式信息，避免过度触发回流</li>
+<li>6、减少通过 JavaScript 代码修改元素样式，尽量使用修改 class 名方式操作样式或动画</li>
+<li>7、动画尽量使用在绝对定位或固定定位的元素上</li>
+</ul>
+<h4 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h4><h1 id="DNS-域名称和组织类型"><a href="#DNS-域名称和组织类型" class="headerlink" title="DNS 域名称和组织类型"></a>DNS 域名称和组织类型</h1><table>
+<thead>
+<tr>
+<th>DNS 域名称</th>
+<th>组织类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>com</td>
+<td>商业公司</td>
+</tr>
+<tr>
+<td>edu</td>
+<td>教育机构</td>
+</tr>
+<tr>
+<td>net</td>
+<td>网络公司</td>
+</tr>
+<tr>
+<td>gov</td>
+<td>非军事政府机构</td>
+</tr>
+<tr>
+<td>Mil</td>
+<td>军事政府机构</td>
+</tr>
+</tbody></table>
+<h2 id="TCP-和-UDP-的区别"><a href="#TCP-和-UDP-的区别" class="headerlink" title="TCP 和 UDP 的区别"></a>TCP 和 UDP 的区别</h2><ul>
+<li><code>TCP</code> 是面向连接的，<code>UDP</code> 是无连接的即发送数据前不需要先建立链接。</li>
+<li><code>TCP</code> 提供可靠的服务。通过 <code>TCP</code> 连接传送的数据，无差错，不丢失，不重复，且按序到达；UDP 尽最大努力交付，即不保证可靠交付。并且因为 <code>TCP</code> 可靠，面向连接，不会丢失数据因此适合大数据量的交换。</li>
+<li><code>TCP</code> 只能是 1 对 1 的，<code>UDP</code> 支持 1 对 1，1 对多。</li>
+<li><code>TCP</code> 是面向连接的可靠性传输，而 <code>UDP</code> 是不可靠的。</li>
+</ul>
+<p><em>来源：<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000040709186">https://segmentfault.com/a/1190000040709186</a></em></p>
 
                 
             </div>
@@ -789,7 +764,7 @@ mysql<span class="token operator">></span> <span class="token keyword">select</s
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/posts/db594d6e.html">http://example.com/posts/db594d6e.html</a>
+                    <a href="http://example.com/posts/ab879cc5.html">http://example.com/posts/ab879cc5.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -827,12 +802,8 @@ mysql<span class="token operator">></span> <span class="token keyword">select</s
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/MySQL/">
-                                    <span class="chip bg-color">MySQL</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                    <span class="chip bg-color">数据库</span>
+                                <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                                    <span class="chip bg-color">计网</span>
                                 </a>
                             
                         </div>
@@ -1265,17 +1236,18 @@ mysql<span class="token operator">></span> <span class="token keyword">select</s
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/f67672e.html">
+                <a href="/posts/ab879cc5.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="hexo-history-calendar历史上的今天插件">
+                        <img src="/medias/featureimages/48.jpg" class="responsive-img" alt="从输入URL到页面展示，这中间发生了什么">
                         
-                        <span class="card-title">hexo-history-calendar历史上的今天插件</span>
+                        <span class="card-title">从输入URL到页面展示，这中间发生了什么</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1285,9 +1257,9 @@ mysql<span class="token operator">></span> <span class="token keyword">select</s
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1296,15 +1268,12 @@ mysql<span class="token operator">></span> <span class="token keyword">select</s
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%8F%92%E4%BB%B6/">
-                        <span class="chip bg-color">插件</span>
+                    <a href="/tags/%E8%AE%A1%E7%BD%91/">
+                        <span class="chip bg-color">计网</span>
                     </a>
                     
                 </div>
@@ -1318,13 +1287,13 @@ mysql<span class="token operator">></span> <span class="token keyword">select</s
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/1ebe294a.html">
+                <a href="/posts/8b4d1897.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/36.jpg" class="responsive-img" alt="《MySQL必知必会》第4-5章 SELECT检索与排序">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="项目中Dao，Service，Controller，Util，Model是什么意思，为什么划分？">
                         
-                        <span class="card-title">《MySQL必知必会》第4-5章 SELECT检索与排序</span>
+                        <span class="card-title">项目中Dao，Service，Controller，Util，Model是什么意思，为什么划分？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1335,7 +1304,7 @@ mysql<span class="token operator">></span> <span class="token keyword">select</s
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-18
                             </span>
                         <span class="publish-author">
                             
@@ -1348,12 +1317,8 @@ mysql<span class="token operator">></span> <span class="token keyword">select</s
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/MySQL/">
-                        <span class="chip bg-color">MySQL</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/%E9%A1%B9%E7%9B%AE/">
+                        <span class="chip bg-color">项目</span>
                     </a>
                     
                 </div>
