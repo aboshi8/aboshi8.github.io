@@ -616,7 +616,7 @@
 <li><strong>服务器发送给客户端</strong>。服务器收到客户端的 <code>SYN</code> 和 <code>ISN(c)</code>，也发送一个 <code>SYN</code> 回去，同时设置 <code>ACK = ISN(c) + 1</code> 以及指明服务器初始化序列号为 <code>ISN(s)</code>，即以 <code>SYN=1, ACK=x+1， seq=y</code> 的形式发送给客户端。</li>
 <li><strong>客户端发送到服务器</strong>。客户端收到服务器发送的消息后，设置 <code>ACK = ISN(s) + 1</code>，将自身的 <code>ISN(c) + 1</code>，即以 <code>ACK=y+1, seq=x+1</code> 的形式发送给服务器。此时客户端处于 <code>ESTABLISHED</code> 阶段，服务器收到报文，也处于 <code>ESTABLISHED</code> 阶段，双方建立了连接。<br><img src="https://segmentfault.com/img/bVcUYtV"></li>
 </ol>
-<h3 id="2-2、两次握手不行吗？"><a href="#2-2、两次握手不行吗？" class="headerlink" title="2.2、两次握手不行吗？"></a>2.2、两次握手不行吗？</h3><p>三次握手的目的：</p>
+<h3 id="2-2两次握手不行吗？"><a href="#2-2两次握手不行吗？" class="headerlink" title="2.2两次握手不行吗？"></a>2.2两次握手不行吗？</h3><p>三次握手的目的：</p>
 <ol>
 <li>客户端发送数据给服务器，服务器确认自己可以接受客户端的请求。</li>
 <li>服务器发送数据给客户端，客户端确认自己可以发送数据给服务器，也可以接受到服务器的请求。</li>
@@ -1572,6 +1572,10 @@
             </script>
             
             <br>
+            
+            <span id="icp"><img src="/blog/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="/blog/www.kalbim.xyz#%20%E5%A4%87%E6%A1%88%E9%93%BE%E6%8E%A5" target="_blank">渝ICP备2021010197号-1</a>
+            </span>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
