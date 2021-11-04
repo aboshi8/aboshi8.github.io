@@ -555,10 +555,10 @@
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-lazyload-image --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>之后在站点配置文件下添加下面的代码：</p>
-<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">lazyload:
-  enable: true  # 是否开启图片懒加载
-  onlypost: false  # 是否只对文章的图片做懒加载
-  loadingImg: # eg .&#x2F;images&#x2F;loading.gif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"><span class="token key atrule">lazyload</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>  <span class="token comment"># 是否开启图片懒加载</span>
+  <span class="token key atrule">onlypost</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>  <span class="token comment"># 是否只对文章的图片做懒加载</span>
+  <span class="token key atrule">loadingImg</span><span class="token punctuation">:</span> <span class="token comment"># eg ./images/loading.gif</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>最后执行<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>就可以看到效果了。</p>
 <h2 id="2-代码压缩"><a href="#2-代码压缩" class="headerlink" title="2. 代码压缩"></a>2. 代码压缩</h2><h3 id="方法一：gulp代码压缩"><a href="#方法一：gulp代码压缩" class="headerlink" title="方法一：gulp代码压缩"></a>方法一：gulp代码压缩</h3><p><strong>使用方法：</strong></p>
@@ -759,43 +759,43 @@ gulp<span class="token punctuation">.</span><span class="token function">series<
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-neat --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>紧接着在站点根目录下的配置文件添加如下代码：</p>
-<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">neat_enable: true
-neat_html:
-  enable: true
-  exclude:
-neat_css:
-  enable: true
-  exclude:
-    - &#39;*.min.css&#39;
-neat_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude:
-    - &#39;*.min.js&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"><span class="token key atrule">neat_enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">neat_html</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+<span class="token key atrule">neat_css</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'*.min.css'</span>
+<span class="token key atrule">neat_js</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">mangle</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">output</span><span class="token punctuation">:</span>
+  <span class="token key atrule">compress</span><span class="token punctuation">:</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'*.min.js'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>然后直接 <code>hexo cl&amp;&amp;hexo g</code> 就可以了，会自动压缩文件 。</p>
 <p><strong>补充</strong>：为了解决以上Bug，<strong>对于matery主题</strong>（其他主题自行解决）需要将以上默认配置修改为：</p>
-<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">#hexo-neat 优化提速插件（去掉HTML、css、js的blank字符）
-neat_enable: true
-neat_html:
-  enable: true
-  exclude:
-    - &#39;**&#x2F;*.md&#39;
-neat_css:
-  enable: true
-  exclude:
-    - &#39;**&#x2F;*.min.css&#39;
-neat_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude:
-    - &#39;**&#x2F;*.min.js&#39;
-    - &#39;**&#x2F;**&#x2F;instantpage.js&#39;
-    - &#39;**&#x2F;matery.js&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"><span class="token comment">#hexo-neat 优化提速插件（去掉HTML、css、js的blank字符）</span>
+<span class="token key atrule">neat_enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">neat_html</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'**/*.md'</span>
+<span class="token key atrule">neat_css</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'**/*.min.css'</span>
+<span class="token key atrule">neat_js</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">mangle</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">output</span><span class="token punctuation">:</span>
+  <span class="token key atrule">compress</span><span class="token punctuation">:</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'**/*.min.js'</span>
+    <span class="token punctuation">-</span> <span class="token string">'**/**/instantpage.js'</span>
+    <span class="token punctuation">-</span> <span class="token string">'**/matery.js'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="3-打造稳定快速、高效免费图床"><a href="#3-打造稳定快速、高效免费图床" class="headerlink" title="3.打造稳定快速、高效免费图床"></a>3.打造稳定快速、高效免费图床</h2><blockquote>
 <p>请看我的另一篇博客文章:<a target="_blank" rel="noopener" href="https://white/_maple.gitee.io/posts/eb3a.html">https://white\_maple.gitee.io/posts/eb3a.html</a></p>
 </blockquote>
@@ -1565,51 +1565,6 @@ hexo<span class="token punctuation">.</span><span class="token function">on</spa
 
 
     <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/blog/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="6826437463"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.4'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/blog/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
     
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
