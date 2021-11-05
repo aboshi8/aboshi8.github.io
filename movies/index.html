@@ -34,16 +34,6 @@
 
 
 
-   <style>
-    body{
-       background-image: url(https://pic.yupoo.com/kalbim/dc120cc7/7d724e1d.png);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-</style>
-
-
 
 <body>
     <header class="navbar-fixed">
@@ -132,9 +122,20 @@
     
     <a href="/blog/live/live.html" class="waves-effect waves-light">
       
-      <i class="fas fa-film" style="zoom: 0.6;"></i>
+      <i class="fas fa-play" style="zoom: 0.6;"></i>
       
       <span>直播</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/blog/live/mianze.html" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-graduate" style="zoom: 0.6;"></i>
+      
+      <span>免责声明</span>
     </a>
     
   </li>
@@ -144,7 +145,7 @@
     <a href="" class="waves-effect waves-light">
 
       
-      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      <i class="fas fa-list-ol" style="zoom: 0.6;"></i>
       
       <span>娱乐</span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
@@ -287,7 +288,7 @@
 	  
 		<a href="/blog/live/live.html" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-film"></i>
+			    <i class="fa-fw fas fa-play"></i>
 			
 			直播
 		</a>
@@ -296,9 +297,20 @@
         
         <li class="m-nav-item">
 	  
+		<a href="/blog/live/mianze.html" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-graduate"></i>
+			
+			免责声明
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
 		<a href="javascript:;">
 			
-				<i class="fa-fw fas fa-list"></i>
+				<i class="fa-fw fas fa-list-ol"></i>
 			
 			娱乐
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
@@ -498,7 +510,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-05
+                    2021-11-06
                 </div>
                 
 
@@ -2219,7 +2231,7 @@ var lastpages = document.getElementsByClassName("hexo-douban-lastpage");
 var pagenums = document.getElementsByClassName("hexo-douban-pagenum");
 
 function makePageNum(num, arr) {
-    return (num + 1) + ' / ' + (Math.ceil(arr.length / 10 === 0 ? 1 : Math.ceil(arr.length / 10)));
+    return (num + 1) + ' / ' + (Math.ceil(arr.length / 20 === 0 ? 1 : Math.ceil(arr.length / 20)));
 }
 
 function firstBtn() {
@@ -2232,7 +2244,7 @@ function previousBtn() {
     var sibs = this.parentNode.siblings();
     var currNum = this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText;
     currNum = currNum.substr(0, currNum.indexOf('/') - 1);
-    currNum = parseInt(currNum, 10) - 1;
+    currNum = parseInt(currNum, 20) - 1;
     if (currNum > 0) {
         currNum--;
     }
@@ -2244,8 +2256,8 @@ function nextBtn() {
     var sibs = this.parentNode.siblings();
     var currNum = this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText;
     currNum = currNum.substr(0, currNum.indexOf('/') - 1);
-    currNum = parseInt(currNum, 10) - 1;
-    if (currNum < Math.ceil(sibs.length / 10) - 1) {
+    currNum = parseInt(currNum, 20) - 1;
+    if (currNum < Math.ceil(sibs.length / 20) - 1) {
         currNum++;
     }
     displayPage(sibs, currNum);
@@ -2254,13 +2266,13 @@ function nextBtn() {
 
 function lastBtn() {
     var sibs = this.parentNode.siblings();
-    displayPage(sibs, Math.ceil(sibs.length / 10) - 1);
-    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(Math.ceil(sibs.length / 10) - 1 === -1 ? 0 : Math.ceil(sibs.length / 10) - 1, sibs);
+    displayPage(sibs, Math.ceil(sibs.length / 20) - 1);
+    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(Math.ceil(sibs.length / 20) - 1 === -1 ? 0 : Math.ceil(sibs.length / 20) - 1, sibs);
 }
 
 function displayPage(arr, num) {
     for (var i = 0; i < arr.length; i++) {
-        if (Math.floor(i / 10) === num) {
+        if (Math.floor(i / 20) === num) {
             arr[i].classList.remove('hexo-douban-hide');
             var img = arr[i].getElementsByTagName('img')[0];
             img.src = img.getAttribute('data-src');
@@ -2280,7 +2292,7 @@ for (var i = 0; i < firstpages.length; i++) {
 
     //set page num
     var size = pagenums[i].parentNode.siblings().length;
-    pagenums[i].innerText = '1 / ' + (Math.ceil(size / 10) === 0 ? 1 : Math.ceil(size / 10));
+    pagenums[i].innerText = '1 / ' + (Math.ceil(size / 20) === 0 ? 1 : Math.ceil(size / 20));
     firstpages[i].click();
 }
 
@@ -2802,7 +2814,7 @@ for (var i = 0; i < firstpages.length; i++) {
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-06
                             </span>
                         <span class="publish-author">
                             
@@ -2840,7 +2852,7 @@ for (var i = 0; i < firstpages.length; i++) {
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-06
                             </span>
                         <span class="publish-author">
                             
