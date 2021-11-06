@@ -1,0 +1,599 @@
+<html lang="zh-CN" style=""><head>
+    <script>
+    function detectIE() {
+        var n = window.navigator.userAgent,
+            e = n.indexOf("MSIE ");
+        if (e > 0) {
+            return parseInt(n.substring(e + 5, n.indexOf(".", e)), 10)
+        }
+        if (n.indexOf("Trident/") > 0) {
+            var r = n.indexOf("rv:");
+            return parseInt(n.substring(r + 3, n.indexOf(".", r)), 10)
+        }
+        var i = n.indexOf("Edge/");
+        return i > 0 && parseInt(n.substring(i + 5, n.indexOf(".", i)), 10)
+    };
+    detectIE() && (alert('当前站点不支持IE浏览器或您开启了兼容模式，请使用其他浏览器访问或关闭兼容模式。'), (location.href = 'https://www.baidu.com'))
+    localStorage.getItem("data-night") && document.querySelector("html").setAttribute("data-night", "night");
+    window.Joe = {
+        THEME_URL: `http://www.abcxpg.cn/usr/themes/Joe-master/`,
+        LIVE2D: `off`,
+        BASE_API: `http://www.abcxpg.cn/index.php/joe/api`,
+        DYNAMIC_BACKGROUND: `off`,
+        WALLPAPER_BACKGROUND_PC: ``,
+        IS_MOBILE: /windows phone|iphone|android/gi.test(window.navigator.userAgent),
+        BAIDU_PUSH: true,
+        DOCUMENT_TITLE: ``,
+        LAZY_LOAD: `https://cdn.jsdelivr.net/npm/typecho-joe-next@6.0.0/assets/img/lazyload.jpg`,
+        BIRTHDAY: ``,
+        MOTTO: `喜欢晚上的晚风`,
+        PAGE_SIZE: `5`,
+        JSensitiveWords: `你`,
+        /* 弹幕 */
+        DOCUMENT_BARRAGER: 'off',
+    }
+    var copyRightText = '转载请注明出处';
+</script>
+<style>
+    @font-face {
+        font-family: 'Joe Font';
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src: url('');
+            }
+
+    body {
+        font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+            }
+
+    body::before {
+        background: #f5f5f5;
+        background-position: center 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    </style><meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="email=no">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta itemprop="image" content="https://z3.ax1x.com/2021/09/30/4o1Awd.jpg">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+<link rel="shortcut icon" href="https://aboshi8.gitee.io/blog/medias/logo66.png">
+<title>免责声明 | Kalbim</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="{mtitle title=&quot;搭建&quot;/}在2021年的8月8，我搭建了这个博客，在以后的时间我会记录生活的点点滴滴，分享快乐！{mtitle title=&quot;为什么会搭建这个博客&quot;/}其实做这个博...">
+	<meta name="generator" content="Typecho 1.2/18.10.23">
+<meta name="template" content="Joe-master">
+<link rel="pingback" href="http://www.abcxpg.cn/index.php/action/xmlrpc">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.abcxpg.cn/index.php/action/xmlrpc?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.abcxpg.cn/index.php/action/xmlrpc?wlw">
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-page-3'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-page-3'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        triggers: ['scroll', 'mousemove', 'keyup', 'touchstart'],
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        triggers: ['onfocus', 'onmousemove', 'onkeyup', 'ontouchstart'],
+        load: 'onload'
+    }, added = false;
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-page-3'),
+            input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_';
+        input.value = (function () {
+    var _PEqP = 'a'//'a'
++//'Cx'
+'b6'+//'D'
+'D'+'0'//'Tt'
++'097'//'u'
++//'u'
+'b'+'e7'//'u'
++//'Kc9'
+'cd'+//'DM'
+'e'+//'5'
+'b2'+''///*'ym'*/'ym'
++'2fd'//'Asx'
++'y8M'//'y8M'
++//'HL'
+'5aa'+//'b'
+'c5'+'a4d'//'x'
++//'6Y'
+'ceb'+//'jr'
+'407'+'2iY'//'2iY'
++//'fxZ'
+'5', _1NBS = [[0,1],[2,3],[17,20],[31,34]];
+    
+    for (var i = 0; i < _1NBS.length; i ++) {
+        _PEqP = _PEqP.substring(0, _1NBS[i][0]) + _PEqP.substring(_1NBS[i][1]);
+    }
+
+    return _PEqP;
+})();
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                function append() {
+                    if (!added) {
+                        forms[0].appendChild(input);
+                        added = true;
+                    }
+                }
+            
+                for (var i = 0; i < event.triggers.length; i ++) {
+                    var trigger = event.triggers[i];
+                    document[event.add](trigger, append);
+                    window[event.add](trigger, append);
+                }
+            }
+        }
+    });
+})();
+</script>
+    <style>.quiet_progress{
+		           position: fixed;
+    z-index: 9999;
+    left: 0;
+    bottom: -3px;
+    height: 4px;
+    border-radius: 1.5px;
+    background: linear-gradient(to right, #4cd964, #5ac8fa, #007aff);
+    transition: width 0.35s;
+    top: 0;
+    border-radius:20%;
+		       
+		   }</style><script type="text/javascript" src="http://www.abcxpg.cn/usr/plugins/QuietBeautify/assets/js/console.js"></script><style>
+             .article.have-img:hover {
+     transform: scale(1.05) rotate(1deg);
+}
+.article.have-img{
+    transition:all .4s linear;
+}
+            </style>
+
+<link rel="stylesheet" href="./live_files/solarbottom.css">
+<link rel="stylesheet" href="./live_files/joe.mode.min.css">
+<link rel="stylesheet" href="./live_files/joe.normalize.min.css">
+<link rel="stylesheet" href="./live_files/joe.global.min.css">
+<link rel="stylesheet" href="./live_files/joe.responsive.min.css">
+<link rel="stylesheet" href="./live_files/qmsg.css">
+<link rel="stylesheet" href="./live_files/jquery.fancybox.min.css">
+<link rel="stylesheet" href="./live_files/animate.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+<script src="./live_files/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typecho-joe-next@6.0.0/plugin/scroll/joe.scroll.js"></script>
+<script src="./live_files/lazysizes.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typecho-joe-next@6.0.0/plugin/sketchpad/joe.sketchpad.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typecho-joe-next@6.0.0/assets/js/joe.extend.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typecho-joe-next@6.0.0/plugin/qmsg/qmsg.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typecho-joe-next@6.0.0/plugin/smooth/joe.smooth.js" async=""></script>
+<script src="http://www.abcxpg.cn/usr/themes/Joe-master/assets/js/joe.global.js?v=7.2.9"></script>
+<script src="http://www.abcxpg.cn/usr/themes/Joe-master/assets/js/joe.short.min.js?v=7.2.9"></script>
+<link rel="stylesheet" href="http://www.abcxpg.cn/usr/themes/Joe-master/assets/css/custom.css">
+<script src="https://cdn.jsdelivr.net/npm/typecho-joe-next@6.0.0/plugin/qmsg/qmsg.js"></script>
+<script src="http://www.abcxpg.cn/usr/themes/Joe-master/assets/js/custom.js"></script>            
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typecho-joe-next@6.2.4/plugin/prism/prism.min.js"></script>
+    <script src="http://www.abcxpg.cn/usr/themes/Joe-master/assets/js/joe.post_page.min.js"></script>
+</head>
+
+<body>
+    <div id="Joe">
+        <!-- 弹幕 -->
+<header class="joe_header active">
+
+    <div class="joe_header__above">
+        <div class="joe_container">
+            <nav class="joe_header__above-nav">
+                <img class=" ls-is-cached lazyloaded"  style="width: 50px; height: 50px;" src="https://aboshi8.gitee.io/blog/medias/logo66.png" data-src="https://aboshi8.gitee.io/blog/medias/logo66.png" alt="程序员斜阳">
+                <a class="item " href="https://aboshi8.gitee.io/blog/" title="首页">首页</a>
+                <a class="item " href="https://aboshi8.gitee.io/blog/tags/" title="壁纸">标签</a>
+                <!-- <a class="item " href="https://www.solaryyds.com/videos.html" title="视频">视频</a> -->
+                <a class="item active" href="https://aboshi8.gitee.io/blog/live/live.html" title="直播">直播</a>
+                <a class="item " href="https://aboshi8.gitee.io/blog/friends/" title="隔壁">友链</a>
+                <a class="item " href="https://aboshi8.gitee.io/blog/about/" title="留言">关于</a>
+                <a class="item " href="#" title="留言">免责声明</a>
+                <a class="item " href="https://aboshi8.gitee.io/blog/box/cn/index.html" title="个人导航">百宝箱</a>
+                <!-- <a class="item " href="https://aboshi8.gitee.io/blog/live/live.html" title="统计">直播</a> -->
+
+                <div class="joe_dropdown" trigger="hover" placement="60px" style="margin-right: 15px;">
+                    <div class="joe_dropdown__link">
+                    <a href="#" rel="nofollow">更多</a>
+                    <svg class="joe_dropdown__link-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                    <path d="M561.873 725.165c-11.262 11.262-26.545 21.72-41.025 18.502-14.479 2.413-28.154-8.849-39.415-18.502L133.129 375.252c-17.697-17.696-17.697-46.655 0-64.352s46.655-17.696 64.351 0l324.173 333.021 324.977-333.02c17.696-17.697 46.655-17.697 64.351 0s17.697 46.655 0 64.351L561.873 725.165z" p-id="3535" fill="var(--main)"></path>
+                    </svg>
+                    </div>
+                <nav class="joe_dropdown__menu" style="top: 60px;">
+                <a class="" target="_blank" href="https://meiriyiwen.com/" title="每日60S早报">每日一文</a>
+                <a class=""  target="_blank" href="https://tophub.today/" title="每日60S早报">今日热点</a>
+                
+                </nav>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    
+   
+    
+
+    <div class="joe_header__mask"></div>
+    <!-- 弹幕 -->
+    </header>        <div class="joe_container">
+            <div class="joe_main">
+                <div class="joe_detail" data-cid="3">
+                    
+        <h1 class="joe_detail__title">免责声明</h1>
+                  <article class="joe_detail__article">
+    
+            <p><joe-mtitle title="搭建">
+				<span class="joe_mtitle">
+					<span class="joe_mtitle__text">
+						搭建
+					</span>
+				</span>
+			</joe-mtitle><br>在2021年的8月8，我搭建了这个博客，在以后的时间我会记录生活的点点滴滴，分享快乐！</p><p><joe-mtitle title="为什么会搭建这个博客">
+				<span class="joe_mtitle">
+					<span class="joe_mtitle__text">
+						为什么会搭建这个博客
+					</span>
+				</span>
+			</joe-mtitle><br>其实做这个博客，就是单纯的一个喜欢，而且也想为了把好东西分享给大家。其次就是为了多交一些朋友，自己也能多学习一些东西！</p><blockquote>有什么意见和建议，随时联系我！谢谢！站长QQ：1367863704</blockquote><p><joe-mtitle title="本站侵权及声明">
+				<span class="joe_mtitle">
+					<span class="joe_mtitle__text">
+						本站侵权及声明
+					</span>
+				</span>
+			</joe-mtitle><br>本站资源来自会员发布以及互联网收集,仅供用于学习和交流,请遵循相关法律法规。本站一切资源不代表本站立场,全体用户必须在下载后的24个小时之内，从您的电脑中彻底删除上述内容！</p><blockquote><p>如有侵权争议、后门、不妥请联系本站删除联系邮箱: 1367863704@qq.com 处理！站长QQ：1367863704</p><p>注意：本站发布所有信息，均来自互联网收集，与本站无关。请玩家仔细辨认信息的真实性，避免上当受骗!<br>本站所有源码都来源于网络收集修改或者交换!如果侵犯了您的权益,请及时告知我,我即刻处理!<br>注意：本站资源多为网络收集，如涉及版权问题请及时与站长联系，我们会在第一时间内删除资源。<br> 本站用户发帖仅代表本站用户个人观点，并不代表本站赞同其观点和对其真实性负责。<br>转载本网站任何内容，请按则和转载方式正确书写本站原文地址</p></blockquote>        <div class="contain" style="margin-bottom: 10px; ">
+       
+    </div>
+</article>
+<script language="javascript">
+    var second=0;
+    var minute=0;
+    var hour=0;
+    window.setTimeout("interval();",1000);
+    function interval()
+    {
+        second++;
+        if(second==60)
+        {
+            second=0;minute+=1;
+        }
+        if(minute==60)
+        {
+            minute=0;hour+=1;
+        }
+        var onlineTime = "您已阅读：" + hour + "时" + minute + "分" + second + "秒。";
+        var joe_message_content = "本文共 " + 411 + "个字数，平均阅读时长 ≈ " + 2 + "分钟，";
+        $('#onlineTime').text(joe_message_content + onlineTime);
+        window.setTimeout("interval();", 1000);
+    }
+</script>                    <div class="joe_detail__agree">
+    <div class="agree">
+        <div class="icon">
+            <svg class="icon-1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                <path d="M736 128c-65.952 0-128.576 25.024-176.384 70.464-4.576 4.32-28.672 28.736-47.328 47.68L464.96 199.04C417.12 153.216 354.272 128 288 128 146.848 128 32 242.848 32 384c0 82.432 41.184 144.288 76.48 182.496l316.896 320.128C450.464 911.68 478.304 928 512 928s61.568-16.32 86.752-41.504l316.736-320 2.208-2.464C955.904 516.384 992 471.392 992 384c0-141.152-114.848-256-256-256z" fill="#fff"></path>
+            </svg>
+            <svg class="icon-2 active" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                <path d="M512 928c-28.928 0-57.92-12.672-86.624-41.376L106.272 564C68.064 516.352 32 471.328 32 384c0-141.152 114.848-256 256-256 53.088 0 104 16.096 147.296 46.592 14.432 10.176 17.92 30.144 7.712 44.608-10.176 14.432-30.08 17.92-44.608 7.712C366.016 204.064 327.808 192 288 192c-105.888 0-192 86.112-192 192 0 61.408 20.288 90.112 59.168 138.688l315.584 318.816C486.72 857.472 499.616 863.808 512 864c12.704.192 24.928-6.176 41.376-22.624l316.672-319.904C896.064 493.28 928 445.696 928 384c0-105.888-86.112-192-192-192-48.064 0-94.08 17.856-129.536 50.272l-134.08 134.112c-12.512 12.512-32.736 12.512-45.248 0s-12.512-32.736 0-45.248L562.24 196c48.32-44.192 109.664-68 173.76-68 141.152 0 256 114.848 256 256 0 82.368-41.152 144.288-75.68 181.696l-317.568 320.8C569.952 915.328 540.96 928 512 928z" fill="#fff"></path>
+            </svg>
+        </div>
+        <span class="text">0</span>
+    </div>
+
+    <script language="javascript" type="text/javascript">
+    	function zfb(){
+            var obj=document.getElementById("ewm");
+    	    obj.src=`http://tc.abcxpg.cn/img/590`;
+    	};
+    	function wx(){
+            var obj=document.getElementById("ewm");
+    	    obj.src=`http://tc.abcxpg.cn/img/587`;
+    	};
+    	function qq(){
+            var obj=document.getElementById("ewm");
+    	    obj.src=`http://tc.abcxpg.cn/img/589`;
+    	};
+	
+	</script> 
+
+</div>
+                  
+
+           </div>
+             
+<form style="display: none;" id="comment_form_operation" action="" method="post"></form>
+            </div>
+            <aside class="joe_aside">
+                <section class="joe_aside__item author">
+            <img width="100%" height="120" class="image ls-is-cached lazyloaded" src="./live_files/Background.png" data-src="https://www.solaryyds.com/images/Background.png" alt="博主栏壁纸">
+            <div class="user">
+                <img width="75" height="75" class="avatar ls-is-cached lazyloaded" src="./live_files/avatar.png" data-src="https://www.solaryyds.com/images/avatar.png" alt="博主头像">
+                <a class="link" href="https://aboshi8.gitee.io/blog/live.html" target="_blank" rel="noopener noreferrer nofollow">ABC</a>
+                <p class="motto joe_motto">喜欢晚上的晚风</p>
+            </div>
+                    <div class="count">
+                <div class="item" title="累计文章数">
+                    <span class="num">00</span>
+                    <span>文章数</span>
+                </div>
+                <div class="item" title="累计评论数">
+                    <span class="num">00</span>
+                    <span>评论量</span>
+                </div>
+            </div>
+                        <!-- <ul class="list">
+                            <li class="item">
+                                <a class="link" href="https://www.solaryyds.com/4.html" title="离开网页时网站显示404 Not Found">离开网页时网站显示404 Not Found</a>
+                                <svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M448.12 320.331a30.118 30.118 0 0 1-42.616-42.586L552.568 130.68a213.685 213.685 0 0 1 302.2 0l38.552 38.551a213.685 213.685 0 0 1 0 302.2L746.255 618.497a30.118 30.118 0 0 1-42.586-42.616l147.034-147.035a153.45 153.45 0 0 0 0-217.028l-38.55-38.55a153.45 153.45 0 0 0-216.998 0L448.12 320.33zM575.88 703.67a30.118 30.118 0 0 1 42.616 42.586L471.432 893.32a213.685 213.685 0 0 1-302.2 0l-38.552-38.551a213.685 213.685 0 0 1 0-302.2l147.065-147.065a30.118 30.118 0 0 1 42.586 42.616L173.297 595.125a153.45 153.45 0 0 0 0 217.027l38.55 38.551a153.45 153.45 0 0 0 216.998 0L575.88 703.64zm-234.256-63.88L639.79 341.624a30.118 30.118 0 0 1 42.587 42.587L384.21 682.376a30.118 30.118 0 0 1-42.587-42.587z"></path></svg>
+                            </li>
+                        
+                            <li class="item">
+                                <a class="link" href="https://www.solaryyds.com/5.html" title="一款超炫酷超好看的个人主页">一款超炫酷超好看的个人主页</a>
+                                <svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M448.12 320.331a30.118 30.118 0 0 1-42.616-42.586L552.568 130.68a213.685 213.685 0 0 1 302.2 0l38.552 38.551a213.685 213.685 0 0 1 0 302.2L746.255 618.497a30.118 30.118 0 0 1-42.586-42.616l147.034-147.035a153.45 153.45 0 0 0 0-217.028l-38.55-38.55a153.45 153.45 0 0 0-216.998 0L448.12 320.33zM575.88 703.67a30.118 30.118 0 0 1 42.616 42.586L471.432 893.32a213.685 213.685 0 0 1-302.2 0l-38.552-38.551a213.685 213.685 0 0 1 0-302.2l147.065-147.065a30.118 30.118 0 0 1 42.586 42.616L173.297 595.125a153.45 153.45 0 0 0 0 217.027l38.55 38.551a153.45 153.45 0 0 0 216.998 0L575.88 703.64zm-234.256-63.88L639.79 341.624a30.118 30.118 0 0 1 42.587 42.587L384.21 682.376a30.118 30.118 0 0 1-42.587-42.587z"></path></svg>
+                            </li>
+                        
+                            <li class="item">
+                                <a class="link" href="https://www.solaryyds.com/1.html" title="域名解红(白)教程(持续更新)">域名解红(白)教程(持续更新)</a>
+                                <svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M448.12 320.331a30.118 30.118 0 0 1-42.616-42.586L552.568 130.68a213.685 213.685 0 0 1 302.2 0l38.552 38.551a213.685 213.685 0 0 1 0 302.2L746.255 618.497a30.118 30.118 0 0 1-42.586-42.616l147.034-147.035a153.45 153.45 0 0 0 0-217.028l-38.55-38.55a153.45 153.45 0 0 0-216.998 0L448.12 320.33zM575.88 703.67a30.118 30.118 0 0 1 42.616 42.586L471.432 893.32a213.685 213.685 0 0 1-302.2 0l-38.552-38.551a213.685 213.685 0 0 1 0-302.2l147.065-147.065a30.118 30.118 0 0 1 42.586 42.616L173.297 595.125a153.45 153.45 0 0 0 0 217.027l38.55 38.551a153.45 153.45 0 0 0 216.998 0L575.88 703.64zm-234.256-63.88L639.79 341.624a30.118 30.118 0 0 1 42.587 42.587L384.21 682.376a30.118 30.118 0 0 1-42.587-42.587z"></path></svg>
+                            </li>
+                        </ul> -->
+                </section>
+                <section class="joe_aside__item timelife">
+                <div class="joe_aside__item-title">
+                    <svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+                        <path d="M864.801 895.471h-33.56v-96.859c0-126.081-73.017-235.093-179.062-287.102 106.046-52.01 179.062-161.022 179.062-287.102v-96.859h33.56c17.301 0 31.325-14.327 31.325-32 0-17.673-14.024-32-31.325-32H159.018c-17.3 0-31.325 14.327-31.325 32 0 17.673 14.025 32 31.325 32h33.02v96.859c0 126.08 73.016 235.092 179.061 287.102-106.046 52.009-179.062 161.02-179.062 287.101v96.859h-33.02c-17.3 0-31.325 14.326-31.325 32s14.025 32 31.325 32H864.8c17.301 0 31.325-14.326 31.325-32s-14.023-31.999-31.324-31.999zM256.05 222.427v-94.878h513.046v94.878c0 141.674-114.85 256.522-256.523 256.522-141.674 0-256.523-114.848-256.523-256.522zm513.046 673.044H256.05v-94.879c0-141.674 114.849-256.521 256.523-256.521 141.673 0 256.523 114.848 256.523 256.521v94.879z"></path>
+                        <path d="M544.141 384c0-17.69-14.341-32.031-32.031-32.031-71.694 0-127.854-56.161-127.854-127.855 0-17.69-14.341-32.032-32.031-32.032s-32.032 14.341-32.032 32.032c0 107.617 84.3 191.918 191.917 191.918 17.69 0 32.031-14.342 32.031-32.032z"></path>
+                    </svg>
+                    <span class="text">人生倒计时</span>
+                    <span class="line"></span>
+                </div>
+                <div class="joe_aside__item-contain">
+                            <div class="item">
+                                <div class="title">
+                                    今日已经过去
+                                    <span class="text">17</span>
+                                    小时
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner progress-bar-inner-0" style="width: 71%"></div>
+                                    </div>
+                                    <div class="progress-percentage">71%</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="title">
+                                    这周已经过去
+                                    <span class="text">3</span>
+                                    天
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner progress-bar-inner-1" style="width: 42%"></div>
+                                    </div>
+                                    <div class="progress-percentage">42%</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="title">
+                                    本月已经过去
+                                    <span class="text">3</span>
+                                    天
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner progress-bar-inner-2" style="width: 10%"></div>
+                                    </div>
+                                    <div class="progress-percentage">10%</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="title">
+                                    今年已经过去
+                                    <span class="text">11</span>
+                                    个月
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-inner progress-bar-inner-3" style="width: 91%"></div>
+                                    </div>
+                                    <div class="progress-percentage">91%</div>
+                                </div>
+                            </div></div>
+                </section>
+            
+        
+                       
+                            
+                </aside>  
+
+
+                   </div>
+        <footer class="joe_footer">
+   
+    <div class="joe_container" style="min-height: 20px;margin-bottom: 20px;">
+        <div class="item" style="display:none;">
+            <span id="cnzz_stat_icon_"></span><script src="" type="text/javascript"></script>
+        </div>
+        <div class="item" id="mli" style="">
+        
+    </div>
+</footer>
+
+<div class="joe_action">
+    <div class="joe_action_item scroll active">
+        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+            <path d="M725.902 498.916c18.205-251.45-93.298-410.738-205.369-475.592l-6.257-3.982-6.258 3.414c-111.502 64.853-224.711 224.142-204.8 475.59-55.751 53.476-80.214 116.623-80.214 204.8v15.36l179.2-35.27c11.378 40.39 58.596 69.973 113.21 69.973 54.613 0 101.262-29.582 112.64-68.836l180.337 36.41v-15.36c-.569-89.885-25.031-153.6-82.489-206.507zM571.733 392.533c-33.564 31.29-87.04 28.445-118.329-5.12s-28.444-87.04 5.12-117.76c33.565-31.289 87.04-28.444 118.33 5.12s28.444 86.471-5.12 117.76zm-56.32 368.64c-35.84 0-64.284 29.014-64.284 64.285 0 35.84 54.044 182.613 64.284 182.613s64.285-146.773 64.285-182.613c0-35.271-29.014-64.285-64.285-64.285z"></path>
+        </svg>
+    </div>
+    <!--<div class="joe_action_item" id="openColorPick">
+        <svg t="1625457632143" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2553" width="25" height="25"><path d="M716.8 897.024c-73.728 0-133.12-59.392-133.12-133.12v-2.048c0-20.48 6.144-45.056 16.384-71.68 0 0 0-2.048 2.048-2.048 12.288-30.72 30.72-61.44 55.296-94.208 16.384-22.528 34.816-45.056 51.2-65.536 2.048-4.096 6.144-6.144 8.192-10.24 2.048 2.048 6.144 6.144 8.192 10.24 6.144 8.192 14.336 16.384 20.48 26.624 8.192 10.24 16.384 22.528 24.576 32.768 2.048 2.048 4.096 4.096 6.144 8.192 24.576 32.768 43.008 67.584 55.296 96.256 12.288 26.624 18.432 51.2 18.432 73.728 0 71.68-59.392 131.072-133.12 131.072z m-546.816-366.592l81.92-88.064h581.632l16.384 16.384-73.728 69.632c-6.144-8.192-12.288-16.384-20.48-24.576-6.144-8.192-12.288-14.336-18.432-20.48-4.096-4.096-6.144-6.144-6.144-8.192l-14.336-16.384-14.336 16.384c-2.048 2.048-4.096 4.096-6.144 8.192-6.144 6.144-12.288 12.288-18.432 20.48-18.432 22.528-36.864 45.056-53.248 69.632-24.576 36.864-45.056 71.68-59.392 104.448-10.24 24.576-16.384 47.104-18.432 67.584l-83.968 77.824-292.864-292.864z m364.544-389.12l260.096 260.096h-501.76l241.664-260.096z m276.48 430.08c-2.048-4.096-6.144-8.192-8.192-12.288l106.496-100.352-376.832-376.832-419.84 448.512 348.16 348.16 86.016-79.872c16.384 79.872 86.016 141.312 169.984 141.312 96.256 0 174.08-77.824 174.08-174.08 0-26.624-8.192-57.344-20.48-88.064-14.336-34.816-34.816-71.68-59.392-106.496z" p-id="2554"></path></svg>
+    </div>-->
+    <div class="joe_action_item mode">
+        <svg class="icon-1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+            <path d="M587.264 104.96c33.28 57.856 52.224 124.928 52.224 196.608 0 218.112-176.128 394.752-393.728 394.752-29.696 0-58.368-3.584-86.528-9.728C223.744 832.512 369.152 934.4 538.624 934.4c229.376 0 414.72-186.368 414.72-416.256 1.024-212.992-159.744-389.12-366.08-413.184z"></path>
+            <path d="M340.48 567.808l-23.552-70.144-70.144-23.552 70.144-23.552 23.552-70.144 23.552 70.144 70.144 23.552-70.144 23.552-23.552 70.144zM168.96 361.472l-30.208-91.136-91.648-30.208 91.136-30.208 30.72-91.648 30.208 91.136 91.136 30.208-91.136 30.208-30.208 91.648z"></path>
+        </svg>
+        <svg class="icon-2 active" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+            <path d="M234.24 512a277.76 277.76 0 1 0 555.52 0 277.76 277.76 0 1 0-555.52 0zM512 187.733a42.667 42.667 0 0 1-42.667-42.666v-102.4a42.667 42.667 0 0 1 85.334 0v102.826A42.667 42.667 0 0 1 512 187.733zm-258.987 107.52a42.667 42.667 0 0 1-29.866-12.373l-72.96-73.387a42.667 42.667 0 0 1 59.306-59.306l73.387 72.96a42.667 42.667 0 0 1 0 59.733 42.667 42.667 0 0 1-29.867 12.373zm-107.52 259.414H42.667a42.667 42.667 0 0 1 0-85.334h102.826a42.667 42.667 0 0 1 0 85.334zm34.134 331.946a42.667 42.667 0 0 1-29.44-72.106l72.96-73.387a42.667 42.667 0 0 1 59.733 59.733l-73.387 73.387a42.667 42.667 0 0 1-29.866 12.373zM512 1024a42.667 42.667 0 0 1-42.667-42.667V878.507a42.667 42.667 0 0 1 85.334 0v102.826A42.667 42.667 0 0 1 512 1024zm332.373-137.387a42.667 42.667 0 0 1-29.866-12.373l-73.387-73.387a42.667 42.667 0 0 1 0-59.733 42.667 42.667 0 0 1 59.733 0l72.96 73.387a42.667 42.667 0 0 1-29.44 72.106zm136.96-331.946H878.507a42.667 42.667 0 1 1 0-85.334h102.826a42.667 42.667 0 0 1 0 85.334zM770.987 295.253a42.667 42.667 0 0 1-29.867-12.373 42.667 42.667 0 0 1 0-59.733l73.387-72.96a42.667 42.667 0 1 1 59.306 59.306l-72.96 73.387a42.667 42.667 0 0 1-29.866 12.373z"></path>
+        </svg>
+    </div>
+</div>
+
+<script>
+                console.log("%c页面加载耗时：27ms | Theme By Joe", "color:#fff; background: linear-gradient(270deg, #986fee, #8695e6, #68b7dd, #18d7d3); padding: 8px 15px; border-radius: 0 15px 0 15px");
+    </script>
+    
+<script type="text/javascript" src="./live_files/a0.js"></script><script type="text/javascript" src="./live_files/as-tool.js"></script>
+<script type="text/javascript" src="./live_files/as-style.js"></script>
+<script>console.log("\n %c AliceStyle v3.4.0 Pro By 萌卜兔's | https://racns.com/374.html","color:#fff;background: linear-gradient(to right , #7A88FF, #9ba5ff);padding:5px;border-radius: 10px;");</script>
+<div id="mobile-footer">
+    <ul id="mobile-menu">
+        <li> <a href="https://aboshi8.gitee.io/blog/"> <span class="cyicon chenyu-zhuye-copy"></span> 首页 </a></li>
+        <li> <a href="https://aboshi8.gitee.io/blog/"> <span class="cyicon chenyu-youlianguanli"></span> 壁纸 </a></li>
+        <li> <a href="https://aboshi8.gitee.io/blog/tags/"> <span class="cyicon chenyu-aixin2"></span> 标签 </a></li>
+        <li> <a href="https://aboshi8.gitee.io/blog/live/live.html"> <span class="cyicon chenyu-gongju"></span> 直播 </a></li>
+        <li> <a href="https://aboshi8.gitee.io/blog/box/cn/index.html"> <span class="cyicon chenyu-guanyu"></span> 百宝箱 </a></li>
+    </ul>
+</div>
+
+<script>
+document.onreadystatechange = function()
+{
+　　 if(document.readyState == "complete"){
+            $(".section").eq(0).fadeOut(500);
+             
+   　 }
+}
+</script><script>
+                document.oncontextmenu=function(){
+                    return false
+                };
+               
+            </script> <script>
+                    document.onkeydown=function(){
+                        if(window.event&&window.event.keyCode==123){
+                            event.keyCode=0;
+                            event.returnValue=false;
+                            return false
+                        }
+                    };
+                </script><script src="https://r3387.gitee.io/wenyu/assets/js/xuanguamiao/szgotop.js"></script>
+<link href="https://r3387.gitee.io/wenyu/assets/js/xuanguamiao/szgotop.css" rel="stylesheet">
+<div class="back-to-top cd-top faa-float animated cd-is-visible" style="top: -200px;"></div><script type="text/javascript" src="https://r3387.gitee.io/wenyu/assets/js/commentTyping.js"></script><div id="cc-myssl-id" style="position: fixed;right: 0;bottom: 0;width: 65px;height: 65px;z-index: 99;">
+    <a><img src="https://ae04.alicdn.com/kf/Hab9cb5aa5889482c8dad4eee03b7f4e18.png" alt="" style="width:100%;height:100%"></a>
+</div><div class="quiet_progress" style="width: 46%;"></div>
+             <script>
+              {
+      const t = ()=>{
+          let t = $(window).scrollTop()
+            , e = $(document).height()
+            , o = $(window).height()
+            , a = parseInt(t / (e - o) * 100);
+          a <= 0 && (a = 0),
+          a >= 100 && (a = 100),
+          $(".quiet_progress").css("width", a + "%")
+      }
+      ;
+      t(),
+      $(window).on("scroll", ()=>t())
+  }
+             </script>
+             <script>
+     let wow_arr=''.split(',')
+wow_arr.forEach(item=>{
+let wow_item=item
+console.log(wow_item)
+   $(wow_item).addClass('wow off')
+})
+     </script>    </div><canvas width="1536" height="276" style="position: fixed; top: 0px; left: 0px; pointer-events: none; z-index: 999999;"></canvas>
+
+
+</body>
+</html>
