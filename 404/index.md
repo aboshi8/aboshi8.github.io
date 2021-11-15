@@ -10,6 +10,6 @@ description: "Cannot find the page you want？？ :("
   <head>
   </head>
   <body>
-    对不起,目前无法访问你的连接,你可以访问主页https://aboshi8.gitee.io/blog/
+    对不起,目前无法访问你的连接,你可以访问主页https://kaiboshi.gitee.io/
     </body>
 </html>
