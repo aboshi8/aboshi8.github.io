@@ -2131,7 +2131,7 @@ footer .copy-right {
 .m-nav-item > a:hover:before {
     opacity: 1;
 }
-
+/* 网易云热评 */
 .m-nav-item .m-icon {
     position: absolute;
     right: 15px;
@@ -2139,3 +2139,132 @@ footer .copy-right {
     padding: 0;
     margin: 0;
 }
+.poem-wrap {
+    position: relative;
+    width: 730px;
+    max-width: 80%;
+    border: 2px solid #797979;
+    border-top: 0;
+    text-align: center;
+    margin: 80px auto;
+  }
+  .poem-left {
+    left: 0;
+  }
+  .poem-border {
+    position: absolute;
+    height: 2px;
+    width: 27%;
+    background-color: #797979;
+  }
+  .poem-right {
+    right: 0;
+  }
+  .poem-wrap h1 {
+    position: relative;
+    margin-top: -20px;
+    display: inline-block;
+    letter-spacing: 4px;
+    color: #797979;
+  }
+  .poem-wrap p:nth-of-type(1) {
+    font-size: 25px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .poem-wrap p {
+    width: 70%;
+    margin: auto;
+    line-height: 30px;
+    color: #797979;
+    font-family: 'Linux Biolinum', 'Noto Serif SC', Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  }
+  .poem-wrap p:nth-of-type(2) {
+    font-size: 18px;
+    margin: 15px auto;
+  }
+  .bozhushuo {
+    font-size: 19px !important;
+    margin: 0 0 12px !important;
+    line-height: 1.9rem;
+    font-family: 'Linux Biolinum', 'Noto Serif SC', Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  }
+  .notice {
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px dashed #e6e6e6;
+    color: #969696;
+    position: relative;
+    display: inline-block;
+    width: 95%;
+    background: #fbfbfb50;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  .notice-content {
+    display: initial;
+    vertical-align: middle;
+  }
+  .note {
+    position: relative;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: initial;
+    border-left: 3px solid #eee;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    font-size: var(--content-font-size);
+  }
+  .note:not(.no-icon):before {
+    position: absolute;
+    font-family: FontAwesome;
+    font-size: larger;
+    top: 11px;
+    left: 15px;
+  }
+  /* 博主说 */
+  .bozhushuo {
+    font-size: 19px !important;
+    margin: 0 0 12px !important;
+    line-height: 1.9rem;
+    font-family: 'Linux Biolinum', 'Noto Serif SC', Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  }
+  .swbk p {
+    font-size: 19px !important;
+    line-height: 2rem;
+    text-indent: 2rem;
+    font-style: italic;
+  }
+  .swbk {
+    position: relative;
+    padding: 26px 20px;
+    font-style: italic;
+    margin: 10px 0;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 14px 38px rgba(0, 0, 0, 0.08), 0 3px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.08), 0 3px 8px rgba(0, 0, 0, 0.06);
+    -webkit-transition: all 0.3s ease 0s, -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+    transition: all 0.3s ease 0s, -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+    transition: all 0.3s ease 0s, transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+    transition: all 0.3s ease 0s, transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  }
+  .swbk:hover {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+    -webkit-box-shadow: 0 14px 38px rgba(0, 0, 0, 0.14), 0 3px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.14), 0 3px 8px rgba(0, 0, 0, 0.12);
+  }
+  .swbk .label {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 0 14px 0 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 0 3px 3px 0;
+    background-color: currentColor;
+  }
+  .swbk .label span {
+    color: #fff;
+  }

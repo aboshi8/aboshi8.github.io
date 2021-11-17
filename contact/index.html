@@ -611,6 +611,30 @@
                 </div>
                 
             </div>
+            <!-- 加入网易云音乐热门评论，实时更新 -->
+            <div class="poem-wrap">
+                <div class="poem-border poem-left">
+                </div>
+                <div class="poem-border poem-right">
+                </div>
+                <h1>热评</h1>
+                <p id="poem">loading...</p>
+                <p id="info">loading...</p>
+            </div>
+            <script>
+                $.get("https://v1.hitokoto.cn?c=d&c=h&c=j",function(data,status){if(status=='success'){$('#poem').html(data.hitokoto);if(data.from_who!=null){$('#info').html(data.from_who+" · "+"《 "+data.from+" 》");}else{$('#info').html(" “ "+data.from+" ” ");}}else{$('#poem').html("获取出错啦");}});
+            </script>
+            <!-- 博主说 -->
+            <div class="swbk">
+                <div class="label" style="color: rgb(115, 26, 187);">
+                    
+                    <span>博主说：</span>
+                </div>
+                <p class="bozhushuo">虽然现在是独立博客式微的时代，但无论你是循关键词自搜索引擎而来，还是从 SNS、朋友引荐而来，能在众多博客中与你相遇，也未尝不是一种缘分。欢迎你！</p>
+                <p class="bozhushuo">这里是博主的留言板，若加上你的qq邮箱及号码可展示你的qq头像，留下博客地址便更好不过了。</p>
+                <p class="bozhushuo">文章若有内容纰漏、图片加载失败、链接失效的地方, 可告知博主, 定会修改完善。</p>
+                <hr style="margin-bottom: 20px;">
+            </div>
         </div>
         <div class="card">
             
@@ -868,16 +892,16 @@
 </div>
 
 <script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
+<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
 <script>
     new Valine({
         el: '#vcomments',
         appId: 'YlXHwBPywqDeFHvLgVHnb8oy-9Nh9j0Va',
         appKey: 'vETrE3CWpuGfdCX01nnzc1Fj',
-        notify: 'false' === 'true',
+        notify: 'true' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
-        avatar: 'mm',
+        avatar: 'monsterid',
         pageSize: '10',
         lang: 'zh-cn',
         placeholder: '说点什么吧......'
