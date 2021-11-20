@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Hexo博客添加分类相册功能（实现瀑布流相册，实现加密相册）</title>
+      <link href="/posts/37bce90.html"/>
+      <url>/posts/37bce90.html</url>
+      
+        <content type="html"><![CDATA[<p>搞了半天，终于把理想的相册弄出来了</p><h2 id="效果如下："><a href="#效果如下：" class="headerlink" title="效果如下："></a>效果如下：</h2><p><img src="https://cdn.jsdelivr.net/gh/kaiboshi/pic/img/2JC7WdYAiE.png" alt="img">  </p><p><img src="https://cdn.jsdelivr.net/gh/kaiboshi/pic/img/7mxiEZX4n3.png" alt="img">  </p><p>我实践已经成功，不知道小伙伴们能不能成功？如果遇到错误，请联系我，我会及时回答！  </p><p>参考文献：<br><strong>星空无线</strong><br><a href="https://liyangzone.com/2019/07/22/hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%B8%80%E7%BA%A7%E5%88%86%E7%B1%BB%E7%9B%B8%E5%86%8C/">https://liyangzone.com/2019/07/22/hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%B8%80%E7%BA%A7%E5%88%86%E7%B1%BB%E7%9B%B8%E5%86%8C/</a><br><strong>Yafine</strong><br><a href="https://yafine-blog.cn/posts/3b98.html">https://yafine-blog.cn/posts/3b98.html</a><br><strong>NekoDeng</strong><br><a href="https://nekodeng.gitee.io/posts/waterfall-flow-photo-album.html">https://nekodeng.gitee.io/posts/waterfall-flow-photo-album.html</a>   </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 关于Hexo博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 相册 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用Picgo+Github+jsdelivr 搭建一个免费图床</title>
       <link href="/posts/28603b98.html"/>
       <url>/posts/28603b98.html</url>
