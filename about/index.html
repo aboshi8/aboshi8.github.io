@@ -184,7 +184,7 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/gallery">
+        <a href="/galleries">
           
           <i class="fas fa-image" style="margin-top: -20px; zoom: 0.6;"></i>
           
@@ -446,7 +446,7 @@
               
                 <li>
 
-                  <a href="/gallery " style="margin-left:75px">
+                  <a href="/galleries " style="margin-left:75px">
 				  
 				   <i class="fa fas fa-image" style="position: absolute;left:50px" ></i>
 			      
@@ -819,7 +819,7 @@
     </div>
 </div>
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/echarts/4.2.0-rc.2/echarts.min.js"></script>
 <script>
     let postsChart = echarts.init(document.getElementById('posts-chart'));
     let categoriesChart = echarts.init(document.getElementById('categories-chart'));
@@ -914,7 +914,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Hexo","博客","博客优化","MySQL","数据库","Github","SpringBoot","插件","nodejs","计网"]
+                data: ["Hexo","博客","博客优化","MySQL","数据库","Github","SpringBoot","插件","Markdown","nodejs"]
             }
         ],
         yAxis: [
@@ -1069,6 +1069,12 @@
             
             
             
+            <a href="/tags/Markdown/">
+                <span class="chip center-align waves-effect waves-light chip-default">Markdown</span>
+            </a>
+            
+            
+            
             <a href="/tags/nodejs/">
                 <span class="chip center-align waves-effect waves-light chip-default">nodejs</span>
             </a>
@@ -1111,12 +1117,6 @@
             
             
             
-            <a href="/tags/Markdown/">
-                <span class="chip center-align waves-effect waves-light chip-default">Markdown</span>
-            </a>
-            
-            
-            
             <a href="/tags/%E5%9B%BE%E5%BA%8A/">
                 <span class="chip center-align waves-effect waves-light chip-default">图床</span>
             </a>
@@ -1135,14 +1135,14 @@
             
             
             
-            <a href="/tags/hexo-theme-matery/">
-                <span class="chip center-align waves-effect waves-light chip-default">hexo-theme-matery</span>
+            <a href="/tags/Layui/">
+                <span class="chip center-align waves-effect waves-light chip-default">Layui</span>
             </a>
             
             
             
-            <a href="/tags/Layui/">
-                <span class="chip center-align waves-effect waves-light chip-default">Layui</span>
+            <a href="/tags/hexo-theme-matery/">
+                <span class="chip center-align waves-effect waves-light chip-default">hexo-theme-matery</span>
             </a>
             
             
@@ -1373,7 +1373,7 @@
 </div>
     </div>
 <!-- 禁F12 -->
-    <script>
+    <!-- <script>
         document.onreadystatechange = function()
         {
         　　 if(document.readyState == "complete"){
@@ -1397,7 +1397,7 @@
                     }
                 };
         </script>
-</footer>
+</footer> -->
 
 
 
@@ -1523,6 +1523,7 @@ $(function () {
     
     <!--浏览器搞笑标题  恶搞 -->
     <script type="text/javascript" src="/js/FunnyTitle.js"></script>
+    <script type="text/javascript" src="https://cdn.staticfile.org/echarts/4.2.0-rc.2/echarts.min.js"></script>
        
     <!-- Baidu Analytics -->
 
