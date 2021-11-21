@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="博主个人影单, kaiboshi">
+    <meta name="keywords" content="教程：hexo-calendar 活动日历插件, kaiboshi">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -20,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>博主个人影单 | kaiboshi</title>
+    <title>教程：hexo-calendar 活动日历插件 | kaiboshi</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -604,12 +604,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.webp')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/kaiboshi/pic/cover/98894.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">博主个人影单</h1>
+                    <h1 class="description center-align post-title">教程：hexo-calendar 活动日历插件</h1>
                 </div>
             </div>
         </div>
@@ -723,12 +723,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%8F%92%E4%BB%B6/">
+                                <span class="chip bg-color">插件</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%85%B3%E4%BA%8EHexo%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                关于Hexo博客
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -746,7 +763,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    656
+                    372
                 </div>
                 
 
@@ -766,249 +783,159 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-    <p>电影发明以后，人类的生命相比之前延长了三倍。————《一一》</p>
-</blockquote>
+                <p>在博客中插入类似 Github contributions 的活动日历。</p>
+<p>注意：此插件会和 <code>hexo g</code>命令冲突，请使用 <code>hexo ge</code>或 <code>hexo generate</code>替代 <code>hexo g</code>命令！</p>
+<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6"></a>前提条件</h2><p>注意：不满足前提条件的无法使用此插件，在不满足前提条件的情况下安装此插件出现的问题不予以处理，如何实现以下前提条件的问题不予以处理！</p>
+<ol>
+<li>Node.js &gt;= 12.0</li>
+<li>使用 <a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a>对博客**源码（不是使用 git 部署）**进行管理；</li>
+<li>在博客根目录使用 <code>git log -1 --date=iso --pretty=format:&quot;%ad&quot;</code>命令能够输出一个日期；</li>
+<li>如何确定第一项是否符合：</li>
+<li> 博客根目录含有 <code>.git</code>文件夹，这是一个隐藏文件夹；</li>
+<li>符合上面的第三项。</li>
+</ol>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a><a href="#%E5%AE%89%E8%A3%85"></a>安装</h2><pre class="line-numbers language-none"><code class="language-none">npm i hexo-calendar -S<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<style>
-    
-.hexo-douban-tabs {
-    margin-bottom: 15px;
-    margin-top: 15px;
-}
+<p>or</p>
+<pre class="line-numbers language-none"><code class="language-none">cnpm i hexo-calendar -S
+&#96;&#96;&#96;  
 
-.hexo-douban-tab {
-    padding: 5px;
-}
+## [](#使用)使用
 
-.hexo-douban-active {
-    background: #657b83;
-    color: #fff;
-}
+### [](#作为辅助函数在主题模板中使用)作为辅助函数在主题模板中使用
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>&lt;%- calendar({monthLang: ‘cn’, dayLang: ‘cn’, title: ‘活动日历’}) %&gt;</p>
+<pre class="line-numbers language-none"><code class="language-none">
 
-.hexo-douban-item {
-    padding-bottom: 10px;
-    position: relative;
-    clear: both;
-    min-height: 170px;
-    padding: 10px 0;
-    border-bottom: 1px #ddd solid;
-}
+### [](#作为标签在-md-文件中使用)作为标签在 md 文件中使用
 
-@media screen and (max-width: 600px) {
-    .hexo-douban-item {
-        width: 100%;
+注意：这种方法请使用严格的 JSON 格式！
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<div style="width:100%;overflow-x:auto;overflow-y:hidden;">
+<div id="calendar" style="width: 600px;height:165px;"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    function dateFormat(date){
+      date = new Date(date)
+      return date.getFullYear() + '-' + (date.getMonth() + 1).toString().padStart(2, '0') + '-' + date.getDate().toString().padStart(2, '0')
     }
-}
+    let calendarChart = echarts.init(document.getElementById('calendar'));
+    let endDate = new Date().getTime()
+    let startDate = new Date(endDate - 40*7*24*3600*1000).getTime()
+    let startDay = Math.ceil(startDate/(24*3600*1000))
+    let endDay = Math.ceil(endDate/(24*3600*1000))
 
-.hexo-douban-picture {
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 100px;
-}
+    let commitData = {"2021-08-08":1}
+    let seriesData = []
 
-.hexo-douban-info {
-    padding-left: 120px;
-    margin-top: 70px;
-}
-
-.hexo-douban-meta {
-    font-size: 12px;
-    padding-right: 10px;
-}
-
-.hexo-douban-comments {
-    font-size: 12px;
-}
-
-.hexo-douban-pagination {
-    margin-top: 15px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.hexo-douban-button {
-    padding: 5px;
-}
-
-.hexo-douban-button:hover {
-    background: #657b83;
-    color: #fff;
-}
-
-.hexo-douban-hide {
-    display: none;
-}
-
-.hexo-douban-show {
-    display: block;
-}
-
-
-</style>
-
-<div class="hexo-douban-tabs">
-    <a class="hexo-douban-tab" id="hexo-douban-tab1" href="javascript:;"
-       rel="external">
-        在看
-        (0)</a>
-    <a class="hexo-douban-tab" id="hexo-douban-tab2" href="javascript:;"
-       rel="external">
-        想看
-        (0)</a>
-    <a class="hexo-douban-tab" id="hexo-douban-tab3" href="javascript:;"
-       rel="external">
-        已看
-        (0)</a>
-</div>
-<div>
-    <div id="hexo-douban-item1">
-        
-        <div class="hexo-douban-pagination">
-    <a class="hexo-douban-button hexo-douban-firstpage" href="javascript:;"> 首页</a>
-    <a class="hexo-douban-button hexo-douban-previouspage" href="javascript:;">上一页</a>
-    <span class="hexo-douban-pagenum">2 / 3</span>
-    <a class="hexo-douban-button hexo-douban-nextpage" href="javascript:;">下一页</a>
-    <a class="hexo-douban-button hexo-douban-lastpage" href="javascript:;">尾页</a>
-</div>
-    </div>
-    <div id="hexo-douban-item2">
-        
-        <div class="hexo-douban-pagination">
-    <a class="hexo-douban-button hexo-douban-firstpage" href="javascript:;"> 首页</a>
-    <a class="hexo-douban-button hexo-douban-previouspage" href="javascript:;">上一页</a>
-    <span class="hexo-douban-pagenum">2 / 3</span>
-    <a class="hexo-douban-button hexo-douban-nextpage" href="javascript:;">下一页</a>
-    <a class="hexo-douban-button hexo-douban-lastpage" href="javascript:;">尾页</a>
-</div>
-    </div>
-    <div id="hexo-douban-item3">
-        
-        <div class="hexo-douban-pagination">
-    <a class="hexo-douban-button hexo-douban-firstpage" href="javascript:;"> 首页</a>
-    <a class="hexo-douban-button hexo-douban-previouspage" href="javascript:;">上一页</a>
-    <span class="hexo-douban-pagenum">2 / 3</span>
-    <a class="hexo-douban-button hexo-douban-nextpage" href="javascript:;">下一页</a>
-    <a class="hexo-douban-button hexo-douban-lastpage" href="javascript:;">尾页</a>
-</div>
-    </div>
-</div>
-
-<script>
-    /**
- * Created by myths on 18-2-8.
- */
-
-Element.prototype.siblings = function () {
-    var siblingElement = [];
-    var sibs = this.parentNode.children;
-    for (var i = 0; i < sibs.length; i++) {
-        if (sibs[i] !== this) {
-            siblingElement.push(sibs[i]);
+    for(let i = startDay;i <= endDay;i++){
+      let date = i*24*3600*1000
+      let formatDate = dateFormat(date)
+      let times = commitData[formatDate] || 0
+      seriesData.push([formatDate, times])
+    }
+    let option = {
+      title: {
+        text: "活动日历",
+        x: "center"
+      },
+      backgroundColor: "#f9f9f9",
+      tooltip: {
+        padding: 10,
+        backgroundColor: "#555",
+        borderColor: "#777",
+        borderWidth: 1,
+        formatter: function(a) {
+          var b = a.value;
+          return '<div style="font-size: 14px;">' + b[0] + "：" + b[1] + "</div>"
         }
-    }
-    return siblingElement;
-};
-function tabClick() {
-    //修改标签样式
-    this.classList.add('hexo-douban-active');
-    var sibs = this.siblings();
-    for (var j = 0; j < sibs.length; j++) {
-        sibs[j].classList.remove('hexo-douban-active');
-    }
-    //显示对应板块
-    var itemId = this.id.replace('tab', 'item');
-    var target = document.getElementById(itemId);
-    target.classList.remove('hexo-douban-hide');
-    target.classList.add('hexo-douban-show');
-    sibs = document.getElementById(itemId).siblings();
-    for (var k = 0; k < sibs.length; k++) {
-        sibs[k].classList.remove('hexo-douban-show');
-        sibs[k].classList.add('hexo-douban-hide');
-    }
-}
-var tabs = document.getElementsByClassName("hexo-douban-tab");
-for (var i = 0; i < tabs.length; i++) {
-    tabs[i].onclick = tabClick;
-    tabs[i].onclick.apply(tabs[i]);
-}
-tabs[2].click();
-
-    var firstpages = document.getElementsByClassName("hexo-douban-firstpage");
-var previouspages = document.getElementsByClassName("hexo-douban-previouspage");
-var nextpages = document.getElementsByClassName("hexo-douban-nextpage");
-var lastpages = document.getElementsByClassName("hexo-douban-lastpage");
-var pagenums = document.getElementsByClassName("hexo-douban-pagenum");
-
-function makePageNum(num, arr) {
-    return (num + 1) + ' / ' + (Math.ceil(arr.length / 20 === 0 ? 1 : Math.ceil(arr.length / 20)));
-}
-
-function firstBtn() {
-    var sibs = this.parentNode.siblings();
-    displayPage(sibs, 0);
-    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(0, sibs);
-}
-
-function previousBtn() {
-    var sibs = this.parentNode.siblings();
-    var currNum = this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText;
-    currNum = currNum.substr(0, currNum.indexOf('/') - 1);
-    currNum = parseInt(currNum, 20) - 1;
-    if (currNum > 0) {
-        currNum--;
-    }
-    displayPage(sibs, currNum);
-    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(currNum, sibs);
-}
-
-function nextBtn() {
-    var sibs = this.parentNode.siblings();
-    var currNum = this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText;
-    currNum = currNum.substr(0, currNum.indexOf('/') - 1);
-    currNum = parseInt(currNum, 20) - 1;
-    if (currNum < Math.ceil(sibs.length / 20) - 1) {
-        currNum++;
-    }
-    displayPage(sibs, currNum);
-    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(currNum, sibs);
-}
-
-function lastBtn() {
-    var sibs = this.parentNode.siblings();
-    displayPage(sibs, Math.ceil(sibs.length / 20) - 1);
-    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(Math.ceil(sibs.length / 20) - 1 === -1 ? 0 : Math.ceil(sibs.length / 20) - 1, sibs);
-}
-
-function displayPage(arr, num) {
-    for (var i = 0; i < arr.length; i++) {
-        if (Math.floor(i / 20) === num) {
-            arr[i].classList.remove('hexo-douban-hide');
-            var img = arr[i].getElementsByTagName('img')[0];
-            img.src = img.getAttribute('data-src');
-        } else {
-            arr[i].classList.add('hexo-douban-hide');
+      },
+      visualMap: {
+        show: !1,
+        showLabel: !0,
+        min: 0,
+        max: 4,
+        calculable: !1,
+        inRange: {
+          symbol: "rect",
+          color: ["#ebedf0", "#c6e48b", "#7bc96f", "#239a3b", "#196127"]
+        },
+        itemWidth: 12,
+        itemHeight: 12,
+        orient: "horizontal",
+        left: "center",
+        top: 0
+      },
+      calendar: [{
+        top: 50,
+        left: "center",
+        range: [dateFormat(startDate), dateFormat(endDate)],
+        cellSize: [13, 13],
+        splitLine: {
+          show: !1
+        },
+        name: {
+          textStyle: {
+            color: "#3C4858"
+          }
+        },
+        itemStyle: {
+          borderColor: "#fff",
+          borderWidth: 2
+        },
+        yearLabel: {
+          show: !1
+        },
+        monthLabel: {
+          nameMap: "cn",
+          fontSize: 11,
+          color: "#3C4858"
+        },
+        dayLabel: {
+          formatter: "{start} 1st",
+          nameMap: "cn",
+          fontSize: 11,
+          color: "#3C4858"
         }
-    }
-}
+      }],
+      series: [{
+        type: "heatmap",
+        coordinateSystem: "calendar",
+        calendarIndex: 0,
+        data: seriesData
+      }]
+    };
 
-for (var i = 0; i < firstpages.length; i++) {
-
-    //add listener
-    firstpages[i].onclick = firstBtn;
-    previouspages[i].onclick = previousBtn;
-    nextpages[i].onclick = nextBtn;
-    lastpages[i].onclick = lastBtn;
-
-    //set page num
-    var size = pagenums[i].parentNode.siblings().length;
-    pagenums[i].innerText = '1 / ' + (Math.ceil(size / 20) === 0 ? 1 : Math.ceil(size / 20));
-    firstpages[i].click();
-}
-
+    calendarChart.setOption(option);
+  })();
 </script>
 
+<pre><code>
+
+### [](#如果你使用了自动部署)如果你使用了自动部署
+
+如果你使用了 `Travis CI`, `Github Action`之类的自动部署，那么你需要在推送源码之前使用 `hexo gc \-w=40`命令生成一个 `calendar.json`文件。 `-w=40`代表显示 40 周之前至今的活动记录。
+
+## [](#选项)选项
+
+| 名称 | 类型 | 默认值 | 描述 |
+| :-: | :-: | :-: | :-: |
+| width | `String` | `&quot;600&quot;` | 日历宽度，单位： `px` |
+| height | `String` | `&quot;165&quot;` | 日历高度，单位： `px` |
+| id | `String` | `&quot;calendar&quot;` | 日历元素 id |
+| monthLang | `String`or `Array` | `&quot;en&quot;` | 月份语言，可选： `en`, `cn`或 [自定义](https://echarts.apache.org/zh/option.html#calendar.monthLabel.nameMap) |
+| dayLang | `String`or `Array` | `&quot;en&quot;` | 一周中每一天的语言，可选： `en`, `cn`或 [自定义](https://echarts.apache.org/zh/option.html#calendar.dayLabel.nameMap) |
+| weeks | `Number` | `40` | 显示多少周之前至今的活动记录 |
+| title | `String` | `&quot;calendar&quot;` | 日历标题 |
+| insertScript | `Boolean` | `true` | 是否自动插入 `echarts`库。如果你已全局引入 `echarts`库，请将此项设为 `false`；如果你的站点启用了 `pjax`，请将此项设为 `false`，并全局引用 `echarts`库。 |
+
+## [](#示例)示例s
+
+![示例](https://cdn.jsdelivr.net/gh/kaiboshi/pic/img/1121121815.png)
+</code></pre>
 
                 
             </div>
@@ -1035,7 +962,7 @@ for (var i = 0; i < firstpages.length; i++) {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kaiboshi.gitee.io/movies/index.html">https://kaiboshi.gitee.io/movies/index.html</a>
+                    <a href="https://kaiboshi.gitee.io/posts/cdfd9e84.html">https://kaiboshi.gitee.io/posts/cdfd9e84.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1072,7 +999,15 @@ for (var i = 0; i < firstpages.length; i++) {
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Hexo/">
+                                    <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%8F%92%E4%BB%B6/">
+                                    <span class="chip bg-color">插件</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1382,19 +1317,18 @@ for (var i = 0; i < firstpages.length; i++) {
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/movies/index.html">
+                <a href="/posts/cdfd9e84.html">
                     <div class="card-image">
                         
+                        <img src="https://cdn.jsdelivr.net/gh/kaiboshi/pic/cover/98894.webp" class="responsive-img" alt="教程：hexo-calendar 活动日历插件">
                         
-                        <img src="/medias/featureimages/9.webp" class="responsive-img" alt="博主个人影单">
-                        
-                        <span class="card-title">博主个人影单</span>
+                        <span class="card-title">教程：hexo-calendar 活动日历插件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            教程：hexo-calendar 活动日历插件
                         
                     </div>
                     <div class="publish-info">
@@ -1403,13 +1337,29 @@ for (var i = 0; i < firstpages.length; i++) {
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            kaiboshi
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%85%B3%E4%BA%8EHexo%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    关于Hexo博客
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8F%92%E4%BB%B6/">
+                        <span class="chip bg-color">插件</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1417,37 +1367,51 @@ for (var i = 0; i < firstpages.length; i++) {
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/movies/index.html">
+                <a href="/posts/37bce90.html">
                     <div class="card-image">
                         
+                        <img src="https://cdn.jsdelivr.net/gh/kaiboshi/pic/cover/gls.jpg" class="responsive-img" alt="Hexo博客添加分类相册功能（实现瀑布流相册，实现加密相册）">
                         
-                        <img src="/medias/featureimages/9.webp" class="responsive-img" alt="博主个人影单">
-                        
-                        <span class="card-title">博主个人影单</span>
+                        <span class="card-title">Hexo博客添加分类相册功能（实现瀑布流相册，实现加密相册）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Hexo博客添加分类相册功能，修改原来的相册
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-20
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            kaiboshi
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%85%B3%E4%BA%8EHexo%E5%8D%9A%E5%AE%A2/" class="post-category">
+                                    关于Hexo博客
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%9B%B8%E5%86%8C/">
+                        <span class="chip bg-color">相册</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

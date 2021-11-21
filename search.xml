@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>教程：hexo-calendar 活动日历插件</title>
+      <link href="/posts/cdfd9e84.html"/>
+      <url>/posts/cdfd9e84.html</url>
+      
+        <content type="html"><![CDATA[<p>在博客中插入类似 Github contributions 的活动日历。</p><p>注意：此插件会和 <code>hexo g</code>命令冲突，请使用 <code>hexo ge</code>或 <code>hexo generate</code>替代 <code>hexo g</code>命令！</p><h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6"></a>前提条件</h2><p>注意：不满足前提条件的无法使用此插件，在不满足前提条件的情况下安装此插件出现的问题不予以处理，如何实现以下前提条件的问题不予以处理！</p><ol><li>Node.js &gt;= 12.0</li><li>使用 <a href="https://git-scm.com/">Git</a>对博客**源码（不是使用 git 部署）**进行管理；</li><li>在博客根目录使用 <code>git log -1 --date=iso --pretty=format:&quot;%ad&quot;</code>命令能够输出一个日期；</li><li>如何确定第一项是否符合：</li><li> 博客根目录含有 <code>.git</code>文件夹，这是一个隐藏文件夹；</li><li>符合上面的第三项。</li></ol><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a><a href="#%E5%AE%89%E8%A3%85"></a>安装</h2><pre class="line-numbers language-none"><code class="language-none">npm i hexo-calendar -S<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>or</p><pre class="line-numbers language-none"><code class="language-none">cnpm i hexo-calendar -S&#96;&#96;&#96;  ## [](#使用)使用### [](#作为辅助函数在主题模板中使用)作为辅助函数在主题模板中使用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>&lt;%- calendar({monthLang: ‘cn’, dayLang: ‘cn’, title: ‘活动日历’}) %&gt;</p><pre class="line-numbers language-none"><code class="language-none">### [](#作为标签在-md-文件中使用)作为标签在 md 文件中使用注意：这种方法请使用严格的 JSON 格式！<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><div style="width:100%;overflow-x:auto;overflow-y:hidden;"><div id="calendar" style="width: 600px;height:165px;"></div></div><script src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script><script type="text/javascript">  (function(){    function dateFormat(date){      date = new Date(date)      return date.getFullYear() + '-' + (date.getMonth() + 1).toString().padStart(2, '0') + '-' + date.getDate().toString().padStart(2, '0')    }    let calendarChart = echarts.init(document.getElementById('calendar'));    let endDate = new Date().getTime()    let startDate = new Date(endDate - 40*7*24*3600*1000).getTime()    let startDay = Math.ceil(startDate/(24*3600*1000))    let endDay = Math.ceil(endDate/(24*3600*1000))    let commitData = {"2021-08-08":1}    let seriesData = []    for(let i = startDay;i <= endDay;i++){      let date = i*24*3600*1000      let formatDate = dateFormat(date)      let times = commitData[formatDate] || 0      seriesData.push([formatDate, times])    }    let option = {      title: {        text: "活动日历",        x: "center"      },      backgroundColor: "#f9f9f9",      tooltip: {        padding: 10,        backgroundColor: "#555",        borderColor: "#777",        borderWidth: 1,        formatter: function(a) {          var b = a.value;          return '<div style="font-size: 14px;">' + b[0] + "：" + b[1] + "</div>"        }      },      visualMap: {        show: !1,        showLabel: !0,        min: 0,        max: 4,        calculable: !1,        inRange: {          symbol: "rect",          color: ["#ebedf0", "#c6e48b", "#7bc96f", "#239a3b", "#196127"]        },        itemWidth: 12,        itemHeight: 12,        orient: "horizontal",        left: "center",        top: 0      },      calendar: [{        top: 50,        left: "center",        range: [dateFormat(startDate), dateFormat(endDate)],        cellSize: [13, 13],        splitLine: {          show: !1        },        name: {          textStyle: {            color: "#3C4858"          }        },        itemStyle: {          borderColor: "#fff",          borderWidth: 2        },        yearLabel: {          show: !1        },        monthLabel: {          nameMap: "cn",          fontSize: 11,          color: "#3C4858"        },        dayLabel: {          formatter: "{start} 1st",          nameMap: "cn",          fontSize: 11,          color: "#3C4858"        }      }],      series: [{        type: "heatmap",        coordinateSystem: "calendar",        calendarIndex: 0,        data: seriesData      }]    };    calendarChart.setOption(option);  })();</script><pre><code>### [](#如果你使用了自动部署)如果你使用了自动部署如果你使用了 `Travis CI`, `Github Action`之类的自动部署，那么你需要在推送源码之前使用 `hexo gc \-w=40`命令生成一个 `calendar.json`文件。 `-w=40`代表显示 40 周之前至今的活动记录。## [](#选项)选项| 名称 | 类型 | 默认值 | 描述 || :-: | :-: | :-: | :-: || width | `String` | `&quot;600&quot;` | 日历宽度，单位： `px` || height | `String` | `&quot;165&quot;` | 日历高度，单位： `px` || id | `String` | `&quot;calendar&quot;` | 日历元素 id || monthLang | `String`or `Array` | `&quot;en&quot;` | 月份语言，可选： `en`, `cn`或 [自定义](https://echarts.apache.org/zh/option.html#calendar.monthLabel.nameMap) || dayLang | `String`or `Array` | `&quot;en&quot;` | 一周中每一天的语言，可选： `en`, `cn`或 [自定义](https://echarts.apache.org/zh/option.html#calendar.dayLabel.nameMap) || weeks | `Number` | `40` | 显示多少周之前至今的活动记录 || title | `String` | `&quot;calendar&quot;` | 日历标题 || insertScript | `Boolean` | `true` | 是否自动插入 `echarts`库。如果你已全局引入 `echarts`库，请将此项设为 `false`；如果你的站点启用了 `pjax`，请将此项设为 `false`，并全局引用 `echarts`库。 |## [](#示例)示例s![示例](https://cdn.jsdelivr.net/gh/kaiboshi/pic/img/1121121815.png)</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 关于Hexo博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 插件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo博客添加分类相册功能（实现瀑布流相册，实现加密相册）</title>
       <link href="/posts/37bce90.html"/>
       <url>/posts/37bce90.html</url>
