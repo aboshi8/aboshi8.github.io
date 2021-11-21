@@ -39,6 +39,7 @@
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/css/style.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/css/style333.css">
+    
 
     <!-- 百度统计 gitee github-->
     <script>
@@ -763,7 +764,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    529
+                    541
                 </div>
                 
 
@@ -785,7 +786,7 @@
             <div id="articleContent">
                 <p>在博客中插入类似 Github contributions 的活动日历。</p>
 <p>注意：此插件会和 <code>hexo g</code>命令冲突，请使用 <code>hexo ge</code>或 <code>hexo generate</code>替代 <code>hexo g</code>命令！</p>
-<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6"></a>前提条件</h2><p>注意：不满足前提条件的无法使用此插件，在不满足前提条件的情况下安装此插件出现的问题不予以处理，如何实现以下前提条件的问题不予以处理！</p>
+<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><p>注意：不满足前提条件的无法使用此插件，在不满足前提条件的情况下安装此插件出现的问题不予以处理，如何实现以下前提条件的问题不予以处理！</p>
 <ol>
 <li>Node.js &gt;= 12.0</li>
 <li>使用 <a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a>对博客**源码（不是使用 git 部署）**进行管理；</li>
@@ -796,18 +797,18 @@
 </ol>
 </li>
 </ol>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a><a href="#%E5%AE%89%E8%A3%85"></a>安装</h2><pre><code class="bashi">npm i hexo-calendar -S
-</code></pre>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre class="line-numbers language-bashi" data-language="bashi"><code class="language-bashi">npm i hexo-calendar -S<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>or  </p>
-<pre><code class="bashi">cnpm i hexo-calendar -S
-</code></pre>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="作为辅助函数在主题模板中使用"><a href="#作为辅助函数在主题模板中使用" class="headerlink" title="作为辅助函数在主题模板中使用"></a>作为辅助函数在主题模板中使用</h3><pre><code class="bashi">&lt;%- calendar(&#123;monthLang: &#39;cn&#39;, dayLang: &#39;cn&#39;, title: &#39;活动日历&#39;&#125;) %&gt;
-</code></pre>
+<pre class="line-numbers language-none"><code class="language-none">cnpm i hexo-calendar -S<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="作为辅助函数在主题模板中使用"><a href="#作为辅助函数在主题模板中使用" class="headerlink" title="作为辅助函数在主题模板中使用"></a>作为辅助函数在主题模板中使用</h3><pre class="line-numbers language-bashi" data-language="bashi"><code class="language-bashi">&lt;%- calendar(&#123;monthLang: &#39;cn&#39;, dayLang: &#39;cn&#39;, title: &#39;活动日历&#39;&#125;) %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h3 id="作为标签在-md-文件中使用"><a href="#作为标签在-md-文件中使用" class="headerlink" title="作为标签在 md 文件中使用"></a><a href="#%E4%BD%9C%E4%B8%BA%E6%A0%87%E7%AD%BE%E5%9C%A8-md-%E6%96%87%E4%BB%B6%E4%B8%AD%E4%BD%BF%E7%94%A8"></a>作为标签在 md 文件中使用</h3><p>注意：这种方法请使用严格的 JSON 格式！</p>
-<pre><code class="bashi">&#123;% calendar %&#125; &#123;"monthLang": "cn", "dayLang": "cn", "title": "活动日历"&#125; &#123;% endcalendar %&#125;
-</code></pre>
+<pre class="line-numbers language-bashi" data-language="bashi"><code class="language-bashi">&#123;% calendar %&#125; &#123;&quot;monthLang&quot;: &quot;cn&quot;, &quot;dayLang&quot;: &quot;cn&quot;, &quot;title&quot;: &quot;活动日历&quot;&#125; &#123;% endcalendar %&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h3 id="如果你使用了自动部署"><a href="#如果你使用了自动部署" class="headerlink" title="如果你使用了自动部署"></a>如果你使用了自动部署</h3><p>如果你使用了 <code>Travis CI</code>, <code>Github Action</code>之类的自动部署，那么你需要在推送源码之前使用 <code>hexo gc \-w=40</code>命令生成一个 <code>calendar.json</code>文件。 <code>-w=40</code>代表显示 40 周之前至今的活动记录。</p>
-<h2 id="选项"><a href="#选项" class="headerlink" title="选项"></a><a href="#%E9%80%89%E9%A1%B9"></a>选项</h2><table>
+<h2 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h2><table>
 <thead>
 <tr>
 <th align="center">名称</th>
