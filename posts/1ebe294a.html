@@ -38,7 +38,7 @@
     
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/css/style.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/css/style333.css">
+    
     
 
     <!-- 百度统计 gitee github-->
@@ -644,8 +644,9 @@
 
     .toc-fixed {
         position: fixed;
-        top: 64px;
+        top: 64px;  
     }
+    /* 200原来是64 */
 
     .toc-widget {
         width: 345px;
@@ -653,7 +654,8 @@
     }
 
     .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
+        padding: 35px 0 15px 0px;
+        padding-left: 17px;
         font-size: 1.5rem;
         font-weight: bold;
         line-height: 1.5rem;
@@ -665,7 +667,7 @@
     }
 
     #toc-content {
-        padding-bottom: 30px;
+        height: calc(100vh - 250px);
         overflow: auto;
     }
 
@@ -706,8 +708,8 @@
     }
 
     #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
+        width: 38px;
+        height: 38px;
     }
 
     #floating-toc-btn .btn-floating i {
@@ -1476,7 +1478,7 @@ mysql<span class="token operator">></span> <span class="token keyword">select</s
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
+        <div class="toc-widget">
             <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
@@ -1498,11 +1500,11 @@ mysql<span class="token operator">></span> <span class="token keyword">select</s
         tocbot.init({
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
+            headingsOffset: -($(window).height() * 0.8 - 45),
             collapseDepth: Number('0'),
             headingSelector: 'h2, h3, h4'
         });
-
+        // 0.8原来是0.4
         // modify the toc link href to support Chinese.
         let i = 0;
         let tocHeading = 'toc-heading-';
@@ -1517,7 +1519,7 @@ mysql<span class="token operator">></span> <span class="token keyword">select</s
         });
 
         // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let tocHeight = parseInt($(window).height() * 0.8 - 64);
         let $tocWidget = $('.toc-widget');
         $(window).scroll(function () {
             let scroll = $(window).scrollTop();
@@ -1949,6 +1951,21 @@ $(function () {
     
     <!--添加鼠标彩虹星星掉落跟随效果-->
     <script src="/js/cursor.js"></script>
+    <!-- 网站全局深色模式设置开始 -->
+    <script>
+        if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        // else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        // document.body.classList.add('dark');
+        } 
+        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+        }
+    </script>
+    <a onclick="switchNightMode()" id="sma">
+        <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+    </a>
 
 <!-- hexo injector body_end start --><script data-pjax>function history_calendar_injector_config(){
                 var parent_div_git = document.getElementsByClassName('col l3 hide-on-med-and-down expanded')[0];

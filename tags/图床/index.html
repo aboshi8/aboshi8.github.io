@@ -38,7 +38,7 @@
     
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/css/style.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/css/style333.css">
+    
     
 
     <!-- 百度统计 gitee github-->
@@ -712,20 +712,20 @@
                 </a>
                 
                 
-                <a href="/tags/SpringBoot/" title="SpringBoot: 2">
+                <a href="/tags/nodejs/" title="nodejs: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="SpringBoot" style="background-color: #82E0AA;">SpringBoot
-                        <span class="tag-length">2</span>
+                            data-tagname="nodejs" style="background-color: #82E0AA;">nodejs
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/nodejs/" title="nodejs: 1">
+                <a href="/tags/SpringBoot/" title="SpringBoot: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="nodejs" style="background-color: #D7BDE2;">nodejs
-                        <span class="tag-length">1</span>
+                            data-tagname="SpringBoot" style="background-color: #D7BDE2;">SpringBoot
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -748,19 +748,10 @@
                 </a>
                 
                 
-                <a href="/tags/%E8%AE%A1%E7%BD%91/" title="计网: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="计网" style="background-color: #F8C471;">计网
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/Html/" title="Html: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Html" style="background-color: #F9E79F;">Html
+                            data-tagname="Html" style="background-color: #F8C471;">Html
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -769,7 +760,7 @@
                 <a href="/tags/%E4%BC%AA%E7%B1%BB/" title="伪类: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="伪类" style="background-color: #FFF;">伪类
+                            data-tagname="伪类" style="background-color: #F9E79F;">伪类
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -789,6 +780,15 @@
                              chip-default "
                             data-tagname="插件" style="background-color: #F8F9F9;">插件
                         <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E8%AE%A1%E7%BD%91/" title="计网: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="计网" style="background-color: #E8F8F5;">计网
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -1237,6 +1237,21 @@ $(function () {
     
     <!--添加鼠标彩虹星星掉落跟随效果-->
     <script src="/js/cursor.js"></script>
+    <!-- 网站全局深色模式设置开始 -->
+    <script>
+        if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        }
+        // else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        // document.body.classList.add('dark');
+        } 
+        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+        }
+    </script>
+    <a onclick="switchNightMode()" id="sma">
+        <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
+    </a>
 
 <!-- hexo injector body_end start --><script data-pjax>function history_calendar_injector_config(){
                 var parent_div_git = document.getElementsByClassName('col l3 hide-on-med-and-down expanded')[0];
