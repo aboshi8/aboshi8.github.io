@@ -1246,29 +1246,28 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/cdfd9e84.html">
+                <a href="/posts/72fc1fe7.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/kaiboshi/pic/cover/98894.webp" class="responsive-img" alt="教程：hexo-calendar 活动日历插件">
+                        <img src="https://cdn.jsdelivr.net/gh/kaiboshi/pic/cover/a9go.webp" class="responsive-img" alt="博客主题个性化(目录，搜索框，代码雨)">
                         
-                        <span class="card-title">教程：hexo-calendar 活动日历插件</span>
+                        <span class="card-title">博客主题个性化(目录，搜索框，代码雨)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            教程：hexo-calendar 活动日历插件
+                            教程：优化hexo搜索框，目录，添加樱花飘落，代码雨
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-21
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1281,7 +1280,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1289,8 +1287,8 @@
                         <span class="chip bg-color">Hexo</span>
                     </a>
                     
-                    <a href="/tags/%E6%8F%92%E4%BB%B6/">
-                        <span class="chip bg-color">插件</span>
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/">
+                        <span class="chip bg-color">博客优化</span>
                     </a>
                     
                 </div>
@@ -1541,7 +1539,7 @@
             
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">47k</span>&nbsp;字
+                class="white-color">47.8k</span>&nbsp;字
             
             
             
@@ -1782,7 +1780,7 @@ $(function () {
     
     
     <!--浏览器搞笑标题  恶搞 -->
-    <script type="text/javascript" src="/js/FunnyTitle.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/FunnyTitle.js"></script>
     
        
     <!-- Baidu Analytics -->
@@ -1818,13 +1816,7 @@ $(function () {
     
 
     
-    
-    <script type="text/javascript" size="150" alpha='0.6'
-        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
-    
 
-    
-    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     
@@ -1832,15 +1824,15 @@ $(function () {
     
 
     
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         //只在桌面版网页启用特效,添加樱花飘落效果768
         var windowWidth = $(window).width();
         if (windowWidth > 500) {
-            document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+            document.write('<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/sakura.js"><\/script>');
         }
-    </script>
-    <!--222-->
-    <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/sakura.js"></script>
+    </script> -->
+    <!--222第二种-->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/sakura.js"></script> -->
 
 
     <!--动态线条背景--> <!--
@@ -1849,14 +1841,24 @@ $(function () {
     </script>   -->
     
     <!--添加鼠标彩虹星星掉落跟随效果-->
-    <script src="/js/cursor.js"></script>
+    <!-- <script type="text/javascript" src="js/mymouse.js" id="mymouse"></script> -->
+    
+    <!-- 点击冒点 -->
+    <canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
+    <script src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/maodian.js"></script>
+    <!-- 数字雨 -->
+    <canvas id="canvas" width="1920" height="1080"></canvas>
+    <script type="text/javascript" zIndex="-4" src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/DigitalRain.js"></script>
+    
+  <!-- 雪花 -->
+  <!--<script src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/snow1.js"></script> -->
     <!-- 网站全局深色模式设置开始 -->
     <script>
         if (localStorage.getItem('dark') === '1') {
         document.body.classList.add('dark');
         }
-        // else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
-        // document.body.classList.add('dark');
+        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        document.body.classList.add('dark');
         } 
         else if (matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');

@@ -3197,3 +3197,15 @@ body.themechris .textsst .col {
 .aboutyunxingsd {
     right: 25%;
 }
+/* 背景数字雨 */
+canvas {
+    position:fixed;
+    right:0px;
+    bottom:0px;
+    min-width:100%;
+    min-height:100%;
+    height:auto;
+    width:auto;
+    z-index:-2;
+}
+

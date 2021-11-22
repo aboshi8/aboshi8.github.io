@@ -668,7 +668,7 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">2</a></span>
+    <span class="count"><a href="/categories">6</a></span>
     <span class="name">分类</span>
 </div>
 
@@ -698,7 +698,7 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">2</a></span>
+    <span class="count"><a href="/categories">6</a></span>
     <span class="name">分类</span>
 </div>
 
@@ -849,7 +849,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,15,13,0,5],
+                data: [0,0,0,0,0,0,0,0,0,15,12,0,6],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -891,7 +891,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"关于Hexo博客","value":8},{"name":"数据库系列","value":3}],
+                data: [{"name":"关于Hexo博客","value":14},{"name":"SpringBoot","value":2},{"name":"Github","value":1},{"name":"数据库系列","value":4},{"name":"Html","value":1},{"name":"Layui","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -915,7 +915,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Hexo","博客","博客优化","MySQL","数据库","Github","插件","SpringBoot","相册","Markdown"]
+                data: ["Hexo","博客","博客优化","Github","MySQL","数据库","插件","SpringBoot","相册","Markdown"]
             }
         ],
         yAxis: [
@@ -928,7 +928,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [17,9,7,4,4,3,3,2,1,1],
+                data: [18,9,8,4,4,4,3,2,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -1082,6 +1082,12 @@
             
             
             
+            <a href="/tags/nodejs/">
+                <span class="chip center-align waves-effect waves-light chip-default">nodejs</span>
+            </a>
+            
+            
+            
             <a href="/tags/SpringBoot/">
                 <span class="chip center-align waves-effect waves-light chip-default">SpringBoot</span>
             </a>
@@ -1132,12 +1138,6 @@
             
             <a href="/tags/%E9%A1%B9%E7%9B%AE/">
                 <span class="chip center-align waves-effect waves-light chip-default">项目</span>
-            </a>
-            
-            
-            
-            <a href="/tags/nodejs/">
-                <span class="chip center-align waves-effect waves-light chip-default">nodejs</span>
             </a>
             
             
@@ -1234,7 +1234,7 @@
             
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">47k</span>&nbsp;字
+                class="white-color">47.8k</span>&nbsp;字
             
             
             
@@ -1475,7 +1475,7 @@ $(function () {
     
     
     <!--浏览器搞笑标题  恶搞 -->
-    <script type="text/javascript" src="/js/FunnyTitle.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/FunnyTitle.js"></script>
     
        
     <!-- Baidu Analytics -->
@@ -1511,13 +1511,7 @@ $(function () {
     
 
     
-    
-    <script type="text/javascript" size="150" alpha='0.6'
-        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
-    
 
-    
-    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     
@@ -1525,15 +1519,15 @@ $(function () {
     
 
     
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         //只在桌面版网页启用特效,添加樱花飘落效果768
         var windowWidth = $(window).width();
         if (windowWidth > 500) {
-            document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+            document.write('<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/sakura.js"><\/script>');
         }
-    </script>
-    <!--222-->
-    <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/sakura.js"></script>
+    </script> -->
+    <!--222第二种-->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/sakura.js"></script> -->
 
 
     <!--动态线条背景--> <!--
@@ -1542,14 +1536,24 @@ $(function () {
     </script>   -->
     
     <!--添加鼠标彩虹星星掉落跟随效果-->
-    <script src="/js/cursor.js"></script>
+    <!-- <script type="text/javascript" src="js/mymouse.js" id="mymouse"></script> -->
+    
+    <!-- 点击冒点 -->
+    <canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
+    <script src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/maodian.js"></script>
+    <!-- 数字雨 -->
+    <canvas id="canvas" width="1920" height="1080"></canvas>
+    <script type="text/javascript" zIndex="-4" src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/DigitalRain.js"></script>
+    
+  <!-- 雪花 -->
+  <!--<script src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/snow1.js"></script> -->
     <!-- 网站全局深色模式设置开始 -->
     <script>
         if (localStorage.getItem('dark') === '1') {
         document.body.classList.add('dark');
         }
-        // else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
-        // document.body.classList.add('dark');
+        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        document.body.classList.add('dark');
         } 
         else if (matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
