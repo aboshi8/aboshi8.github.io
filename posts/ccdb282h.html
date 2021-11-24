@@ -816,10 +816,10 @@
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-lazyload-image --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>之后在站点配置文件下添加下面的代码：</p>
-<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">lazyload:
-  enable: true  # 是否开启图片懒加载
-  onlypost: false  # 是否只对文章的图片做懒加载
-  loadingImg: # eg .&#x2F;images&#x2F;loading.gif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"><span class="token key atrule">lazyload</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>  <span class="token comment"># 是否开启图片懒加载</span>
+  <span class="token key atrule">onlypost</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>  <span class="token comment"># 是否只对文章的图片做懒加载</span>
+  <span class="token key atrule">loadingImg</span><span class="token punctuation">:</span> <span class="token comment"># eg ./images/loading.gif</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>最后执行<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>就可以看到效果了。</p>
 <h2 id="2-代码压缩"><a href="#2-代码压缩" class="headerlink" title="2. 代码压缩"></a>2. 代码压缩</h2><h3 id="方法一：gulp代码压缩"><a href="#方法一：gulp代码压缩" class="headerlink" title="方法一：gulp代码压缩"></a>方法一：gulp代码压缩</h3><p><strong>使用方法：</strong></p>
@@ -1020,43 +1020,43 @@ gulp<span class="token punctuation">.</span><span class="token function">series<
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-neat --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>紧接着在站点根目录下的配置文件添加如下代码：</p>
-<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">neat_enable: true
-neat_html:
-  enable: true
-  exclude:
-neat_css:
-  enable: true
-  exclude:
-    - &#39;*.min.css&#39;
-neat_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude:
-    - &#39;*.min.js&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"><span class="token key atrule">neat_enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">neat_html</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+<span class="token key atrule">neat_css</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'*.min.css'</span>
+<span class="token key atrule">neat_js</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">mangle</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">output</span><span class="token punctuation">:</span>
+  <span class="token key atrule">compress</span><span class="token punctuation">:</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'*.min.js'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>然后直接 <code>hexo cl&amp;&amp;hexo g</code> 就可以了，会自动压缩文件 。</p>
 <p><strong>补充</strong>：为了解决以上Bug，<strong>对于matery主题</strong>（其他主题自行解决）需要将以上默认配置修改为：</p>
-<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">#hexo-neat 优化提速插件（去掉HTML、css、js的blank字符）
-neat_enable: true
-neat_html:
-  enable: true
-  exclude:
-    - &#39;**&#x2F;*.md&#39;
-neat_css:
-  enable: true
-  exclude:
-    - &#39;**&#x2F;*.min.css&#39;
-neat_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude:
-    - &#39;**&#x2F;*.min.js&#39;
-    - &#39;**&#x2F;**&#x2F;instantpage.js&#39;
-    - &#39;**&#x2F;matery.js&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"><span class="token comment">#hexo-neat 优化提速插件（去掉HTML、css、js的blank字符）</span>
+<span class="token key atrule">neat_enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">neat_html</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'**/*.md'</span>
+<span class="token key atrule">neat_css</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'**/*.min.css'</span>
+<span class="token key atrule">neat_js</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">mangle</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">output</span><span class="token punctuation">:</span>
+  <span class="token key atrule">compress</span><span class="token punctuation">:</span>
+  <span class="token key atrule">exclude</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token string">'**/*.min.js'</span>
+    <span class="token punctuation">-</span> <span class="token string">'**/**/instantpage.js'</span>
+    <span class="token punctuation">-</span> <span class="token string">'**/matery.js'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="3-打造稳定快速、高效免费图床"><a href="#3-打造稳定快速、高效免费图床" class="headerlink" title="3.打造稳定快速、高效免费图床"></a>3.打造稳定快速、高效免费图床</h2><blockquote>
 <p>请看我的另一篇博客文章:<a target="_blank" rel="noopener" href="https://white/_maple.gitee.io/posts/eb3a.html">https://white\_maple.gitee.io/posts/eb3a.html</a></p>
 </blockquote>
@@ -1200,336 +1200,52 @@ hexo<span class="token punctuation">.</span><span class="token function">on</spa
     
 
     
+
+    
         <style>
-    .valine-card {
+    .mvaline-card {
         margin: 1.5rem auto;
     }
 
-    .valine-card .card-content {
+    .mvaline-card .card-content {
         padding: 20px 20px 5px 20px;
-    }
-
-    #vcomments textarea {
-        box-sizing: border-box;
-        background: url("https://cdn.jsdelivr.net/npm/akilar-candyassets@1.0.6/image/valine.gif") 100% 100% no-repeat;
-    }
-
-    #vcomments p {
-        margin: 2px 2px 10px;
-        font-size: 1.05rem;
-        line-height: 1.78rem;
-    }
-
-    #vcomments blockquote p {
-        text-indent: 0.2rem;
-    }
-
-    #vcomments a {
-        padding: 0 2px;
-        color: #4cbf30;
-        font-weight: 500;
-        text-decoration: none;
-    }
-
-    #vcomments img {
-        max-width: 100%;
-        height: auto;
-        cursor: pointer;
-    }
-
-    #vcomments ol li {
-        list-style-type: decimal;
-    }
-
-    #vcomments ol,
-    ul {
-        display: block;
-        padding-left: 2em;
-        word-spacing: 0.05rem;
-    }
-
-    #vcomments ul li,
-    ol li {
-        display: list-item;
-        line-height: 1.8rem;
-        font-size: 1rem;
-    }
-
-    #vcomments ul li {
-        list-style-type: disc;
-    }
-
-    #vcomments ul ul li {
-        list-style-type: circle;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    #vcomments table, th, td {
-        border: 0;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments h1 {
-        font-size: 1.85rem;
-        font-weight: bold;
-        line-height: 2.2rem;
-    }
-
-    #vcomments h2 {
-        font-size: 1.65rem;
-        font-weight: bold;
-        line-height: 1.9rem;
-    }
-
-    #vcomments h3 {
-        font-size: 1.45rem;
-        font-weight: bold;
-        line-height: 1.7rem;
-    }
-
-    #vcomments h4 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    #vcomments h5 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        line-height: 1.4rem;
-    }
-
-    #vcomments h6 {
-        font-size: 1rem;
-        line-height: 1.3rem;
-    }
-
-    #vcomments p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-
-    #vcomments hr {
-        margin: 12px 0;
-        border: 0;
-        border-top: 1px solid #ccc;
-    }
-
-    #vcomments blockquote {
-        margin: 15px 0;
-        border-left: 5px solid #42b983;
-        padding: 1rem 0.8rem 0.3rem 0.8rem;
-        color: #666;
-        background-color: rgba(66, 185, 131, .1);
-    }
-
-    #vcomments pre {
-        font-family: monospace, monospace;
-        padding: 1.2em;
-        margin: .5em 0;
-        background: #272822;
-        overflow: auto;
-        border-radius: 0.3em;
-        tab-size: 4;
-    }
-
-    #vcomments code {
-        font-family: monospace, monospace;
-        padding: 1px 3px;
-        font-size: 0.92rem;
-        color: #e96900;
-        background-color: #f8f8f8;
-        border-radius: 2px;
-    }
-
-    #vcomments pre code {
-        font-family: monospace, monospace;
-        padding: 0;
-        color: #e8eaf6;
-        background-color: #272822;
-    }
-
-    #vcomments pre[class*="language-"] {
-        padding: 1.2em;
-        margin: .5em 0;
-    }
-
-    #vcomments code[class*="language-"],
-    pre[class*="language-"] {
-        color: #e8eaf6;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-
-    #vcomments b,
-    strong {
-        font-weight: bold;
-    }
-
-    #vcomments dfn {
-        font-style: italic;
-    }
-
-    #vcomments small {
-        font-size: 85%;
-    }
-
-    #vcomments cite {
-        font-style: normal;
-    }
-
-    #vcomments mark {
-        background-color: #fcf8e3;
-        padding: .2em;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-
-    .v[data-class=v] .emoji, .v[data-class=v] .vemoji {
-        max-height: 20px;
-        overflow: hidden;
-        max-width: 20px!important;
-    }
-    .v[data-class=v] .vwrap .vemojis {
-        text-align: center;
-    }
-    .roboterbb {
-        position: absolute;
-        right: 87px;
-        padding-top: 3px;
-    }
-    .robot-check-text:hover {
-        color: #26a69a;
-    }
-    .roboter:hover .robot-check-text::before {
-        border: 2px solid #5a5a5a;
-    }
-    .robotxian {
-        background: #5a5a5a;
-        top: 21px;
-        left: 11px!important;
-        transform-origin: 50% -17px;
-        animation: swing 3.5s infinite ease-in-out;
-        -webkit-transform-origin: 50% -17px;
-        -webkit-animation: swing 2.85s infinite ease-in-out;
-    }
-    .v[data-class=v] .vwrap {
-        padding-bottom: 23px;
-    }
-    .robotimg {
-        width: 28px!important;
-        height: 28px!important;
-        top: 14px!important;
-        left: -13px!important;
-        max-width: none!important;
-        z-index: 99;
-        cursor: none!important;
-    }
-    .v[data-class=v] .vbtn:disabled {
-        color: #b2b2b5;
-        border-color: #b2b2b5;
-    }
-    .v[data-class=v] .vbtn:disabled {
-        background-color: transparent;
     }
 </style>
 
-<div class="card valine-card" data-aos="fade-up">
+<div class="card mvaline-card" data-aos="fade-up">
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
     </div>
-    <div id="vcomments" class="card-content" style="display: grid">
+    <div id="mvcomments" class="card-content" style="display: grid">
     </div>
 </div>
 
-<script src="/libs/valine/av-min.js"></script>
-<script src="https://unpkg.com/valine/dist/Valine.min.js"></script>
+<script src="/libs/minivaline/MiniValine.js"></script>
 <script>
-    new Valine({
-        el: '#vcomments',
+    new MiniValine({
+        el: '#mvcomments',
         appId: 'YlXHwBPywqDeFHvLgVHnb8oy-9Nh9j0Va',
         appKey: 'vETrE3CWpuGfdCX01nnzc1Fj',
-        notify: 'true' === 'true',
-        verify: 'true' === 'true',
-        visitor: 'true' === 'true',
-        avatar: 'monsterid',
-        pageSize: '18',
-        lang: 'zh-cn',
-        placeholder: '评论前记得点击下方机器人验证按钮~ （客官留下QQ邮箱可好，会得到及时回复哦~）'
+        mode: 'DesertsP',
+        placeholder: 'Write a Comment',
+        pathname: window.location.pathname,
+        lang: '',
+        adminEmailMd5: 'de8a7aa53d07e6b6bceb45c64027763d',
+        tagMeta: ["管理员", "小伙伴", "访客"],
+        master: ["522e276974e5bd19f75fea4b4e98c27b"],
+        friends: ["b5bd5d836c7a0091aa8473e79ed4c25e", "adb7d1cd192658a55c0ad22a3309cecf", "3ce1e6c77b4910f1871106cb30dc62b0", "cfce8dc43725cc14ffcd9fb4892d5bfc"],
+        math: true,
+        md: true,
+        enableQQ: false,
+        NoRecordIP: false,
+        visitor: true,
+        maxNest: 6,
+        pageSize: 6,
+        serverURLs: '',
+        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest", "https://cdn.jsdelivr.net/gh/MiniValine/qq@latest", "https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest", "https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest", "https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest", "https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"],
     });
 </script>
-
-<!-- 评论机器人验证 -->
-<script>
-    $('.roboter').on('click',function(){
-        $('.robot-check-text').html('·&nbsp;&nbsp;&nbsp;验证成功！');
-        $('.roboter:hover .robot-check-text::before').css('border','2px solid #26a69a');
-        $('.robotxian').css('background','#26a69a');
-        $('.robotimg').attr('src','/medias/robot.png');
-        $('.robot-check-text').css('color','#26a69a');
-    });
-    
-    if(!$('.robot-check').checked) {
-        // alert("请勾选机器人验证后再发表评论！");
-        $('.vsubmit').attr('disabled',true).attr('title','评论前勾选机器人验证按钮');
-    } 
-    $('.robot-check').on('click',function(){
-        $('.vsubmit').attr('disabled',false).attr('title','欢迎畅所欲言');
-    });
-</script>
-
-    
 
     
 
@@ -1544,18 +1260,18 @@ hexo<span class="token punctuation">.</span><span class="token function">on</spa
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/2e58.html">
+                <a href="/posts/ccdb282d.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/medias/featureimages/26.webp" class="responsive-img" alt="Hexo 博客自定义一个不使用主题模板渲染的独立页面">
+                        <img src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/medias/featureimages/hexo.png" class="responsive-img" alt="Hexo博客主题安装和优化（三）添加评论系统">
                         
-                        <span class="card-title">Hexo 博客自定义一个不使用主题模板渲染的独立页面</span>
+                        <span class="card-title">Hexo博客主题安装和优化（三）添加评论系统</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Hexo 博客自定义一个不使用主题模板渲染的独立页面
+                            Hexo博客主题安装和优化（三）添加评论系统
                         
                     </div>
                     <div class="publish-info">
@@ -1585,6 +1301,10 @@ hexo<span class="token punctuation">.</span><span class="token function">on</spa
                         <span class="chip bg-color">博客</span>
                     </a>
                     
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/">
+                        <span class="chip bg-color">博客优化</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1596,18 +1316,18 @@ hexo<span class="token punctuation">.</span><span class="token function">on</spa
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/ccdb282d.html">
+                <a href="/posts/ccdb282.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/medias/featureimages/hexo.png" class="responsive-img" alt="Hexo博客主题安装和优化（三）添加评论系统">
+                        <img src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/medias/featureimages/hexo.png" class="responsive-img" alt="Hexo博客主题安装和优化（四）域名解析与绑定">
                         
-                        <span class="card-title">Hexo博客主题安装和优化（三）添加评论系统</span>
+                        <span class="card-title">Hexo博客主题安装和优化（四）域名解析与绑定</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Hexo博客主题安装和优化（三）添加评论系统
+                            Hexo博客主题安装和优化（四）域名解析与绑定
                         
                     </div>
                     <div class="publish-info">
@@ -1773,51 +1493,6 @@ hexo<span class="token punctuation">.</span><span class="token function">on</spa
 
 
     <footer class="page-footer bg-color">
-    
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="6826437463"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='metadata'
-                   volume='0.4'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
     
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
