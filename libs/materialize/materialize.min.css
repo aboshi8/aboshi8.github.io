@@ -36,7 +36,14 @@ nav.nav-extended{height:auto}nav.nav-extended .nav-wrapper{min-height:56px;heigh
     nav a.sidenav-trigger{display:none}
 }
 
-nav .sidenav-trigger{float:left;position:relative;z-index:1;height:56px;margin:0 18px}nav .sidenav-trigger i{height:56px;line-height:56px}nav .brand-logo{position:absolute;color:#fff;display:inline-block;font-size:2.1rem;padding:0}nav .brand-logo.center{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+nav .sidenav-trigger{float:left;position:relative;z-index:1;height:56px;margin:0 18px}nav .sidenav-trigger i{height:56px;line-height:56px}
+nav .brand-logo{position:absolute;
+	color:#fff;
+	display:inline-block;
+	/* font-size:2.1rem; */
+	padding:0}
+
+nav .brand-logo.center{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}
 
 @media only screen and (max-width: 1030px){
     nav .brand-logo{

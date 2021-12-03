@@ -2992,9 +2992,9 @@ body.themechris .shoucangtou
     body.themechris .phonetreeindex {
         display: block!important;
     }  
-    .phonetreeindex img {
+    /* .phonetreeindex img {
         filter: brightness(1)!important;
-    }           
+    }            */
 }
 @media only screen and (max-width: 1100px) {
     body.themechris .bigphonetree {
@@ -3008,9 +3008,9 @@ body.themechris .shoucangtou
     body.themechris .bigphonetree {
         display: block!important;
     }  
-    .bigphonetree img {
+    /* .bigphonetree img {
         filter: brightness(1)!important;
-    }           
+    }            */
 }
 
 .weilerela {
