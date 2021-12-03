@@ -414,7 +414,7 @@ header .brand-logo .logo-img {
 }
 
 header .brand-logo .logo-span {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 }
 
 /*修改顶部 logo 的文字垂直对齐为 top，避免默认 middle 看起来偏下*/
@@ -2581,7 +2581,8 @@ body.dark header .side-nav .mobile-head .logo-desc,
 body.dark header .side-nav .menu-list a,
 body.dark article .article-content .publish-info,
 body.dark article .article-content .post-category,
-body.dark  #reprint-statement > div.reprint__notice > span.reprint-info
+body.dark  #reprint-statement > div.reprint__notice > span.reprint-info,
+.mobile-menu
  {
     color: rgb(255, 255, 255);
 }
@@ -2859,9 +2860,9 @@ body.dark header .side-nav .menu-list .m-nav-show
 body.dark .aplayer{
     opacity: 0.9;
 }
-body.dark img, body.dark strong {
+/* body.dark img, body.dark strong {
     filter: brightness(.99);
-}
+} */
 
 /* 深色模式按钮设置 */
 #sma {

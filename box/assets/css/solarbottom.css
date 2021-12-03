@@ -1,8 +1,8 @@
 @import url("//at.alicdn.com/t/font_2611504_8nq4wp1bmb3.css");
 /*@import"./solar.css";*/
 @media screen and (min-width:767px){#mobile-footer{display:none}}
-#mobile-footer{height:50px;background:#fafafa;position:fixed;bottom:0;left:0;border-top:0;width:100%;z-index:9999999}
-#mobile-menu{display:block}
+#mobile-footer{height:50px;background:#000000;position:fixed;bottom:0;left:0;border-top:0;width:100%;z-index:9999999}
+#mobile-menu{display:block;margin: auto;}
 #mobile-menu:after{content:'';display:block;height:0;clear:both}
 #mobile-menu>li{width:20%;float:left;border-top:1px solid #e6e6eb;height:100%}
 #mobile-menu>li>a:hover{color:#000;}
