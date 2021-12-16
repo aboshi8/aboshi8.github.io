@@ -3229,9 +3229,12 @@ canvas {
     min-height:100%;
     height:auto;
     width:auto;
-    z-index:-2;
+    z-index:-5;
 }
 
+.card  .card-content{
+    z-index: 55;
+}
 .cateee{
     margin-top: 15px;
 }
