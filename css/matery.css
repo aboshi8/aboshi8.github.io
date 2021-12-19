@@ -32,6 +32,9 @@
         max-width: 1250px;
     }
 }
+/* #article-container code,body{
+    font-family:"Linux Biolinum","Noto Serif SC",Helvetica,Arial,Menlo,Monaco,monospace,sans-serif!important
+} */
 
 @font-face {
     font-family: 'hys';
@@ -3238,3 +3241,36 @@ canvas {
 .cateee{
     margin-top: 15px;
 }
+/* footer好看的图片 */
+#footer-wrap .footer_custom_text{
+    margin-top:8px;
+    line-height:2.3
+}
+#footer-wrap .footer_custom_text a:nth-child(n+2){
+    margin-left:8px
+}
+@media screen and (max-width:376px){
+    #footer-wrap .footer_custom_text a:nth-child(n+2){
+        margin-left:5px!important
+    }
+}
+#footer-wrap .footer_custom_text a{
+    display:inline
+}
+@media screen and (max-width:376px){
+    #footer-wrap .footer_custom_text a:nth-child(4){
+        margin-left:0!important
+    }
+}
+@media screen and (max-width:376px){
+    #footer-wrap{
+        font-size:14px;
+        padding:1rem
+    }
+}
+@media screen and (max-width:376px){
+    #footer-wrap .footer_custom_text{
+        margin-bottom:-7px
+    }
+}
+
