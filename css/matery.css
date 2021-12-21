@@ -501,8 +501,8 @@ header .side-nav .social-link {
     height: 45px;
     line-height: 45px;
     font-size: 1rem;
-    color: #fff;
-    border: 1px solid #fff;
+    color: #409eff;
+    border: 1px solid #409eff;
     background-color: transparent;
     border-radius: 30px;
     box-shadow: none;
@@ -632,7 +632,7 @@ header .side-nav .social-link {
 .cover-social-link a {
     padding: 0 15px;
     font-size: 1.35rem;
-    color: #fff;
+    color: #039be5;
 }
 
 header .go-back {
@@ -706,7 +706,7 @@ header .go-back i {
     font-weight: 300;
     font-size: 1.25rem;
     line-height: 1.4em;
-    color: #eee;
+    color: #409eff;
 }
 
 .bg-cover .post-title {
@@ -2676,7 +2676,7 @@ iframe[frameborder='no']{
     content: "\f0eb"!important;
 }
 .nav-menu li .sub-nav, .menus_item_child:before {
-    background-color: #000;
+    background-color: #409eff;
 }
 .chart {
     margin-top: 10px;

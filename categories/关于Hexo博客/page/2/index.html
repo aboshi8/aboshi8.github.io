@@ -39,7 +39,14 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/box/assets/css/solarbottom.css">
 
-    
+    <!-- 点击冒点 -->
+    <canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
+    <script src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/maodian.js"></script>
+    <!-- 数字雨 -->
+    <canvas id="canvas" width="1920" height="1080"></canvas>
+    <script type="text/javascript" zIndex="-6" src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/DigitalRain.js"></script>
+     
+  
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.1/css/style.css"> -->
 
@@ -640,7 +647,7 @@
                 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                 <script>
                     var typed = new Typed("#subtitle", {
-                        strings: ['如果结局不是你想要的，那么故事就还没结束,','喜欢就去追吧，毕竟那不是巧合，是牛顿说的万有引力啊'],
+                        strings: ['如果结局不是你想要的，那么故事就还没结束','喜欢就去追吧，毕竟那不是巧合，是牛顿说的万有引力啊'],
                         startDelay: 300,
                         typeSpeed: 100,
                         loop: true,
@@ -654,7 +661,7 @@
     </div>
 </div>
 
-
+<!-- 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.、getDay()    Date().getMinutes() 每分钟换一个总共得60张图片 
     var bannerUrl = "https://cdn.jsdelivr.net/gh/aboshi8/aboshi8.github.io/medias/banner/" + new Date().getMinutes() + '.webp';
@@ -662,7 +669,7 @@
     //     var bannerUrl = "/medias/banner/" + new Date().getMinutes() + '.webp';
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
-
+ -->
 
     </div>
 </div>
@@ -1446,15 +1453,13 @@ $(function () {
     <!-- <script type="text/javascript" src="js/mymouse.js" id="mymouse"></script> -->
     
     <!-- 点击冒点 -->
-    <canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
-    <script src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/maodian.js"></script>
+    <!-- <canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
+    <script src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/maodian.js"></script> -->
     <!-- 数字雨 -->
-    <canvas id="canvas" width="1920" height="1080"></canvas>
-    <script type="text/javascript" zIndex="-4" src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/DigitalRain.js"></script>
-    
-  <!-- 雪花 -->
-  <!--<script src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/snow1.js"></script> -->
-    <!-- 网站全局深色模式设置开始 -->
+    <!-- <canvas id="canvas" width="1920" height="1080"></canvas>
+    <script type="text/javascript" zIndex="-6" src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/DigitalRain.js"></script>
+     -->
+ 
     <script>
         if (localStorage.getItem('dark') === '1') {
         document.body.classList.add('dark');
