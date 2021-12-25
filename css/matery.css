@@ -5,14 +5,43 @@
         width: 95%;
     }
 }
-
+@media screen and (max-width:750px){
+    .V-badge{
+        zoom:.7
+    }
+    footer .info img{
+        zoom:.7
+    }
+    #searchModal{
+        width:80%!important
+    }
+}
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
         width: 90%;
     }
 }
-
+@media screen and (max-width:1250px){
+    .V-title{
+        zoom:.8
+    }
+    .m-V-title{
+        zoom:1
+    }
+    .V-title-top{
+        zoom:1
+    }
+    .V-img-link img{
+        zoom:.8
+    }
+    #live2dcanvas{
+        zoom:.6!important
+    }
+    #searchModal{
+        width:80%!important
+    }
+}
 /*大屏幕下(桌面类)的样式*/
 @media only screen and (min-width: 993px) {
     .container {
@@ -107,6 +136,14 @@ body {
   overflow-y: auto;
   color: #34495e;
   /* font-family: Georgia, 'Noto Serif SC', Helvetica, Arial, Menlo, Monaco, monospace, serif; */
+}
+#live2dcanvas{
+    zoom:.7
+}
+#particles-js{
+    position:fixed;
+    height:100vh;
+    width:100vw
 }
 h1 {
   margin: 48px 0 22px -5px;
@@ -392,7 +429,7 @@ mark {
 header .side-nav {
     width: 240px;
     z-index: 999;
-    background-color: rgb(0, 0, 0);
+    background-color: #1e21238a;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 7px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -418,6 +455,7 @@ header .brand-logo .logo-img {
 
 header .brand-logo .logo-span {
     font-size: 1.1rem;
+    font-weight: 900;
 }
 
 /*修改顶部 logo 的文字垂直对齐为 top，避免默认 middle 看起来偏下*/
@@ -649,7 +687,10 @@ header .go-back i {
     font-weight: 200;
     line-height: 56px;
 }
-
+/* 顶部导航logo字体颜色 */
+.fan-color {
+    color: #09240f;
+  }
 /* 背景图效果. */
 .bg-cover {
     position: relative;
@@ -669,7 +710,7 @@ header .go-back i {
 }
 
 .post-cover {
-    height: 40vh !important;
+    height: 60vh !important;
 }
 
 .bg-cover:after {
@@ -677,8 +718,7 @@ header .go-back i {
     animation: rainbow 60s infinite;
 }
 
-.bg-cover:before,
-.bg-cover:after {
+.bg-cover:before,.bg-cover:after {
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -695,11 +735,44 @@ header .go-back i {
     z-index: 2;
 }
 
-.bg-cover .title {
+/* .bg-cover .title {
     font-size: 4rem;
     line-height: 1.2em;
     margin-bottom: 20px;
     position: relative;
+} */
+.bg-cover .title {
+    font-size: 4rem;
+    line-height: 1.85em;
+    margin-bottom: 20px;
+    position: relative;
+    font-weight: 900;
+    font-family:KaiTi,serif;
+  }
+  .bg-cover .description {
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 1.4em;
+    color: #eee;
+    font-weight: 900;
+    font-family:KaiTi,serif;
+  }
+  .bg-cover .post-title {
+    margin: 0 auto;
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+/* .bg-cover .title{
+    font-size:6rem;
+    line-height:1.2em;
+    margin-bottom:20px;
+    position:relative;
+    color:#f5f5f5;
+    text-decoration:none;
+    display:inline;
+    top:-15px;
+    left:160px;
+    font-family:Bangers,cursive
 }
 
 .bg-cover .description {
@@ -713,7 +786,7 @@ header .go-back i {
     margin: 0 auto;
     font-size: 2.5rem;
     font-weight: 400;
-}
+} */
 /*  动态切换背景颜色. 
 @-webkit-keyframes rainbow {
 
@@ -2555,7 +2628,7 @@ hr:hover::before{
 
 /* 深色模式设置 */
 /* 字体颜色变灰白色 */ 
-body.dark .fas,
+/* body.dark .fas, */
 body.dark .title,
 body.dark .row .text,
 body.dark article .article-content .summary,
@@ -2663,9 +2736,9 @@ iframe[frameborder='no']{
 .fa-angle-double-down:before {
     content: ""!important;
 }
-.fa-lightbulb-o, .fa-moon-o {
+/* .fa-lightbulb-o, .fa-moon-o {
     color: #fff;
-}
+} */
 .fa-lightbulb-o:hover{
     color: #039be5!important;
 }
@@ -2676,7 +2749,7 @@ iframe[frameborder='no']{
     content: "\f0eb"!important;
 }
 .nav-menu li .sub-nav, .menus_item_child:before {
-    background-color: #409eff;
+    background-color: #d5e9fda8;
 }
 .chart {
     margin-top: 10px;
@@ -2854,9 +2927,9 @@ body.dark hr
 body.dark,
 body.dark .v[data-class=v] .vcount,
 body.dark #rewardModal .modal-content,
-body.dark .modal,
-body.dark header .side-nav,
-body.dark header .side-nav .menu-list .m-nav-show
+body.dark .modal
+/* body.dark header .side-nav,
+body.dark header .side-nav .menu-list .m-nav-show */
 {
     background-color: #12121c;
 }
@@ -2866,9 +2939,8 @@ body.dark .aplayer{
 /* body.dark img, body.dark strong {
     filter: brightness(.99);
 } */
-
-/* 深色模式按钮设置 */
-#sma {
+/* 深色模式按钮设置 按钮 脚部 */
+#smaa {
     background: #000;
     width: 38px;
     height: 38px;
@@ -2882,13 +2954,14 @@ body.dark .aplayer{
     z-index: 998;
     cursor: pointer;
 }
-#sma .fa-moon-o {
+#smaa .fa-moon-o {
+    color: rgb(255, 255, 255);
     position: absolute;
     right: 8px;
     bottom: 8px;
     font-size: 1.48rem!important;
 }
-#sma .fa-lightbulb-o  {
+#smaa .fa-lightbulb-o  {
     position: absolute;
     right: 13px;
     bottom: 8px;
@@ -3330,37 +3403,4 @@ a.goroups_button_new:hover{
 a.goroups_button_new:link{
     color:#FFFFFF;
 }
-
-/* footer好看的图片
-#footer-wrap .footer_custom_text{
-    margin-top:8px;
-    line-height:2.3
-}
-#footer-wrap .footer_custom_text a:nth-child(n+2){
-    margin-left:8px
-}
-@media screen and (max-width:376px){
-    #footer-wrap .footer_custom_text a:nth-child(n+2){
-        margin-left:5px!important
-    }
-}
-#footer-wrap .footer_custom_text a{
-    display:inline
-}
-@media screen and (max-width:376px){
-    #footer-wrap .footer_custom_text a:nth-child(4){
-        margin-left:0!important
-    }
-}
-@media screen and (max-width:376px){
-    #footer-wrap{
-        font-size:14px;
-        padding:1rem
-    }
-}
-@media screen and (max-width:376px){
-    #footer-wrap .footer_custom_text{
-        margin-bottom:-7px
-    }
-} */
 
