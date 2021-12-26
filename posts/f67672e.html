@@ -363,6 +363,11 @@
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
+  <li class="hide-on-med-and-down nav-show">
+    <a onclick="switchNightMode()" id="sma" class="modal-trigger waves-effect waves-light Vino-color">
+      <i class="fa fa-moon" id="nightMode" aria-hidden="true" style="zoom: 0.7;"></i>
+    </a>
+  </li>
 </ul>
 
 
@@ -1726,26 +1731,24 @@ $(function () {
     <!-- <canvas id="canvas" width="1920" height="1080"></canvas>
     <script type="text/javascript" zIndex="-6" src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/DigitalRain.js"></script>
      -->
- 
-    <script>
+ <!-- 自动进入夜间模式 -->
+    <!-- <script>
         if (localStorage.getItem('dark') === '1') {
         document.body.classList.add('dark');
         }
-        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        else if (new Date().getHours() >= 23 || new Date().getHours() < 7) {
         document.body.classList.add('dark');
         } 
         else if (matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
         }
-    </script>
-    <a onclick="switchNightMode()" id="sma">
-        <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
-    </a>
+    </script> -->
+    
     <a onclick="switchNightMode()" id="smaa">
         <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
     </a>
 
-    
+     
 <!-- hexo injector body_end start --><script data-pjax>function history_calendar_injector_config(){
                 var parent_div_git = document.getElementsByClassName('col l3 hide-on-med-and-down expanded')[0];
                 var item_html = '<div class="card-widget card-history"> <div class="card-content" style="    position: relative; overflow: hidden; margin-top: 1rem; padding: 1rem 1.2rem; border-radius: 8px; background: var(--card-bg); -webkit-box-shadow: var(--card-box-shadow); box-shadow: var(--card-box-shadow); -webkit-transition: box-shadow .3s; -moz-transition: box-shadow .3s; -o-transition: box-shadow .3s; -ms-transition: box-shadow .3s; transition: box-shadow .3s;background-color: white;"><div class="item-headline"> <i class="fas fa-clock fa-spin"></i> <span>那年今日</span></div> <div id="history-baidu" style="height: 100px;overflow: hidden"> <div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"> <div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div> </div> </div> </div>';

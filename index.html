@@ -363,6 +363,11 @@
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
+  <li class="hide-on-med-and-down nav-show">
+    <a onclick="switchNightMode()" id="sma" class="modal-trigger waves-effect waves-light Vino-color">
+      <i class="fa fa-moon" id="nightMode" aria-hidden="true" style="zoom: 0.7;"></i>
+    </a>
+  </li>
 </ul>
 
 
@@ -669,7 +674,110 @@
 </style>
 
 
-<style> .DarkMode .candle-con { display: none !important; }</style>
+
+<!-- <div class="bg-cover pd-header article-cover" style="height: 100vh"> 
+  <div class="candle-con">
+   <div class="wrapper">
+       <div class="candles">
+           <div class="light__wave"></div>
+           <div class="candle1">
+               <div class="candle1__body">
+                   <div class="candle1__eyes">
+                       <span class="candle1__eyes-one"></span>
+                       <span class="candle1__eyes-two"></span>
+                   </div>
+                   <div class="candle1__mouth"></div>
+               </div>
+               <div class="candle1__stick"></div>
+           </div>
+           <div class="candle2">
+               <div class="candle2__body">
+                   <div class="candle2__eyes">
+                       <div class="candle2__eyes-one"></div>
+                       <div class="candle2__eyes-two"></div>
+                   </div>
+               </div>
+               <div class="candle2__stick"></div>
+           </div>
+           <div class="candle2__fire"></div>
+           <div class="sparkles-one"></div>
+           <div class="sparkles-two"></div>
+           <div class="candle__smoke-one">
+           </div>
+           <div class="candle__smoke-two">
+           </div>
+       </div>
+       <div class="floor">
+       </div>
+   </div>
+   </div>
+  <div class="workBoy-con">
+   <div class="wrapper2">
+       <div class="sofa">
+           <div class="sofa-cushion"></div>
+           <div class="sofa-bottom-l"></div>
+           <div class="sofa-bottom-r"></div>
+       </div>
+   </div>
+       <div class="cat-V">
+           <div class="cat-arm-shoulder"></div>
+           <div class="cat-head">
+               <div class="cat-ear-l"></div>
+               <div class="cat-ear-r"></div>
+               <div class="cat-eye-l"></div>
+               <div class="cat-eye-r"></div>
+           </div>
+           <div class="cat-arm-l"></div>
+           <div class="cat-arm-r"></div>
+           <div class="cat-tale"></div>
+       </div>
+       <div class="boy">
+           <div class="arm-l"></div>
+           <div class="foot-l"></div>
+           <div class="head">
+               <div class="face">
+                   <div class="hair-1"></div>
+                   <div class="hair-2"></div>
+                   <div class="eye-l"></div>
+                   <div class="eye-r"></div>
+               </div>
+               <div class="hair-3"></div>
+           </div>
+           <div class="foot-r"></div>
+           <div class="arm-r"></div>
+           <div class="laptop">
+               <div class="light"></div>
+           </div>
+       </div>
+   </div>
+  <div data-aos="fade-right" data-aos-delay="1700" class="about-tag-about hide-on-med-and-down"> 
+   <div class="V-title"> 
+    <span>&quot;Articles&quot;</span> 
+   </div> 
+  </div> 
+  <div data-aos="fade-left" data-aos-delay="1700" class="hide-on-med-and-down"> 
+   <div class="V-title"> 
+    <span class="article-tag-Vino">&quot;Vino&quot;</span> 
+    <span class="about-tag-blog">&quot;blog&quot;</span> 
+   </div> 
+  </div> 
+  <div class="center-align article-typed" style="top:72vh;"> 
+   <span id="subtitle" style="font-size:28px;color: #0C0C0C"></span> 
+  </div> 
+  <div class="hide-on-med-and-down V-img" data-aos="zoom-in" data-aos-delay="1700"> 
+   <img src="https://cdn.vino.run/V_9U5qSVDG.png" /> 
+  </div> 
+  <div class="hide-on-large-only center-align m-V-img-article" style="width: 100vw" data-aos="zoom-in" data-aos-delay="1700"> 
+   <img src="https://cdn.vino.run/V_9U5qSVDG.png" /> 
+   <div class="V-title m-V-title"> 
+    <span>&quot;Articles&quot;</span> 
+   </div> 
+  </div> 
+  <div class="rightan center-align"> 
+   <img src="https://cdn.vino.run/Typora/Vino_2021-01-03-09-31-20180726095736463.png" /> 
+  </div> 
+ </div>  -->
+ 
 
 <div class="bg-cover pd-header article-cover" style="height: 100vh">
     <div class="candle-con">
@@ -780,12 +888,12 @@
     </div>
     <div data-aos="fade-right" data-aos-delay="1700" class="about-tag-about hide-on-med-and-down aos-init aos-animate">
       <div class="V-title">
-        <span>"kaiboshi"</span>
+        <span>"KaiBoShi"</span>
       </div>
     </div>
     <div data-aos="fade-left" data-aos-delay="1700" class="hide-on-med-and-down aos-init aos-animate">
       <div class="V-title">
-        <span class="about-tag-blog">"blog"</span>
+        <span class="about-tag-blog">"Blog"</span>
       </div>
     </div>
     <div class="center-align article-typed" style="top: 70vh">
@@ -794,7 +902,7 @@
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11">
       </script>
       <script>var typed = new Typed("#subtitle", {
-          strings: ['如果结局不是你想要的，那么故事就还没结束', '喜欢就去追吧，毕竟那不是巧合，是牛顿说的万有引力啊'],
+          strings: ['Write the Code , Change the world ! ', 'Live a good life, write some good code !'],
           startDelay: 300,
           typeSpeed: 150,
           loop: true,
@@ -1844,26 +1952,24 @@ $(function () {
     <!-- <canvas id="canvas" width="1920" height="1080"></canvas>
     <script type="text/javascript" zIndex="-6" src="https://cdn.jsdelivr.net/gh/kaiboshi/kaiboshi.github.io/js/DigitalRain.js"></script>
      -->
- 
-    <script>
+ <!-- 自动进入夜间模式 -->
+    <!-- <script>
         if (localStorage.getItem('dark') === '1') {
         document.body.classList.add('dark');
         }
-        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
+        else if (new Date().getHours() >= 23 || new Date().getHours() < 7) {
         document.body.classList.add('dark');
         } 
         else if (matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
         }
-    </script>
-    <a onclick="switchNightMode()" id="sma">
-        <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
-    </a>
+    </script> -->
+    
     <a onclick="switchNightMode()" id="smaa">
         <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i>
     </a>
 
-    
+     
 <!-- hexo injector body_end start --><script data-pjax>function history_calendar_injector_config(){
                 var parent_div_git = document.getElementsByClassName('col l3 hide-on-med-and-down expanded')[0];
                 var item_html = '<div class="card-widget card-history"> <div class="card-content" style="    position: relative; overflow: hidden; margin-top: 1rem; padding: 1rem 1.2rem; border-radius: 8px; background: var(--card-bg); -webkit-box-shadow: var(--card-box-shadow); box-shadow: var(--card-box-shadow); -webkit-transition: box-shadow .3s; -moz-transition: box-shadow .3s; -o-transition: box-shadow .3s; -ms-transition: box-shadow .3s; transition: box-shadow .3s;background-color: white;"><div class="item-headline"> <i class="fas fa-clock fa-spin"></i> <span>那年今日</span></div> <div id="history-baidu" style="height: 100px;overflow: hidden"> <div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"> <div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div> </div> </div> </div>';
